@@ -1,6 +1,4 @@
-using MenuAdventures
-using Test
+using MenuAdventures: MenuAdventures
+using Documenter: doctest
 
-@testset "MenuAdventures.jl" begin
-    # Write your tests here.
-end
+doctest(AudioSchedules)
