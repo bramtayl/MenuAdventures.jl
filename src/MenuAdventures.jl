@@ -1,10 +1,11 @@
 module MenuAdventures
 
+using Base: disable_text_style, @kwdef, text_colors
+import Base: setindex!, show
+using InteractiveUtils: subtypes
 using LightGraphs: DiGraph, inneighbors, outneighbors
 using MacroTools: @capture
 using MetaGraphsNext: code_for, MetaGraph, label_for
-using Base: disable_text_style, @kwdef, text_colors
-import Base: setindex!, show
 using REPL.Terminals: TTYTerminal
 using REPL.TerminalMenus: RadioMenu, request, terminal
 using TextWrap: println_wrapped
@@ -12,10 +13,10 @@ using TextWrap: println_wrapped
 """
     abstract type Domain end
 
-A domain refers to a search space for a specific argument to a verb. 
+A domain refers to a search space for a specific argument to a action. 
     
 For example, you are only able to look at things in the `Visible` domain.
-Domains serve both as a way of distinguishing different arguments to a verb, and also, categorizing the environment around the player. 
+Domains serve both as a way of distinguishing different arguments to a action, and also, categorizing the environment around the player. 
 Users could theoretically add a new domain. 
 """
 abstract type Domain end
@@ -23,18 +24,18 @@ abstract type Domain end
 """
     struct Reachable <: Domain end
 
-Anything the player concretely_possible reach. 
+Anything the player possible_now reach. 
 
-Players concretely_possible't reach through closed containers by default.
+Players possible_now't reach through closed containers by default.
 """
 struct Reachable <: Domain end
 
 """
     struct Visible <: Domain end
 
-Anything the player concretely_possible see. 
+Anything the player possible_now see. 
 
-Players concretely_possible't see into closed, opaque containers.
+Players possible_now't see into closed, opaque containers.
 """
 struct Visible <: Domain end
 
@@ -71,7 +72,7 @@ Relationships show the relationshp of a `thing` to its `parent_thing`.
     
 Directions show the relationships between [`Location`](@ref)s. 
 
-You concretely_possible use [`opposite`](@ref) to find the opposite of a direction.
+You possible_now use [`opposite`](@ref) to find the opposite of a direction.
 """
 @enum Direction north south west east north_west north_east south_west south_east up down inside outside
 
@@ -111,51 +112,188 @@ function opposite(direction::Direction)
 end
 
 """
-    abstract type Verb end
+    abstract type Action end
 
-A verb is an action the player concretely_possible take. 
+A action is an action the player possible_now take. 
 
 It should be fairly easy to create new verbs: 
-you will need to define [`abstractly_possible`](@ref) for abstract possibilities, 
-[`concretely_possible`](@ref) for concrete possibilities,
+you will need to define [`ever_possible`](@ref) for abstract possibilities, 
+[`possible_now`](@ref) for concrete possibilities,
 [`argument_domains`](@ref) to specify the domain of the arguments, and 
 [`print_sentence`](@ref) for printing the sentence. 
 
 Most importantly, define:
 
 ```
-function (::MyNewVerb)(universe, arguments...) -> Tuple{Bool, Bool}
+function (::MyNewAction)(universe, arguments...) -> Tuple{Bool, Bool}
 ```
 
-Which will conduct the verb based on user choices. 
+Which will conduct the action based on user choices. 
 Must return tuple of bools. If the first one is true, on the next turn, the game will describe the player's environment again.
 If the second one is true, the game will end at the end of the turn.
 """
-abstract type Verb end
+abstract type Action end
 
-struct Attach <: Verb end
-struct Close <: Verb end
-struct Dress <: Verb end
-struct Drop <: Verb end
-struct Eat <: Verb end
-struct Give <: Verb end
-struct Go <: Verb end
-struct GoInto <: Verb end
-struct GoOnto <: Verb end
-struct Leave <: Verb end
-struct ListInventory <: Verb end
-struct Lock <: Verb end
-struct LookAt <: Verb end
-struct Open <: Verb end
-struct Push <: Verb end
-struct Put <: Verb end
-struct Lay <: Verb end
-struct Quit <: Verb end
-struct Take <: Verb end
-struct TurnOn <: Verb end
-struct TurnOff <: Verb end
-struct Unlock <: Verb end
-struct Wear <: Verb end
+"""
+    struct Attach <: Action end
+
+`Attach` something to something else.
+"""
+struct Attach <: Action end
+
+"""
+    struct Close <: Action end
+
+`Close` something.
+"""
+struct Close <: Action end
+
+"""
+    struct Dress <: Action end
+
+`Dress` someone in something.
+"""
+struct Dress <: Action end
+
+"""
+    struct Drop <: Action end
+
+`Drop` something.
+"""
+struct Drop <: Action end
+
+"""
+    struct Eat <: Action end
+
+`Eat` something.
+"""
+struct Eat <: Action end
+
+"""
+    struct Give <: Action end
+
+`Give` something to someone.
+"""
+struct Give <: Action end
+
+"""
+    struct Go <: Action end
+
+`Go` some way.
+"""
+struct Go <: Action end
+
+"""
+    struct GoInto <: Action end
+
+Go into something.
+"""
+struct GoInto <: Action end
+
+"""
+    struct GoOnto <: Action end
+
+Go onto something.
+"""
+struct GoOnto <: Action end
+
+"""
+    struct Leave <: Action end
+
+Leave something.
+"""
+struct Leave <: Action end
+
+"""
+    struct ListInventory <: Action end
+
+List your inventory.
+"""
+struct ListInventory <: Action end
+
+"""
+    struct Lock <: Action end
+
+Lock something with something.
+"""
+struct Lock <: Action end
+
+"""
+    struct LookAt <: Action end
+
+Look at something.
+"""
+struct LookAt <: Action end
+
+"""
+    struct Open <: Action end
+
+Open something.
+"""
+struct Open <: Action end
+
+"""
+    struct Push <: Action end
+
+Push something some way.
+"""
+struct Push <: Action end
+
+"""
+    struct Put <: Action end
+
+Put something somewhere.
+"""
+struct Put <: Action end
+
+"""
+    struct Lay <: Action end
+
+Lay something onto something
+"""
+struct Lay <: Action end
+
+"""
+    struct Quit <: Action end
+
+Quit
+"""
+struct Quit <: Action end
+
+"""
+    struct Take <: Action end
+
+Take something
+"""
+struct Take <: Action end
+
+"""
+    struct TurnOn <: Action end
+
+Turn something on
+"""
+struct TurnOn <: Action end
+
+"""
+    struct TurnOff <: Action end
+
+Turn something off
+"""
+struct TurnOff <: Action end
+
+"""
+    struct Unlock <: Action end
+
+Unlock something
+"""
+struct Unlock <: Action end
+
+"""
+    struct Wear <: Action end
+
+Wear something.
+"""
+struct Wear <: Action end
 
 """
     @enum GrammaticalPerson first_person second_person third_person
@@ -174,12 +312,13 @@ plural::Bool
 grammatical_person::GrammaticalPerson
 indefinite_article::String
 
-They are governed by the following traits and methods: 
-[`get_description`](@ref), 
-[`is_providing_light`](@ref), 
-[`is_transparent`](@ref), 
-[`abstractly_possible`](@ref), and 
-[`is_vehicle`](@ref).
+They are characterized by the following traits and methods: 
+
+- [`ever_possible`](@ref)
+- [`get_description`](@ref), 
+- [`is_providing_light`](@ref), 
+- [`is_transparent`](@ref), 
+- [`is_vehicle`](@ref).
 
 Set `indefinite_article` to `""` to make a proper noun.
 """
@@ -192,12 +331,12 @@ Get the description of a thing.
 
 Unless you overload `get_description`, nouns are required to have a description field.
 """
-get_description(universe, thing::Noun) = thing.description
+get_description(_, thing::Noun) = thing.description
 
 """
     is_transparent(thing::Noun) = false
 
-Whether you concretely_possible see through `thing` into its contents.
+Whether you can see through `thing` into its contents.
 """
 is_transparent(::Noun) = false
 
@@ -216,90 +355,103 @@ Whether something provides its own light. Naturally lit locations and light sour
 is_providing_light(::Noun) = false
 
 """
-    abstractly_possible(verb::Verb, domain::Domain, noun::Noun)
+    ever_possible(action::Action, domain::Domain, noun::Noun)
 
-Whether is is abstractly possible to apply a verb to a `noun` from a particular `domain`.
+Whether is is abstractly possible to apply a action to a `noun` from a particular `domain`.
 
-For whether it is concretely possible for the player in at a certain moment, see [`concretely_possible`](@ref). 
+For whether it is concretely possible for the player in at a certain moment, see [`possible_now`](@ref). 
 Most possibilities default to `false`, with some exceptions:
 
 ```
-abstractly_possible(::Put, ::Inventory, _) = true
-abstractly_possible(::Drop, ::Inventory, _) = true
-abstractly_possible(::Lay, ::Inventory, _) = true
-abstractly_possible(verb::TurnOff, domain::Reachable, noun) = 
-    abstractly_possible(TurnOn(), domain, noun)
-abstractly_possible(verb::Close, domain::Reachable, noun) = 
-    abstractly_possible(Open(), domain, noun)
-abstractly_possible(verb::Lock, domain::Reachable, noun) = 
-    abstractly_possible(Unlock(), domain, noun)
+ever_possible(::Put, ::Inventory, _) = true
+ever_possible(::Drop, ::Inventory, _) = true
+ever_possible(::Lay, ::Inventory, _) = true
+ever_possible(action::TurnOff, domain::Reachable, noun) = 
+    ever_possible(TurnOn(), domain, noun)
+ever_possible(action::Close, domain::Reachable, noun) = 
+    ever_possible(Open(), domain, noun)
+ever_possible(action::Lock, domain::Reachable, noun) = 
+    ever_possible(Unlock(), domain, noun)
 ```
 
 Certain possibilities come with required fields:
 
-`abstractly_possible(::TurnOn, ::Reachable, noun)` requires that `noun` has a mutable `on::Bool` field.
-`abstractly_possible(::Open, ::Reachable, noun` requires that `noun` has a mutable `closed::Bool` field.
-`abstractly_possible(::Unlock, ::Reachable, noun)` requires that `noun` has a  `key::Noun` field and a mutable `locked::Bool` field.
-`abstractly_possible(::Take, ::Reachable, noun)` requires that `noun` has a `handled::Bool` field.
+`ever_possible(::TurnOn, ::Reachable, noun)` requires that `noun` has a mutable `on::Bool` field.
+`ever_possible(::Open, ::Reachable, noun` requires that `noun` has a mutable `closed::Bool` field.
+`ever_possible(::Unlock, ::Reachable, noun)` requires that `noun` has a `key::Noun` field and a mutable `locked::Bool` field.
+`ever_possible(::Take, ::Reachable, noun)` requires that `noun` has a mutable `handled::Bool` field.
 """
-abstractly_possible(_, __, ___) = false
+ever_possible(_, __, ___) = false
 
-# you concretely_possible put or drop anything in your inventory
-abstractly_possible(::Put, ::Inventory, _) = true
-abstractly_possible(::Drop, ::Inventory, _) = true
-abstractly_possible(::Lay, ::Inventory, _) = true
-abstractly_possible(verb::TurnOff, domain::Reachable, noun) = abstractly_possible(TurnOn(), domain, noun)
-abstractly_possible(verb::Close, domain::Reachable, noun) = abstractly_possible(Open(), domain, noun)
-abstractly_possible(verb::Lock, domain::Reachable, noun) = abstractly_possible(Unlock(), domain, noun)
+# you possible_now put or drop anything in your inventory
+ever_possible(::Put, ::Inventory, _) = true
+ever_possible(::Drop, ::Inventory, _) = true
+ever_possible(::Lay, ::Inventory, _) = true
+ever_possible(::TurnOff, domain::Reachable, noun) = ever_possible(TurnOn(), domain, noun)
+ever_possible(::Close, domain::Reachable, noun) = ever_possible(Open(), domain, noun)
+ever_possible(::Lock, domain::Reachable, noun) = ever_possible(Unlock(), domain, noun)
 
-struct VerbWord
+struct Verb
     base::String
     third_person_singular_present::String
 end
 
-function VerbWord(act; third_person_singular_present = string(act, "s"))
-    VerbWord(act, third_person_singular_present)
+"""
+    function Verb(base; third_person_singular_present = string(base, "s"))
+
+Create an English verb. 
+
+Use [`subject_to_verb`](@ref) to get the form of a verb to agree with a subject.
+"""
+function Verb(base; third_person_singular_present = string(base, "s"))
+    Verb(base, third_person_singular_present)
 end
 
-const VERB_FOR = Dict{Relationship, VerbWord}(
-    carrying => VerbWord("carry"; third_person_singular_present = "carries"),
-    containing => VerbWord("contain"),
-    incorporating => VerbWord("incorporate"),
-    supporting => VerbWord("support"),
-    wearing => VerbWord("wear")
+const VERB_FOR = Dict{Relationship, Verb}(
+    carrying => Verb("carry"; third_person_singular_present = "carries"),
+    containing => Verb("contain"),
+    incorporating => Verb("incorporate"),
+    supporting => Verb("support"),
+    wearing => Verb("wear")
 )
 
-const DO = VerbWord("do"; third_person_singular_present = "does")
-const BE = VerbWord("are"; third_person_singular_present = "is")
+const DO = Verb("do"; third_person_singular_present = "does")
+const BE = Verb("are"; third_person_singular_present = "is")
 
-function match_verb_to_noun(subject, verb)
+function subject_to_verb(subject, action)
     if subject.grammatical_person === third_person && !(subject.plural)
-        verb.third_person_singular_present
+        action.third_person_singular_present
     else
-        verb.base
+        action.base
     end
 end
 
-# all commands have the subject as "you", so is_argument usually means use the non-subject form
-function pronoun_for(thing; is_argument = false)
+"""
+    pronoun_for(thing; is_object = false)
+
+Get the subject pronoun for a thing.
+
+If `is_object`, then returns the non-subject form (assuming the subject is the second person, as with most sentences).
+"""
+function pronoun_for(thing; is_object = false)
     grammatical_person = thing.grammatical_person
     plural = thing.plural
     if grammatical_person === first_person
         if plural
-            if is_argument
+            if is_object
                 "us"
             else
                 "we"
             end
         else
-            if is_argument
+            if is_object
                 "me"
             else
                 "I"
             end
         end
     elseif grammatical_person === second_person
-        if is_argument
+        if is_object
             # since the subject is the second person, use the reflexive pronoun instead
             "yourself"
         else
@@ -307,7 +459,7 @@ function pronoun_for(thing; is_argument = false)
         end
     elseif grammatical_person === third_person
         if plural
-            if is_argument
+            if is_object
                 "them"
             else
                 "they"
@@ -320,7 +472,11 @@ function pronoun_for(thing; is_argument = false)
     end
 end
 
-"A location (room or door)"
+"""
+    abstract type Location <: Noun end
+
+A location (room or door)
+"""
 abstract type Location <: Noun end
 
 """
@@ -339,6 +495,7 @@ struct Universe
     introduction::String
     relationships_graph::typeof(MetaGraph(DiGraph(), Label = Noun, EdgeMeta = Relationship))
     directions_graph::typeof(MetaGraph(DiGraph(), Label = Location, EdgeMeta = Direction))
+    choices_log::Vector{Int}
 end
 
 """
@@ -347,25 +504,27 @@ end
         interface = terminal,
         introduction = "",
         relationships_graph = MetaGraph(DiGraph(), Label = Noun, EdgeMeta = Relationship),
-        directions_graph = MetaGraph(DiGraph(), Label = Location, EdgeMeta = Direction)
+        directions_graph = MetaGraph(DiGraph(), Label = Location, EdgeMeta = Direction),
+        choices_log::Vector{Int}
     )
 
-The universe contains a player, a text interface, and an introduction. 
-The universe is organized as interlinking web of locations connected by [`Direction`](@ref)s. For any origin and
-destination, there should be no more than one connection of a particular direction.
-Each location is the root of a [`Relationship`](@ref) tree. Every noun should half one and only one parent, 
-except for locations, which are at the root of trees.
+The universe contains a player, a text interface, an introduction, and the relationships between nouns and locations.
 
-You concretely_possible add a new thing to the universe, or change its location, by specifying relation to another thing:
+The universe is organized as interlinking web of locations connected by [`Direction`](@ref)s. For any origin and
+destination, there should be no more than one connection to a particular direction.
+Each location is the root of a [`Relationship`](@ref) tree. Every noun should have one and only one parent, 
+(except for locations), which are at the root of trees and have no parent.
+
+You can add a new thing to the universe, or change its location, by specifying its  relation to another thing:
 
     universe[parent_thing, thing, silent = false] = relationship
 
 Set `silent = true` to suppress the "Ok" message.
 
-You concretely_possible add a connection between locations too, optionally interspersed by a door:
+You possible_now add a connection between locations too, optionally interspersed by a door:
 
-    universe[origin, destination, one_way = false] = direction
-    universe[origin, destination, one_way = false] = door, direction
+    universe[parent_thing, destination, one_way = false] = direction
+    universe[parent_thing, destination, one_way = false] = door, direction
 
 By default, this will create a way back in the [`opposite`](@ref) direction. To suppress this, set `one_way = true`
 """
@@ -374,9 +533,10 @@ function Universe(
     interface = terminal,
     introduction = "",
     relationships_graph = MetaGraph(DiGraph(), Label = Noun, EdgeMeta = Relationship),
-    directions_graph = MetaGraph(DiGraph(), Label = Location, EdgeMeta = Direction)
+    directions_graph = MetaGraph(DiGraph(), Label = Location, EdgeMeta = Direction),
+    choices_log = Int[]
 )
-    Universe(player, interface, introduction, relationships_graph, directions_graph)
+    Universe(player, interface, introduction, relationships_graph, directions_graph, choices_log)
 end
 
 function get_parent(universe, thing)
@@ -413,59 +573,59 @@ function out_neighbors_relationships(meta_graph, parent_thing)
     )
 end
 
-function get_origin_relationship(universe, ::Reachable)
-    # you concretely_possible't reach outside of the thing that you are in/on/etc.
+function blocking_thing_and_relationship(universe, ::Reachable)
+    # you can't reach outside of the thing that you are in/on/etc.
     get_parent_relationship(universe, universe.player)
 end
 
-function get_origin_relationship(universe, domain::Visible)
+function blocking_thing_and_relationship(universe, domain::Visible)
     relationships_graph = universe.relationships_graph
     thing = universe.player
-    parent_thing, relationship = get_parent_relationship(universe, thing)
+    blocking_thing, blocked_relationship = get_parent_relationship(universe, thing)
     # locations don't have a parent...
-    while !(parent_thing isa Location) && !(blocking(domain, parent_thing, relationship, thing))
-        thing = parent_thing
-        parent_thing, relationship =
+    while !(blocking_thing isa Location) && !(blocking(domain, blocking_thing, blocked_relationship, thing))
+        thing = blocking_thing
+        blocking_thing, blocked_relationship =
             get_parent_relationship(universe, thing)
     end
-    parent_thing, relationship
+    blocking_thing, blocked_relationship
 end
 
-function player_proxy(universe)
+function mover(universe)
     player = universe.player
     relationships_graph = universe.relationships_graph
-    parent_thing, relationship = get_parent_relationship(universe, player)
-    if is_vehicle(parent_thing)
-        parent_thing
+    blocking_thing, blocked_relationship = get_parent_relationship(universe, player)
+    if is_vehicle(blocking_thing)
+        blocking_thing
     else
         player
     end
 end
 
-function get_origin_relationship(universe, domain::ExitDirections)
+function blocking_thing_and_relationship(universe, ::ExitDirections)
     relationships_graph = universe.relationships_graph
-    get_parent_relationship(universe, player_proxy(universe))
+    get_parent_relationship(universe, mover(universe))
 end
 
-function get_destination(universe, origin, direction)
+function get_first_destination(universe, blocking_thing, direction)
     only(Iterators.filter(
         function ((location, possible_direction),)
             possible_direction === direction
         end,
-        out_neighbors_relationships(universe.directions_graph, origin),
+        out_neighbors_relationships(universe.directions_graph, blocking_thing),
     ))[1]
 end
 
-function get_destination(universe, direction)
-    origin, _ = get_origin_relationship(universe, ExitDirections())
-    get_destination(universe, origin, direction)
+function get_first_destination(universe, direction)
+    blocking_thing, _ = blocking_thing_and_relationship(universe, ExitDirections())
+    get_first_destination(universe, blocking_thing, direction)
 end
 
 function get_final_destination(universe, direction)
-    origin, _ = get_origin_relationship(universe, ExitDirections())
-    maybe_door = get_destination(universe, origin, direction)
+    blocking_thing, _ = blocking_thing_and_relationship(universe, ExitDirections())
+    maybe_door = get_first_destination(universe, blocking_thing, direction)
     if maybe_door isa AbstractDoor
-        get_destination(universe, maybe_door, direction)
+        get_first_destination(universe, maybe_door, direction)
     else
         maybe_door
     end
@@ -489,33 +649,33 @@ function setindex!(universe::Universe, relationship::Relationship, parent_thing:
     nothing
 end
 
-function one_way!(universe::Universe, origin::Location, direction::Direction, destination::Location)
+function one_way!(universe::Universe, blocking_thing::Location, direction::Direction, destination::Location)
     relationships_graph = universe.relationships_graph
-    relationships_graph[origin] = nothing
+    relationships_graph[blocking_thing] = nothing
     relationships_graph[destination] = nothing
     directions_graph = universe.directions_graph
-    directions_graph[origin] = nothing
+    directions_graph[blocking_thing] = nothing
     directions_graph[destination] = nothing
-    directions_graph[origin, destination] = direction
+    directions_graph[blocking_thing, destination] = direction
     nothing
 end
 
-function one_way!(universe::Universe, origin::Location, door::AbstractDoor, direction::Direction, destination::Location)
-    one_way!(universe, origin, direction, door)
+function one_way!(universe::Universe, blocking_thing::Location, door::AbstractDoor, direction::Direction, destination::Location)
+    one_way!(universe, blocking_thing, direction, door)
     one_way!(universe, door, direction, destination)
     nothing
 end
 
-function setindex!(universe::Universe, direction::Direction, origin::Location, destination::Location; one_way = false)
-    one_way!(universe, origin, direction, destination)
+function setindex!(universe::Universe, direction::Direction, blocking_thing::Location, destination::Location; one_way = false)
+    one_way!(universe, blocking_thing, direction, destination)
     if !one_way
-        one_way!(universe, destination, opposite(direction), origin)
+        one_way!(universe, destination, opposite(direction), blocking_thing)
     end
 end
-function setindex!(universe::Universe, (door, direction)::Tuple{AbstractDoor, Direction}, origin::Location, destination::Location; one_way = false)
-    one_way!(universe, origin, door, direction, destination)
+function setindex!(universe::Universe, (door, direction)::Tuple{AbstractDoor, Direction}, blocking_thing::Location, destination::Location; one_way = false)
+    one_way!(universe, blocking_thing, door, direction, destination)
     if !one_way
-        one_way!(universe, destination, door, opposite(direction), origin)
+        one_way!(universe, destination, door, opposite(direction), blocking_thing)
     end
 end
 
@@ -526,7 +686,7 @@ end
 function show(io::IO, thing::Noun)
     if thing.grammatical_person === third_person
         indefinite_article = thing.indefinite_article
-        if !isempty(indefinite_article)
+        if isempty(indefinite_article)
             print(io, thing.name)
         else
             if get(io, :known, true)
@@ -539,7 +699,7 @@ function show(io::IO, thing::Noun)
             end
         end
     else
-        print(io, pronoun_for(thing; is_argument = get(io, :is_argument, false)))
+        print(io, pronoun_for(thing; is_object = get(io, :is_object, false)))
     end
 end
 
@@ -553,11 +713,11 @@ end
 
 function (::Attach)(universe, thing, parent_thing)
     universe[parent_thing, thing] = incorporating
-    return false, false
+    return false
 end
 
 """
-    function print_sentence(io, verb::Verb, argument_texts...)
+    function print_sentence(io, action::Action, argument_texts...)
 
 Print a sentence to `io`. This allows for adding connectives like `with`.
 """
@@ -570,7 +730,7 @@ end
 
 function (::Dress)(universe, parent_thing, thing)
     universe[parent_thing, thing] = wearing
-    return false, false
+    return false
 end
 
 function print_sentence(io, ::Dress, parent_thing_text, thing_text)
@@ -582,7 +742,7 @@ end
 
 function (::Give)(universe, thing, parent_thing)
     universe[parent_thing, thing] = carrying
-    return false, false
+    return false
 end
 
 function print_sentence(io, ::Give, thing_text, parent_thing_text)
@@ -594,7 +754,7 @@ end
 
 function (::Lay)(universe, thing, parent_thing)
     universe[parent_thing, thing] = supporting
-    return false, false
+    return false
 end
 
 function print_sentence(io, ::Lay, thing_text, parent_thing_text)
@@ -606,7 +766,7 @@ end
 
 function (::Put)(universe, thing, parent_thing; silent = false)
     universe[parent_thing, thing, silent = silent] = containing
-    return false, false
+    return false
 end
 
 function print_sentence(io, ::Put, thing_text, parent_thing_text)
@@ -618,8 +778,8 @@ end
 
 # add relations to player
 function (::GoInto)(universe, place)
-    Put()(universe, player_proxy(universe), place)
-    return true, false
+    Put()(universe, mover(universe), place)
+    return false
 end
 
 function print_sentence(io, ::GoInto, place_text)
@@ -628,8 +788,8 @@ function print_sentence(io, ::GoInto, place_text)
 end
 
 function (::GoOnto)(universe, place)
-    Lay()(universe, player_proxy(universe), place)
-    return true, false
+    Lay()(universe, mover(universe), place)
+    return false
 end
 
 function print_sentence(io, ::GoOnto, place_text)
@@ -640,6 +800,7 @@ end
 function (::Take)(universe, thing)
     Give()(universe, thing, universe.player)
     thing.handled = true
+    false
 end
 
 function print_sentence(io, ::Take, thing_text)
@@ -660,7 +821,7 @@ end
 function (::Close)(universe, thing)
     thing.closed = true
     success(universe)
-    return false, false
+    return false
 end
 
 function print_sentence(io, ::Close, thing_text)
@@ -670,7 +831,7 @@ end
 
 function (::Drop)(universe, thing)
     universe[get_parent(universe, universe.player), thing] = containing
-    return false, false
+    return false
 end
 
 function print_sentence(io, ::Drop, thing_text)
@@ -681,7 +842,7 @@ end
 function (::Eat)(universe, thing)
     delete!(universe.relationships_graph, get_parent(universe, thing), thing)
     success(universe)
-    return false, false
+    return false
 end
 
 function print_sentence(io, ::Eat, thing_text)
@@ -689,7 +850,7 @@ function print_sentence(io, ::Eat, thing_text)
     print(io, thing_text)
 end
 
-function (verb::Go)(universe, direction)
+function (::Go)(universe, direction)
     GoInto()(universe, get_final_destination(universe, direction))
 end
 
@@ -708,12 +869,12 @@ function (::Lock)(universe, door, key)
             string_in_color(:red, 
                 uppercasefirst(pronoun_for(key)),
                 ' ',
-                match_verb_to_noun(key, DO),
+                subject_to_verb(key, DO),
                 "n't fit!"
             )
         )
     end
-    return false, false
+    return false
 end
 
 function print_sentence(io, ::Lock, door_text, key_text)
@@ -730,7 +891,7 @@ function (::Leave)(universe)
     grandparent_thing, parent_relationship =
         get_parent_relationship(universe, parent_thing)
     universe[grandparent_thing, player] = parent_relationship
-    return true, false
+    return false
 end
 
 function print_sentence(io, ::Leave)
@@ -750,7 +911,7 @@ function (::ListInventory)(universe)
     print(interface, ':')
     println(interface)
     print_relations(universe, 0, Visible(), parent_thing, relations)
-    return false, false
+    return false
 end
 
 function print_sentence(io, ::ListInventory)
@@ -759,7 +920,7 @@ end
 
 function (::LookAt)(universe, thing)
     println_wrapped(universe.interface, get_description(universe, thing); replace_whitespace = false)
-    return false, false
+    return false
 end
 
 function print_sentence(io, ::LookAt, thing_text)
@@ -767,7 +928,7 @@ function print_sentence(io, ::LookAt, thing_text)
     print(io, thing_text)
 end
 
-function (verb::Open)(universe, parent_thing)
+function (action::Open)(universe, parent_thing)
     parent_thing.closed = false
     success(universe)
     if !(parent_thing isa Location)
@@ -784,7 +945,7 @@ function (verb::Open)(universe, parent_thing)
         print(interface, uppercasefirst(sprint(show, parent_thing)))
         if isempty(relations)
             print(interface, ' ')
-            print(interface, match_verb_to_noun(parent_thing, BE))
+            print(interface, subject_to_verb(parent_thing, BE))
             print(interface, " empty")
         else
             print(interface, ':')
@@ -792,7 +953,7 @@ function (verb::Open)(universe, parent_thing)
             print_relations(universe, 0, Visible(), parent_thing, relations)
         end
     end
-    return false, false
+    return false
 end
 
 function print_sentence(io, ::Open, thing_text)
@@ -800,7 +961,7 @@ function print_sentence(io, ::Open, thing_text)
     print(io, thing_text)
 end
 
-function (::Push)(universe, thing, destination)
+function (::Push)(universe, thing, direction)
     final_destination = get_final_destination(universe, direction)
     Put()(universe, thing, final_destination; silent = true)
     Go()(universe, final_destination)
@@ -812,8 +973,8 @@ function print_sentence(io, ::Push, thing_text, direction_text)
     print(io, direction_text)
 end
 
-function (::Quit)(universe)
-    return false, true
+function (::Quit)(_)
+    return true
 end
 
 function print_sentence(io, ::Quit)
@@ -823,7 +984,7 @@ end
 function (::TurnOff)(universe, thing)
     thing.on = false
     success(universe)
-    return false, false
+    return false
 end
 
 function print_sentence(io, ::TurnOff, thing_text)
@@ -834,7 +995,7 @@ end
 function (::TurnOn)(universe, thing)
     thing.on = true
     success(universe)
-    return false, false
+    return false
 end
 
 function print_sentence(io, ::TurnOn, thing_text)
@@ -855,7 +1016,7 @@ function (::Unlock)(universe, door, key)
             )
         )
     end
-    return false, false
+    return false
 end
 
 function print_sentence(io, ::Unlock, door_text, key_text)
@@ -874,7 +1035,7 @@ end
 # things will have already been mentioned in the room descrption
 function Answer(thing)
     buffer = IOBuffer()
-    show(IOContext(buffer, :is_argument => true), thing)
+    show(IOContext(buffer, :is_object => true), thing)
     Answer(String(take!(buffer)), thing)
 end
 
@@ -883,13 +1044,13 @@ mutable struct Question
     answers::Vector{Answer}
 end
 
-struct Sentence{Verb}
-    verb::Verb
+struct Sentence{Action}
+    action::Action
     arguments::Vector{Answer}
 end
 
-function Sentence(verb::Verb; arguments = Answer[])
-    Sentence(verb, arguments)
+function Sentence(action::Action; arguments = Answer[])
+    Sentence(action, arguments)
 end
 
 function print_relationship_to(io, thing_text, relationship, parent_thing)
@@ -899,7 +1060,7 @@ function print_relationship_to(io, thing_text, relationship, parent_thing)
         print(io, "that ")
         show(io, parent_thing)
         print(io, ' ')
-        print(io, match_verb_to_noun(parent_thing, BE))
+        print(io, subject_to_verb(parent_thing, BE))
         print(io, " carrying")
     elseif relationship === containing
         print(io, thing_text)
@@ -922,7 +1083,7 @@ function print_relationship_to(io, thing_text, relationship, parent_thing)
         print(io, "that ")
         show(io, parent_thing)
         print(io, ' ')
-        print(io, match_verb_to_noun(parent_thing, BE))
+        print(io, subject_to_verb(parent_thing, BE))
         print(io, " wearing")
     else
         print(io, thing_text)
@@ -935,19 +1096,19 @@ function print_relationship_to(io, thing_text, relationship, parent_thing)
 end
 
 function print_relationship_as_verb(io, parent_thing, relationship::Relationship)
-    print(io, match_verb_to_noun(parent_thing, VERB_FOR[relationship]))
+    print(io, subject_to_verb(parent_thing, VERB_FOR[relationship]))
 end
 
-function print_relationship_as_verb(io, parent_thing, direction::Direction)
+function print_relationship_as_verb(io, _, direction::Direction)
     show(io, direction)
 end
 
 function is_closable_and_closed(thing)
-    abstractly_possible(Close(), Reachable(), thing) && thing.closed
+    ever_possible(Close(), Reachable(), thing) && thing.closed
 end
 
 function is_lockable_and_locked(thing)
-    abstractly_possible(Lock(), Reachable(), thing) && thing.locked
+    ever_possible(Lock(), Reachable(), thing) && thing.locked
 end
 
 """
@@ -958,7 +1119,7 @@ end
 By default, [`Reachable`](@ref) `parent_thing`s block `thing`s they are `containing` if they are closed.
 By default, [`Visible`](@ref) `parent_thing`s block `thing`s they are `containing` if they are closed and not [`is_transparent`](@ref).
 """
-function blocking(domain::Reachable, parent_thing, relationship, thing)
+function blocking(::Reachable, parent_thing, relationship, _)
     relationship === containing && is_closable_and_closed(parent_thing)
 end
 
@@ -967,74 +1128,74 @@ function blocking(::Visible, parent_thing, relationship, thing)
 end
 
 """
-    concretely_possible(universe, sentence, domain, thing)
+    possible_now(universe, sentence, domain, thing)
 
-Whether it is currently abstractly_possible to apply `sentence.verb` to a `thing` in a `domain`. 
+Whether it is currently ever_possible to apply `sentence.action` to a `thing` in a `domain`. 
 
-See [`abstractly_possible`](@ref) for a more abstract possibility. `sentence` will contain already chosen
+See [`ever_possible`](@ref) for a more abstract possibility. `sentence` will contain already chosen
 arguments should you wish to access them.
 """
-function concretely_possible(_, sentence, domain, thing)
-    abstractly_possible(sentence.verb, domain, thing)
+function possible_now(_, sentence, domain, thing)
+    ever_possible(sentence.action, domain, thing)
 end
 
-function concretely_possible(_, sentence::Sentence{Close}, domain::Reachable, thing)
-    abstractly_possible(sentence.verb, domain, thing) && !(thing.closed)
+function possible_now(_, sentence::Sentence{Close}, domain::Reachable, thing)
+    ever_possible(sentence.action, domain, thing) && !(thing.closed)
 end
 
-function concretely_possible(universe, ::Sentence{<: Union{Go,Push}}, ::ExitDirections, direction)
-    !(is_closable_and_closed(get_destination(universe, direction)))
+function possible_now(universe, ::Sentence{<: Union{Go,Push}}, ::ExitDirections, direction)
+    !(is_closable_and_closed(get_first_destination(universe, direction)))
 end
 
-function concretely_possible(universe, sentence::Sentence{GoInto}, domain::MoveSiblings, thing)
-    abstractly_possible(sentence.verb, domain, thing) && !(is_closable_and_closed(thing))
+function possible_now(_, sentence::Sentence{GoInto}, domain::MoveSiblings, thing)
+    ever_possible(sentence.action, domain, thing) && !(is_closable_and_closed(thing))
 end
 
-function concretely_possible(_, sentence::Sentence{Lock}, domain::Reachable, thing)
-    is_closable_and_closed(thing) && abstractly_possible(sentence.verb, domain, thing) && !(thing.locked)
+function possible_now(_, sentence::Sentence{Lock}, domain::Reachable, thing)
+    is_closable_and_closed(thing) && ever_possible(sentence.action, domain, thing) && !(thing.locked)
 end
 
-function concretely_possible(universe, ::Sentence{LookAt}, ::Visible, thing)
+function possible_now(universe, ::Sentence{LookAt}, ::Visible, thing)
     get_description(universe, thing) != ""
 end
 
-function concretely_possible(_, ::Sentence{Open}, domain::Reachable, thing)
+function possible_now(_, ::Sentence{Open}, ::Reachable, thing)
     is_closable_and_closed(thing) && !(is_lockable_and_locked(thing))
 end
 
-function concretely_possible(_, sentence::Sentence{Put}, domain::Reachable, thing)
-    abstractly_possible(sentence.verb, domain, thing) && 
+function possible_now(_, sentence::Sentence{Put}, domain::Reachable, thing)
+    ever_possible(sentence.action, domain, thing) && 
     !(is_closable_and_closed(thing)) &&
-    # concretely_possible't put something into itself
+    # possible_now't put something into itself
     thing !== sentence.arguments[1].object
 end
 
-function concretely_possible(universe, sentence::Sentence{Take}, domain::Reachable, thing)
+function possible_now(universe, sentence::Sentence{Take}, domain::Reachable, thing)
     if thing isa Location
         false
     else
         parent_thing, relationship =
             get_parent_relationship(universe, thing)
-        abstractly_possible(sentence.verb, domain, thing) &&
+        ever_possible(sentence.action, domain, thing) &&
             !(parent_thing === universe.player && relationship === carrying)
     end
 end
 
-function concretely_possible(_, sentence::Sentence{TurnOff}, domain::Reachable, thing)
-    abstractly_possible(sentence.verb, domain, thing) && thing.on
+function possible_now(_, sentence::Sentence{TurnOff}, domain::Reachable, thing)
+    ever_possible(sentence.action, domain, thing) && thing.on
 end
 
-function concretely_possible(_, sentence::Sentence{TurnOn}, domain::Reachable, thing)
-    abstractly_possible(sentence.verb, domain, thing) && !(thing.on)
+function possible_now(_, sentence::Sentence{TurnOn}, domain::Reachable, thing)
+    ever_possible(sentence.action, domain, thing) && !(thing.on)
 end
 
-function concretely_possible(_, sentence::Sentence{Unlock}, domain::Reachable, thing)
-    is_closable_and_closed(thing) && abstractly_possible(sentence.verb, domain, thing) && thing.locked
+function possible_now(_, sentence::Sentence{Unlock}, domain::Reachable, thing)
+    is_closable_and_closed(thing) && ever_possible(sentence.action, domain, thing) && thing.locked
 end
 
-function concretely_possible(universe, sentence::Sentence{Wear}, domain::Inventory, thing)
+function possible_now(universe, sentence::Sentence{Wear}, domain::Inventory, thing)
     _, relationship = get_parent_relationship(universe, thing)
-    abstractly_possible(sentence.verb, domain, thing) && !(relationship == wearing)
+    ever_possible(sentence.action, domain, thing) && !(relationship == wearing)
 end
 
 function append_parent_relationship_to(noun::Noun, _, __)
@@ -1058,16 +1219,16 @@ function append_parent_relationship_to(question::Question, relationship, parent_
     ))
 end
 
-function some_word(verb, domain)
+function indefinite_for(__)
     "something"
 end
-function what_word(verb, domain)
+function interrogative_for(__)
     "what"
 end
-function some_word(verb, ::ExitDirections)
+function indefinite_for(::ExitDirections)
     "some way"
 end
-function what_word(verb, ::ExitDirections)
+function interrogative_for(::ExitDirections)
     "which way"
 end
 
@@ -1078,8 +1239,8 @@ function add_thing_and_relations!(
     domain,
     parent_thing
 )
-    verb = sentence.verb
-    if concretely_possible(universe, sentence, domain, parent_thing)
+    action = sentence.action
+    if possible_now(universe, sentence, domain, parent_thing)
         push!(answers, Answer(parent_thing))
     end
     sub_relations = Dict{Relationship,Vector{Answer}}()
@@ -1102,7 +1263,7 @@ function add_thing_and_relations!(
                 if length(sub_answers) == 1
                     only(sub_answers)
                 else
-                    Answer(some_word(verb, domain), Question(what_word(verb, domain), sub_answers))
+                    Answer(indefinite_for(domain), Question(interrogative_for(domain), sub_answers))
                 end, 
                 sub_relationship, 
                 parent_thing
@@ -1111,10 +1272,10 @@ function add_thing_and_relations!(
     end
 end
 
-function add_from_domain!(answers, universe, sentence, domain)
-    parent_thing, sibling_relationship = get_origin_relationship(universe, domain)
-    for (thing, relationship) in out_neighbors_relationships(universe.relationships_graph, parent_thing)
-        if relationship === sibling_relationship
+function add_siblings_and_doors!(answers, universe, sentence, domain)
+    blocking_thing, blocked_relationship = blocking_thing_and_relationship(universe, domain)
+    for (thing, relationship) in out_neighbors_relationships(universe.relationships_graph, blocking_thing)
+        if relationship === blocked_relationship
             add_thing_and_relations!(
                 answers,
                 universe,
@@ -1125,8 +1286,8 @@ function add_from_domain!(answers, universe, sentence, domain)
         end
     end
     directions_graph = universe.directions_graph
-    if haskey(directions_graph, parent_thing)
-        for (location, direction) in out_neighbors_relationships(directions_graph, parent_thing)
+    if haskey(directions_graph, blocking_thing)
+        for (location, direction) in out_neighbors_relationships(directions_graph, blocking_thing)
             if location isa AbstractDoor
                 add_thing_and_relations!(
                     answers,
@@ -1140,11 +1301,10 @@ function add_from_domain!(answers, universe, sentence, domain)
     end
 end
 
-
 function find_in_domain(universe, sentence, domain::Visible; lit = true)
     answers = Answer[]
     if lit
-        add_from_domain!(answers, universe, sentence, domain)
+        add_siblings_and_doors!(answers, universe, sentence, domain)
     end
     answers
 end
@@ -1152,7 +1312,7 @@ end
 function find_in_domain(universe, sentence, domain::Reachable; lit = true)
     answers = Answer[]
     if lit
-        add_from_domain!(answers, universe, sentence, domain)
+        add_siblings_and_doors!(answers, universe, sentence, domain)
     else
         for (thing, relationship) in out_neighbors_relationships(universe.relationships_graph, universe.player)
             add_thing_and_relations!(
@@ -1168,12 +1328,12 @@ function find_in_domain(universe, sentence, domain::Reachable; lit = true)
 end
 
 function find_in_domain(universe, sentence, domain::ExitDirections; lit = true)
-    origin, _ = get_origin_relationship(universe, domain)
+    blocking_thing, _ = blocking_thing_and_relationship(universe, domain)
     answers = Answer[]
     directions_graph = universe.directions_graph
-    if haskey(directions_graph, origin)
-        for (location, direction) in out_neighbors_relationships(universe.directions_graph, origin)
-            if concretely_possible(universe, sentence, domain, direction)
+    if haskey(directions_graph, blocking_thing)
+        for (location, direction) in out_neighbors_relationships(universe.directions_graph, blocking_thing)
+            if possible_now(universe, sentence, domain, direction)
                 push!(answers, Answer(direction))
             end
         end
@@ -1183,10 +1343,10 @@ end
 
 function find_in_domain(universe, sentence, domain::MoveSiblings; lit = true)
     answers = Answer[]
-    origin, sibling_relationship = get_origin_relationship(universe, ExitDirections())
+    blocking_thing, blocked_relationship = blocking_thing_and_relationship(universe, ExitDirections())
     if lit
-        for (thing, relationship) in out_neighbors_relationships(universe.relationships_graph, origin)
-            if relationship === sibling_relationship && concretely_possible(universe, sentence, domain, thing)
+        for (thing, relationship) in out_neighbors_relationships(universe.relationships_graph, blocking_thing)
+            if relationship === blocked_relationship && possible_now(universe, sentence, domain, thing)
                 push!(answers, Answer(thing))
             end
         end
@@ -1197,7 +1357,7 @@ end
 function find_in_domain(universe, sentence, domain::Inventory; lit = true)
     answers = Answer[]
     for (thing, relationship) in out_neighbors_relationships(universe.relationships_graph, universe.player)
-        if relationship === carrying && concretely_possible(universe, sentence, domain, thing)
+        if relationship === carrying && possible_now(universe, sentence, domain, thing)
             push!(answers, Answer(thing))
         end
     end
@@ -1239,107 +1399,111 @@ end
 
 function print_environment(universe; indent = 0, domain = Visible())
     interface = universe.interface
-    parent_thing, sibling_relationship = get_origin_relationship(universe, domain)
-    description = get_description(universe, parent_thing)
+    blocking_thing, blocked_relationship = blocking_thing_and_relationship(universe, domain)
+    description = get_description(universe, blocking_thing)
     if !isempty(description)
         println_wrapped(interface, description)
         println(interface)
     end
     relations = Dict{Union{Relationship,Direction},Vector{Answer}}()
-    for (thing, relationship) in out_neighbors_relationships(universe.relationships_graph, parent_thing)
-        if relationship === sibling_relationship
+    for (thing, relationship) in out_neighbors_relationships(universe.relationships_graph, blocking_thing)
+        if relationship === blocked_relationship
             # we automatically mention everything that is visible
             push!(get!(relations, relationship, Answer[]), Answer(thing))
         end
     end
     directions_graph = universe.directions_graph
-    if haskey(directions_graph, parent_thing)
-        for (location, direction) in out_neighbors_relationships(directions_graph, parent_thing)
+    if haskey(directions_graph, blocking_thing)
+        for (location, direction) in out_neighbors_relationships(directions_graph, blocking_thing)
             if location isa AbstractDoor
                 push!(get!(relations, direction, Answer[]), Answer(location))
             end
         end
     end
     print(interface, ' ' ^ indent)
-    show(IOContext(interface, :known => false), parent_thing)
+    show(IOContext(interface, :known => false), blocking_thing)
     if !isempty(relations)
         print(interface, ':')
     end
     println(interface)
-    print_relations(universe, indent, domain, parent_thing, relations)
+    print_relations(universe, indent, domain, blocking_thing, relations)
 end
 
 """
-    function argument_domains(verb::Verb)
+    function argument_domains(action::Action)
 
-List the [`Domain`](@ref)s to take the arguments to `verb` from as a tuple.
+A tuple of the [`Domain`](@ref)s for each argument of an `action`.
 """
-function argument_domains(verb::Union{Attach,Give})
+function argument_domains(::Union{Attach,Give})
     Inventory(), Reachable()
 end
-function argument_domains(verb::Union{Close,Eat,Open,Take,TurnOn,TurnOff})
+function argument_domains(::Union{Close,Eat,Open,Take,TurnOn,TurnOff})
     (Reachable(),)
 end
-function argument_domains(verb::Union{Drop, Wear})
+function argument_domains(::Union{Drop, Wear})
     (Inventory(),)
 end
-function argument_domains(verb::Go)
+function argument_domains(::Go)
     (ExitDirections(),)
 end
-function argument_domains(verb::Union{GoInto,GoOnto})
+function argument_domains(::Union{GoInto,GoOnto})
     (MoveSiblings(),)
 end
-function argument_domains(verb::Union{ListInventory, Quit})
+function argument_domains(::Union{ListInventory, Quit})
     ()
 end
-function argument_domains(verb::Lay)
+function argument_domains(::Lay)
     Inventory(), Reachable()
 end
-function argument_domains(verb::Leave)
+function argument_domains(::Leave)
     ()
 end
-function argument_domains(verb::Union{Dress, Lock,Unlock})
+function argument_domains(::Union{Dress, Lock,Unlock})
     Reachable(), Inventory()
 end
-function argument_domains(verb::LookAt)
+function argument_domains(::LookAt)
     (Visible(),)
 end
-function argument_domains(verb::Push)
+function argument_domains(::Push)
     MoveSiblings(), ExitDirections()
 end
-function argument_domains(verb::Put)
+function argument_domains(::Put)
     Inventory(), Reachable()
 end
 
 """
-    concretely_possible(universe, verb)
+    possible_now(universe, action)
 
-Whether it is abstractly_possible to conduct a verb. Defaults to `true`.
+Whether it is possible to conduct an action. 
+Defaults to `true`; you can set to `false` for some actions without arguments.
 """
-function concretely_possible(_, __)
+function possible_now(_, __)
     true
 end
-function concretely_possible(universe, ::Leave)
+function possible_now(universe, ::Leave)
     !(get_parent(universe, universe.player) isa Location)
 end
-function concretely_possible(universe, verb::ListInventory)
+function possible_now(universe, ::ListInventory)
     !isempty(out_neighbors_relationships(universe.relationships_graph, universe.player))
 end
 
-function choose(interface, sentence, index, answer)
+function choose(universe, sentence, index, answer)
+    interface = universe.interface
     object = answer.object
     if object isa Question
         answers = object.answers
         println(interface)
         # add an exta line to add space before the question
         # we need take it first to see if its empty or not
-        choose(interface, sentence, index, answers[request(
+        choice = request(
             interface,
-            sprint(show, fill_in_the_blank(sentence, index, object.text); context = :suffix => "?"),
+            sprint(show, replace_argument(sentence, index, object.text); context = :suffix => "?"),
             RadioMenu(map(function (sub_answer)
-                string(fill_in_the_blank(sentence, index, sub_answer.text))
+                string(replace_argument(sentence, index, sub_answer.text))
             end, answers)),
-        )])
+        )
+        push!(universe.choices_log, choice)
+        choose(universe, sentence, index, answers[choice])
     else 
         answer
     end
@@ -1347,7 +1511,7 @@ end
 
 function show(io::IO, sentence::Sentence)
     print(io, text_colors[:green])
-    print_sentence(io, sentence.verb, Iterators.map(
+    print_sentence(io, sentence.action, Iterators.map(
         function (answer)
             answer.text
         end,
@@ -1357,19 +1521,19 @@ function show(io::IO, sentence::Sentence)
     print(io, text_colors[:default])
 end
 
-function fill_in_the_blank(sentence, blank_index, replacement)
+function replace_argument(sentence, blank_index, replacement)
     arguments_copy = copy(sentence.arguments)
     arguments_copy[blank_index] = Answer(replacement, nothing)
-    Sentence(sentence.verb, arguments_copy)
+    Sentence(sentence.action, arguments_copy)
 end
 
-function is_lit(universe; domain = Visible())
-    parent_thing, sibling_relationship = get_origin_relationship(universe, domain)
-    if is_providing_light(parent_thing)
+function is_player_lit(universe; domain = Visible())
+    blocking_thing, blocked_relationship = blocking_thing_and_relationship(universe, domain)
+    if is_providing_light(blocking_thing)
         true
     else
-        for (thing, relationship) in out_neighbors_relationships(universe.relationships_graph, parent_thing)
-            if relationship === sibling_relationship && is_lit(universe, thing; domain = domain)
+        for (thing, relationship) in out_neighbors_relationships(universe.relationships_graph, blocking_thing)
+            if relationship === blocked_relationship && is_lit(universe, thing; domain = domain)
                 return true
             end
         end
@@ -1393,11 +1557,11 @@ function is_lit(universe, parent_thing; domain = Visible())
 end
 
 """
-    turn!(universe; introduce = false, should_look_around = false, lit_before = false)
+    turn!(universe; introduce = false, should_look_around = false)
 
 Start a turn in the [`Universe`](@ref), and keep going until the user wins or quits.
 """
-function turn!(universe; introduce = false, should_look_around = false, lit_before = false)
+function turn!(universe; introduce = false, should_look_around = false)
     interface = universe.interface
     relationships_graph = universe.relationships_graph
     player = universe.player
@@ -1413,9 +1577,9 @@ function turn!(universe; introduce = false, should_look_around = false, lit_befo
     end
 
     # reintroduce the player to their surroundings if the end the turn in a new loaction
-    lit = is_lit(universe)
+    lit = is_player_lit(universe)
 
-    if should_look_around || lit != lit_before
+    if should_look_around
         if lit
             print_environment(universe)
         else
@@ -1428,11 +1592,11 @@ function turn!(universe; introduce = false, should_look_around = false, lit_befo
         immediate_location.visited = true
     end
     sentences = Sentence[]
-    for verb_type in subtypes(Verb)
-        verb = verb_type()
-        sentence = Sentence(verb)
+    for verb_type in subtypes(Action)
+        action = verb_type()
+        sentence = Sentence(action)
         dead_end = false
-        for domain in argument_domains(verb)
+        for domain in argument_domains(action)
             # returns true for impossible arguments
             answers = find_in_domain(universe, sentence, domain; lit = lit)
             if isempty(answers)
@@ -1443,232 +1607,166 @@ function turn!(universe; introduce = false, should_look_around = false, lit_befo
                     if length(answers) == 1
                         only(answers)
                     else
-                        Answer(some_word(verb, domain), Question(what_word(verb, domain), answers))
+                        Answer(indefinite_for(domain), Question(interrogative_for(domain), answers))
                     end
                 )
             end
         end
-        if concretely_possible(universe, verb) && !dead_end
+        if possible_now(universe, action) && !dead_end
             push!(sentences, sentence)
         end
     end
 
-    sentence = sentences[request(
+    choice = request(
         interface,
         "",
         RadioMenu(map(
             string,
             sentences,
         )),
-    )]
+    )
+    push!(universe.choices_log, choice)
+
+    sentence = sentences[choice]
     arguments = sentence.arguments
 
     for (index, argument) in enumerate(arguments)
-        arguments[index] = choose(interface, sentence, index, argument)
+        arguments[index] = choose(universe, sentence, index, argument)
     end
-    should_look_around, end_game = 
-        sentence.verb(universe, Iterators.map(
+    end_game = 
+        sentence.action(universe, Iterators.map(
             function (answer)
                 answer.object
             end, 
             arguments
         )...)
     if !end_game
-        turn!(universe; should_look_around = should_look_around, lit_before = lit)
+        turn!(universe; should_look_around = get_parent(universe, universe.player) !== immediate_location || is_player_lit(universe) != lit)
     end
     nothing
-end
-
-function fill_out(location, user_definition)
-    constructor_in_positionals = Any[]
-    constructor_in_keywords = Any[]
-    constructor_out_arguments = Any[]
-    struct_lines = Any[]
-
-    if @capture user_definition (mutable struct typename_ <: thesupertype_
-        userlines__
-    end)
-        is_mutable = true
-    elseif @capture user_definition (struct typename_ <: thesupertype_
-        userlines__
-    end)
-        is_mutable = false
-    else
-        error("Can't parse the user definition")
-    end
-    for line in userlines
-        if @capture line field_::atype_ = default_
-            push!(constructor_in_keywords, Expr(:kw, field, default))
-        elseif @capture line field_::atype_
-            push!(constructor_in_positionals, field)    
-        else
-            error("Can't parse field")
-        end
-        push!(struct_lines, location)
-        push!(struct_lines, Expr(:(::), field, atype))
-        push!(constructor_out_arguments, field)
-    end
-    (
-        typename,
-        Expr(:struct, is_mutable, Expr(:<:, typename, thesupertype), Expr(:block, struct_lines...)),
-        Expr(:function, 
-            Expr(:call, typename, Expr(:parameters, constructor_in_keywords...), constructor_in_positionals...),
-            Expr(:block, location, Expr(:call, typename, constructor_out_arguments...))
-        )
-    )
-end
-
-macro proper_noun(user_definition)
-    esc(proper_noun(__source__, user_definition))
 end
 
 "A door"
 @kwdef mutable struct Door <: AbstractDoor
     name::String
     key::Noun
-    grammatical_person::GrammaticalPerson = third_person
-    indefinite_article::String = "a"
-    plural::Bool = false
     closed::Bool = true
     description::String = ""
+    grammatical_person::GrammaticalPerson = third_person
+    indefinite_article::String = "a"
     locked::Bool = true
+    plural::Bool = false    
 end
 
-abstractly_possible(::Open, ::Reachable, ::Door) = true
-abstractly_possible(::Unlock, ::Reachable, ::Door) = true
+ever_possible(::Open, ::Reachable, ::Door) = true
+ever_possible(::Unlock, ::Reachable, ::Door) = true
 
 @kwdef struct Person <: Noun
     name::String
+    description::String = ""
     grammatical_person::GrammaticalPerson = third_person
     indefinite_article::String = "a"
     plural::Bool = false
-    description::String = ""
 end
 
 @kwdef mutable struct Key <: Noun
     name::String
+    description::String = ""
     grammatical_person::GrammaticalPerson = third_person
+    handled::Bool = false
     indefinite_article::String = "a"
     plural::Bool = false
-    description::String = ""
-    handled::Bool = false
 end
 
-abstractly_possible(::Unlock, ::Inventory, ::Key) = true
-abstractly_possible(::Take, ::Reachable, ::Key) = true
+ever_possible(::Unlock, ::Inventory, ::Key) = true
+ever_possible(::Take, ::Reachable, ::Key) = true
 
 @kwdef mutable struct Lamp <: Noun
     name::String
-    grammatical_person::GrammaticalPerson = third_person
-    indefinite_article::String = "a"
-    plural::Bool = false
-    on::Bool = false
     description::String = ""
+    grammatical_person::GrammaticalPerson = third_person
     handled::Bool = false
+    indefinite_article::String = "a"
+    on::Bool = false
+    plural::Bool = false
 end
 
-abstractly_possible(::Take, ::Reachable, ::Lamp) = true
-abstractly_possible(::TurnOn, ::Reachable, ::Lamp) = true
+ever_possible(::Take, ::Reachable, ::Lamp) = true
+ever_possible(::TurnOn, ::Reachable, ::Lamp) = true
 is_providing_light(noun::Lamp) = noun.on
 
 @kwdef mutable struct Box <: Noun
     name::String
-    grammatical_person::GrammaticalPerson = third_person
-    indefinite_article::String = "a"
-    plural::Bool = false
     closed::Bool = true
     description::String = ""
+    grammatical_person::GrammaticalPerson = third_person
     handled::Bool = false
+    indefinite_article::String = "a"
+    plural::Bool = false
 end
 
-abstractly_possible(::Open, ::Reachable, ::Box) = true
-abstractly_possible(::Take, ::Reachable, ::Box) = true
-abstractly_possible(::Put, ::Reachable, ::Box) = true
+ever_possible(::Open, ::Reachable, ::Box) = true
+ever_possible(::Take, ::Reachable, ::Box) = true
+ever_possible(::Put, ::Reachable, ::Box) = true
 
-@kwdef struct Car <: Noun
+@kwdef mutable struct Car <: Noun
     name::String
+    description::String = ""
     grammatical_person::GrammaticalPerson = third_person
     indefinite_article::String = "a"
     plural::Bool = false
-    description::String = ""
+    visited::Bool = false
 end
 
-abstractly_possible(::GoInto, ::MoveSiblings, ::Car) = true
+ever_possible(::GoInto, ::MoveSiblings, ::Car) = true
 is_vehicle(::Car) = true
 is_transparent(::Car) = true
 
 @kwdef struct Table <: Noun
     name::String
+    description::String = ""
     grammatical_person::GrammaticalPerson = third_person
     indefinite_article::String = "a"
     plural::Bool = false
-    description::String = ""
 end
 
-abstractly_possible(::Lay, ::Reachable, ::Table) = true
+ever_possible(::Lay, ::Reachable, ::Table) = true
 
 @kwdef mutable struct Clothes <: Noun
     name::String
-    grammatical_person::GrammaticalPerson = third_person
-    indefinite_article::String = "a"
-    plural::Bool = false
     description::String = ""
+    grammatical_person::GrammaticalPerson = third_person
     handled::Bool = false
-end
-
-abstractly_possible(::Wear, ::Inventory, ::Clothes) = true
-abstractly_possible(::Take, ::Reachable, ::Clothes) = true
-
-@kwdef struct Food <: Noun
-    name::String
-    grammatical_person::GrammaticalPerson = third_person
     indefinite_article::String = "a"
     plural::Bool = false
-    description::String = ""
 end
 
-abstractly_possible(::Eat, ::Reachable, ::Food) = true
+ever_possible(::Wear, ::Inventory, ::Clothes) = true
+ever_possible(::Take, ::Reachable, ::Clothes) = true
+
+@kwdef mutable struct Food <: Noun
+    name::String
+    description::String = ""
+    grammatical_person::GrammaticalPerson = third_person
+    handled = false
+    indefinite_article::String = "a"
+    plural::Bool = false
+end
+
+ever_possible(::Eat, ::Reachable, ::Food) = true
+ever_possible(::Take, ::Reachable, ::Food) = true
 
 @kwdef mutable struct Room <: AbstractRoom
     name::String
+    description::String = ""
     grammatical_person::GrammaticalPerson = third_person
     indefinite_article::String = "a"
     plural::Bool = false
-    description::String = ""
     providing_light::Bool = true
     visited::Bool = false
 end
 
 is_providing_light(room::Room) = room.providing_light
-
-A = Room(name = "A", description = "A non-descript room", indefinite_article = "")
-B = Room(name = "B"; providing_light = false)
-C = Room(name = "C")
-you = Person(name = "matilda", grammatical_person = second_person, description = "a little worse for the wear")
-yellow_key = Key(name = "yellow key", description = "It's yellow, duh!")
-yellow_box = Box(name = "yellow box")
-red_key = Key(name = "red key")
-lamp = Lamp(name = "lamp")
-yellow_door =
-    Door(name = "yellow door", key = yellow_key, description = "What color do you thing this is?")
-yellow_car = Car(name = "car")
-table = Table(name = "blue table")
-hat = Clothes(name = "hat")
-apple = Food(name = "apple")
-universe = Universe(you, introduction = "Welcome!")
-universe[A, you] = containing
-universe[A, yellow_car] = containing
-universe[A, table] = containing
-universe[A, hat] = containing
-universe[A, apple] = containing
-universe[B, yellow_box] = containing
-universe[yellow_box, yellow_key] = containing
-universe[yellow_box, red_key] = containing
-universe[A, lamp] = containing
-universe[A, B] = north
-universe[A, C] = yellow_door, west
-
-turn!(universe; introduce = true, should_look_around = true)
 
 # TODO: try out porting Bronze to see what happens
 # TODO: tests

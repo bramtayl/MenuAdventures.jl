@@ -1,0 +1,1867 @@
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Ok
+Welcome!
+
+A non-descript room
+
+A:
+  contains:
+    you
+    a car
+    a blue table
+    a hat
+    a apple
+    a lamp
+  west:
+    a yellow door
+
+[2K > [32mEat the apple[39m
+[2K   [32mGo north[39m
+[2K   [32mGo into the car[39m
+[2K   [32mLook at something[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m
+[2K   [32mTurn on the lamp[39m[?25l[999D[6A[2K   [32mEat the apple[39m
+[2K > [32mGo north[39m
+[2K   [32mGo into the car[39m
+[2K   [32mLook at something[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m
+[2K   [32mTurn on the lamp[39m[999D[6A[2K   [32mEat the apple[39m
+[2K   [32mGo north[39m
+[2K > [32mGo into the car[39m
+[2K   [32mLook at something[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m
+[2K   [32mTurn on the lamp[39m[999D[6A[2K   [32mEat the apple[39m
+[2K   [32mGo north[39m
+[2K   [32mGo into the car[39m
+[2K > [32mLook at something[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m
+[2K   [32mTurn on the lamp[39m[999D[6A[2K   [32mEat the apple[39m
+[2K   [32mGo north[39m
+[2K   [32mGo into the car[39m
+[2K   [32mLook at something[39m
+[2K > [32mQuit[39m
+[2K   [32mTake something[39m
+[2K   [32mTurn on the lamp[39m[999D[6A[2K   [32mEat the apple[39m
+[2K   [32mGo north[39m
+[2K   [32mGo into the car[39m
+[2K   [32mLook at something[39m
+[2K   [32mQuit[39m
+[2K > [32mTake something[39m
+[2K   [32mTurn on the lamp[39m[?25h
+
+[32mTake what?[39m
+[2K > [32mTake the hat[39m
+[2K   [32mTake the apple[39m
+[2K   [32mTake the lamp[39m[?25l[999D[2A[2K   [32mTake the hat[39m
+[2K > [32mTake the apple[39m
+[2K   [32mTake the lamp[39m[?25h
+Ok
+
+
+[2K > [32mDrop the apple[39m
+[2K   [32mEat the apple that you are carrying[39m
+[2K   [32mGo north[39m
+[2K   [32mGo into the car[39m
+[2K   [32mLay the apple onto the blue table[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m
+[2K   [32mTurn on the lamp[39m[?25l[999D[9A[2K   [32mDrop the apple[39m
+[2K > [32mEat the apple that you are carrying[39m
+[2K   [32mGo north[39m
+[2K   [32mGo into the car[39m
+[2K   [32mLay the apple onto the blue table[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m
+[2K   [32mTurn on the lamp[39m[?25h
+Ok
+
+
+[2K > [32mGo north[39m
+[2K   [32mGo into the car[39m
+[2K   [32mLook at something[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m
+[2K   [32mTurn on the lamp[39m[?25l[999D[5A[2K   [32mGo north[39m
+[2K > [32mGo into the car[39m
+[2K   [32mLook at something[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m
+[2K   [32mTurn on the lamp[39m[999D[5A[2K   [32mGo north[39m
+[2K   [32mGo into the car[39m
+[2K > [32mLook at something[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m
+[2K   [32mTurn on the lamp[39m[999D[5A[2K   [32mGo north[39m
+[2K   [32mGo into the car[39m
+[2K   [32mLook at something[39m
+[2K > [32mQuit[39m
+[2K   [32mTake something[39m
+[2K   [32mTurn on the lamp[39m[999D[5A[2K   [32mGo north[39m
+[2K   [32mGo into the car[39m
+[2K   [32mLook at something[39m
+[2K   [32mQuit[39m
+[2K > [32mTake something[39m
+[2K   [32mTurn on the lamp[39m[?25h
+
+[32mTake what?[39m
+[2K > [32mTake the hat[39m
+[2K   [32mTake the lamp[39m[?25l[?25h
+Ok
+
+
+[2K > [32mDrop the hat[39m
+[2K   [32mGo north[39m
+[2K   [32mGo into the car[39m
+[2K   [32mLay the hat onto the blue table[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the lamp[39m
+[2K   [32mTurn on the lamp[39m
+[2K   [32mWear the hat[39m[?25l[999D[9A[2K   [32mDrop the hat[39m
+[2K > [32mGo north[39m
+[2K   [32mGo into the car[39m
+[2K   [32mLay the hat onto the blue table[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the lamp[39m
+[2K   [32mTurn on the lamp[39m
+[2K   [32mWear the hat[39m[999D[9A[2K   [32mDrop the hat[39m
+[2K   [32mGo north[39m
+[2K > [32mGo into the car[39m
+[2K   [32mLay the hat onto the blue table[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the lamp[39m
+[2K   [32mTurn on the lamp[39m
+[2K   [32mWear the hat[39m[999D[9A[2K   [32mDrop the hat[39m
+[2K   [32mGo north[39m
+[2K   [32mGo into the car[39m
+[2K > [32mLay the hat onto the blue table[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the lamp[39m
+[2K   [32mTurn on the lamp[39m
+[2K   [32mWear the hat[39m[999D[9A[2K   [32mDrop the hat[39m
+[2K   [32mGo north[39m
+[2K   [32mGo into the car[39m
+[2K   [32mLay the hat onto the blue table[39m
+[2K > [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the lamp[39m
+[2K   [32mTurn on the lamp[39m
+[2K   [32mWear the hat[39m[999D[9A[2K   [32mDrop the hat[39m
+[2K   [32mGo north[39m
+[2K   [32mGo into the car[39m
+[2K   [32mLay the hat onto the blue table[39m
+[2K   [32mList inventory[39m
+[2K > [32mLook at something[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the lamp[39m
+[2K   [32mTurn on the lamp[39m
+[2K   [32mWear the hat[39m[999D[9A[2K   [32mDrop the hat[39m
+[2K   [32mGo north[39m
+[2K   [32mGo into the car[39m
+[2K   [32mLay the hat onto the blue table[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K > [32mQuit[39m
+[2K   [32mTake the lamp[39m
+[2K   [32mTurn on the lamp[39m
+[2K   [32mWear the hat[39m[999D[9A[2K   [32mDrop the hat[39m
+[2K   [32mGo north[39m
+[2K   [32mGo into the car[39m
+[2K   [32mLay the hat onto the blue table[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mQuit[39m
+[2K > [32mTake the lamp[39m
+[2K   [32mTurn on the lamp[39m
+[2K   [32mWear the hat[39m[999D[9A[2K   [32mDrop the hat[39m
+[2K   [32mGo north[39m
+[2K   [32mGo into the car[39m
+[2K   [32mLay the hat onto the blue table[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the lamp[39m
+[2K > [32mTurn on the lamp[39m
+[2K   [32mWear the hat[39m[999D[9A[2K   [32mDrop the hat[39m
+[2K   [32mGo north[39m
+[2K   [32mGo into the car[39m
+[2K   [32mLay the hat onto the blue table[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the lamp[39m
+[2K   [32mTurn on the lamp[39m
+[2K > [32mWear the hat[39m[?25h
+Ok
+
+
+[2K > [32mGo north[39m
+[2K   [32mGo into the car[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m
+[2K   [32mTurn on the lamp[39m[?25l[999D[6A[2K   [32mGo north[39m
+[2K > [32mGo into the car[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m
+[2K   [32mTurn on the lamp[39m[999D[6A[2K   [32mGo north[39m
+[2K   [32mGo into the car[39m
+[2K > [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m
+[2K   [32mTurn on the lamp[39m[999D[6A[2K   [32mGo north[39m
+[2K   [32mGo into the car[39m
+[2K   [32mList inventory[39m
+[2K > [32mLook at something[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m
+[2K   [32mTurn on the lamp[39m[999D[6A[2K   [32mGo north[39m
+[2K   [32mGo into the car[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K > [32mQuit[39m
+[2K   [32mTake something[39m
+[2K   [32mTurn on the lamp[39m[999D[6A[2K   [32mGo north[39m
+[2K   [32mGo into the car[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mQuit[39m
+[2K > [32mTake something[39m
+[2K   [32mTurn on the lamp[39m[?25h
+
+[32mTake what?[39m
+[2K > [32mTake the hat that you are wearing[39m
+[2K   [32mTake the lamp[39m[?25l[?25h
+Ok
+
+
+[2K > [32mDrop the hat[39m
+[2K   [32mGo north[39m
+[2K   [32mGo into the car[39m
+[2K   [32mLay the hat onto the blue table[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the lamp[39m
+[2K   [32mTurn on the lamp[39m
+[2K   [32mWear the hat[39m[?25l[999D[9A[2K   [32mDrop the hat[39m
+[2K > [32mGo north[39m
+[2K   [32mGo into the car[39m
+[2K   [32mLay the hat onto the blue table[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the lamp[39m
+[2K   [32mTurn on the lamp[39m
+[2K   [32mWear the hat[39m[999D[9A[2K   [32mDrop the hat[39m
+[2K   [32mGo north[39m
+[2K > [32mGo into the car[39m
+[2K   [32mLay the hat onto the blue table[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the lamp[39m
+[2K   [32mTurn on the lamp[39m
+[2K   [32mWear the hat[39m[999D[9A[2K   [32mDrop the hat[39m
+[2K   [32mGo north[39m
+[2K   [32mGo into the car[39m
+[2K > [32mLay the hat onto the blue table[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the lamp[39m
+[2K   [32mTurn on the lamp[39m
+[2K   [32mWear the hat[39m[?25h
+Ok
+
+
+[2K > [32mGo north[39m
+[2K   [32mGo into the car[39m
+[2K   [32mLook at something[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m
+[2K   [32mTurn on the lamp[39m[?25l[999D[5A[2K   [32mGo north[39m
+[2K > [32mGo into the car[39m
+[2K   [32mLook at something[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m
+[2K   [32mTurn on the lamp[39m[999D[5A[2K   [32mGo north[39m
+[2K   [32mGo into the car[39m
+[2K > [32mLook at something[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m
+[2K   [32mTurn on the lamp[39m[999D[5A[2K   [32mGo north[39m
+[2K   [32mGo into the car[39m
+[2K   [32mLook at something[39m
+[2K > [32mQuit[39m
+[2K   [32mTake something[39m
+[2K   [32mTurn on the lamp[39m[999D[5A[2K   [32mGo north[39m
+[2K   [32mGo into the car[39m
+[2K   [32mLook at something[39m
+[2K   [32mQuit[39m
+[2K > [32mTake something[39m
+[2K   [32mTurn on the lamp[39m[?25h
+
+[32mTake what?[39m
+[2K > [32mTake the hat on the blue table[39m
+[2K   [32mTake the lamp[39m[?25l[999D[1A[2K   [32mTake the hat on the blue table[39m
+[2K > [32mTake the lamp[39m[?25h
+Ok
+
+
+[2K > [32mDrop the lamp[39m
+[2K   [32mGo north[39m
+[2K   [32mGo into the car[39m
+[2K   [32mLay the lamp onto the blue table[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the hat on the blue table[39m
+[2K   [32mTurn on the lamp that you are carrying[39m[?25l[999D[8A[2K   [32mDrop the lamp[39m
+[2K > [32mGo north[39m
+[2K   [32mGo into the car[39m
+[2K   [32mLay the lamp onto the blue table[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the hat on the blue table[39m
+[2K   [32mTurn on the lamp that you are carrying[39m[999D[8A[2K   [32mDrop the lamp[39m
+[2K   [32mGo north[39m
+[2K > [32mGo into the car[39m
+[2K   [32mLay the lamp onto the blue table[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the hat on the blue table[39m
+[2K   [32mTurn on the lamp that you are carrying[39m[999D[8A[2K   [32mDrop the lamp[39m
+[2K   [32mGo north[39m
+[2K   [32mGo into the car[39m
+[2K > [32mLay the lamp onto the blue table[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the hat on the blue table[39m
+[2K   [32mTurn on the lamp that you are carrying[39m[999D[8A[2K   [32mDrop the lamp[39m
+[2K   [32mGo north[39m
+[2K   [32mGo into the car[39m
+[2K   [32mLay the lamp onto the blue table[39m
+[2K > [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the hat on the blue table[39m
+[2K   [32mTurn on the lamp that you are carrying[39m[999D[8A[2K   [32mDrop the lamp[39m
+[2K   [32mGo north[39m
+[2K   [32mGo into the car[39m
+[2K   [32mLay the lamp onto the blue table[39m
+[2K   [32mList inventory[39m
+[2K > [32mLook at something[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the hat on the blue table[39m
+[2K   [32mTurn on the lamp that you are carrying[39m[999D[8A[2K   [32mDrop the lamp[39m
+[2K   [32mGo north[39m
+[2K   [32mGo into the car[39m
+[2K   [32mLay the lamp onto the blue table[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K > [32mQuit[39m
+[2K   [32mTake the hat on the blue table[39m
+[2K   [32mTurn on the lamp that you are carrying[39m[999D[8A[2K   [32mDrop the lamp[39m
+[2K   [32mGo north[39m
+[2K   [32mGo into the car[39m
+[2K   [32mLay the lamp onto the blue table[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mQuit[39m
+[2K > [32mTake the hat on the blue table[39m
+[2K   [32mTurn on the lamp that you are carrying[39m[999D[8A[2K   [32mDrop the lamp[39m
+[2K   [32mGo north[39m
+[2K   [32mGo into the car[39m
+[2K   [32mLay the lamp onto the blue table[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the hat on the blue table[39m
+[2K > [32mTurn on the lamp that you are carrying[39m[?25h
+Ok
+
+
+[2K > [32mDrop the lamp[39m
+[2K   [32mGo north[39m
+[2K   [32mGo into the car[39m
+[2K   [32mLay the lamp onto the blue table[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the hat on the blue table[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[?25l[999D[8A[2K   [32mDrop the lamp[39m
+[2K > [32mGo north[39m
+[2K   [32mGo into the car[39m
+[2K   [32mLay the lamp onto the blue table[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the hat on the blue table[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[999D[8A[2K   [32mDrop the lamp[39m
+[2K   [32mGo north[39m
+[2K > [32mGo into the car[39m
+[2K   [32mLay the lamp onto the blue table[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the hat on the blue table[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[999D[8A[2K   [32mDrop the lamp[39m
+[2K   [32mGo north[39m
+[2K   [32mGo into the car[39m
+[2K > [32mLay the lamp onto the blue table[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the hat on the blue table[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[999D[8A[2K   [32mDrop the lamp[39m
+[2K   [32mGo north[39m
+[2K   [32mGo into the car[39m
+[2K   [32mLay the lamp onto the blue table[39m
+[2K > [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the hat on the blue table[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[999D[8A[2K   [32mDrop the lamp[39m
+[2K   [32mGo north[39m
+[2K   [32mGo into the car[39m
+[2K   [32mLay the lamp onto the blue table[39m
+[2K   [32mList inventory[39m
+[2K > [32mLook at something[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the hat on the blue table[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[999D[8A[2K   [32mDrop the lamp[39m
+[2K   [32mGo north[39m
+[2K   [32mGo into the car[39m
+[2K   [32mLay the lamp onto the blue table[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K > [32mQuit[39m
+[2K   [32mTake the hat on the blue table[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[999D[8A[2K   [32mDrop the lamp[39m
+[2K   [32mGo north[39m
+[2K   [32mGo into the car[39m
+[2K   [32mLay the lamp onto the blue table[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mQuit[39m
+[2K > [32mTake the hat on the blue table[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[999D[8A[2K   [32mDrop the lamp[39m
+[2K   [32mGo north[39m
+[2K   [32mGo into the car[39m
+[2K   [32mLay the lamp onto the blue table[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the hat on the blue table[39m
+[2K > [32mTurn off the lamp that you are carrying[39m[?25h
+Ok
+
+
+[2K > [32mDrop the lamp[39m
+[2K   [32mGo north[39m
+[2K   [32mGo into the car[39m
+[2K   [32mLay the lamp onto the blue table[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the hat on the blue table[39m
+[2K   [32mTurn on the lamp that you are carrying[39m[?25l[999D[8A[2K   [32mDrop the lamp[39m
+[2K > [32mGo north[39m
+[2K   [32mGo into the car[39m
+[2K   [32mLay the lamp onto the blue table[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the hat on the blue table[39m
+[2K   [32mTurn on the lamp that you are carrying[39m[?25h
+Ok
+
+In darkness
+
+[2K > [32mDrop the lamp[39m
+[2K   [32mGo south[39m
+[2K   [32mList inventory[39m
+[2K   [32mQuit[39m
+[2K   [32mTurn on the lamp[39m[?25l[999D[4A[2K   [32mDrop the lamp[39m
+[2K > [32mGo south[39m
+[2K   [32mList inventory[39m
+[2K   [32mQuit[39m
+[2K   [32mTurn on the lamp[39m[999D[4A[2K   [32mDrop the lamp[39m
+[2K   [32mGo south[39m
+[2K > [32mList inventory[39m
+[2K   [32mQuit[39m
+[2K   [32mTurn on the lamp[39m[999D[4A[2K   [32mDrop the lamp[39m
+[2K   [32mGo south[39m
+[2K   [32mList inventory[39m
+[2K > [32mQuit[39m
+[2K   [32mTurn on the lamp[39m[999D[4A[2K   [32mDrop the lamp[39m
+[2K   [32mGo south[39m
+[2K   [32mList inventory[39m
+[2K   [32mQuit[39m
+[2K > [32mTurn on the lamp[39m[?25h
+Ok
+
+a B:
+  contains:
+    you
+    a yellow box
+
+[2K > [32mDrop the lamp[39m
+[2K   [32mGo south[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at yourself[39m
+[2K   [32mOpen the yellow box[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the yellow box[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[?25l[999D[7A[2K   [32mDrop the lamp[39m
+[2K > [32mGo south[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at yourself[39m
+[2K   [32mOpen the yellow box[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the yellow box[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[999D[7A[2K   [32mDrop the lamp[39m
+[2K   [32mGo south[39m
+[2K > [32mList inventory[39m
+[2K   [32mLook at yourself[39m
+[2K   [32mOpen the yellow box[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the yellow box[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[999D[7A[2K   [32mDrop the lamp[39m
+[2K   [32mGo south[39m
+[2K   [32mList inventory[39m
+[2K > [32mLook at yourself[39m
+[2K   [32mOpen the yellow box[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the yellow box[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[999D[7A[2K   [32mDrop the lamp[39m
+[2K   [32mGo south[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at yourself[39m
+[2K > [32mOpen the yellow box[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the yellow box[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[999D[7A[2K   [32mDrop the lamp[39m
+[2K   [32mGo south[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at yourself[39m
+[2K   [32mOpen the yellow box[39m
+[2K > [32mQuit[39m
+[2K   [32mTake the yellow box[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[999D[7A[2K   [32mDrop the lamp[39m
+[2K   [32mGo south[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at yourself[39m
+[2K   [32mOpen the yellow box[39m
+[2K   [32mQuit[39m
+[2K > [32mTake the yellow box[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[?25h
+Ok
+
+
+[2K > [32mDrop something[39m
+[2K   [32mGo south[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at yourself[39m
+[2K   [32mOpen the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[?25l[999D[6A[2K   [32mDrop something[39m
+[2K > [32mGo south[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at yourself[39m
+[2K   [32mOpen the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[999D[6A[2K   [32mDrop something[39m
+[2K   [32mGo south[39m
+[2K > [32mList inventory[39m
+[2K   [32mLook at yourself[39m
+[2K   [32mOpen the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[999D[6A[2K   [32mDrop something[39m
+[2K   [32mGo south[39m
+[2K   [32mList inventory[39m
+[2K > [32mLook at yourself[39m
+[2K   [32mOpen the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[999D[6A[2K   [32mDrop something[39m
+[2K   [32mGo south[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at yourself[39m
+[2K > [32mOpen the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[?25h
+Ok
+
+The yellow box:
+  contains:
+    a yellow key
+    a red key
+
+
+[2K > [32mClose the yellow box that you are carrying[39m
+[2K   [32mDrop something[39m
+[2K   [32mGo south[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut something into the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something in the yellow box that you are carrying[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[?25l[999D[8A[2K   [32mClose the yellow box that you are carrying[39m
+[2K > [32mDrop something[39m
+[2K   [32mGo south[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut something into the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something in the yellow box that you are carrying[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[999D[8A[2K   [32mClose the yellow box that you are carrying[39m
+[2K   [32mDrop something[39m
+[2K > [32mGo south[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut something into the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something in the yellow box that you are carrying[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[999D[8A[2K   [32mClose the yellow box that you are carrying[39m
+[2K   [32mDrop something[39m
+[2K   [32mGo south[39m
+[2K > [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut something into the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something in the yellow box that you are carrying[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[999D[8A[2K   [32mClose the yellow box that you are carrying[39m
+[2K   [32mDrop something[39m
+[2K   [32mGo south[39m
+[2K   [32mList inventory[39m
+[2K > [32mLook at something[39m
+[2K   [32mPut something into the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something in the yellow box that you are carrying[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[999D[8A[2K   [32mClose the yellow box that you are carrying[39m
+[2K   [32mDrop something[39m
+[2K   [32mGo south[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K > [32mPut something into the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something in the yellow box that you are carrying[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[999D[8A[2K   [32mClose the yellow box that you are carrying[39m
+[2K   [32mDrop something[39m
+[2K   [32mGo south[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut something into the yellow box that you are carrying[39m
+[2K > [32mQuit[39m
+[2K   [32mTake something in the yellow box that you are carrying[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[999D[8A[2K   [32mClose the yellow box that you are carrying[39m
+[2K   [32mDrop something[39m
+[2K   [32mGo south[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut something into the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K > [32mTake something in the yellow box that you are carrying[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[?25h
+
+[32mTake what in the yellow box that you are carrying?[39m
+[2K > [32mTake the yellow key in the yellow box that you are carrying[39m
+[2K   [32mTake the red key in the yellow box that you are carrying[39m[?25l[999D[1A[2K   [32mTake the yellow key in the yellow box that you are carrying[39m
+[2K > [32mTake the red key in the yellow box that you are carrying[39m[?25h
+Ok
+
+
+[2K > [32mClose the yellow box that you are carrying[39m
+[2K   [32mDrop something[39m
+[2K   [32mGo south[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut something into the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the yellow key in the yellow box that you are carrying[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[?25l[999D[8A[2K   [32mClose the yellow box that you are carrying[39m
+[2K > [32mDrop something[39m
+[2K   [32mGo south[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut something into the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the yellow key in the yellow box that you are carrying[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[999D[8A[2K   [32mClose the yellow box that you are carrying[39m
+[2K   [32mDrop something[39m
+[2K > [32mGo south[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut something into the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the yellow key in the yellow box that you are carrying[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[999D[8A[2K   [32mClose the yellow box that you are carrying[39m
+[2K   [32mDrop something[39m
+[2K   [32mGo south[39m
+[2K > [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut something into the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the yellow key in the yellow box that you are carrying[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[999D[8A[2K   [32mClose the yellow box that you are carrying[39m
+[2K   [32mDrop something[39m
+[2K   [32mGo south[39m
+[2K   [32mList inventory[39m
+[2K > [32mLook at something[39m
+[2K   [32mPut something into the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the yellow key in the yellow box that you are carrying[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[999D[8A[2K   [32mClose the yellow box that you are carrying[39m
+[2K   [32mDrop something[39m
+[2K   [32mGo south[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K > [32mPut something into the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the yellow key in the yellow box that you are carrying[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[999D[8A[2K   [32mClose the yellow box that you are carrying[39m
+[2K   [32mDrop something[39m
+[2K   [32mGo south[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut something into the yellow box that you are carrying[39m
+[2K > [32mQuit[39m
+[2K   [32mTake the yellow key in the yellow box that you are carrying[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[999D[8A[2K   [32mClose the yellow box that you are carrying[39m
+[2K   [32mDrop something[39m
+[2K   [32mGo south[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut something into the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K > [32mTake the yellow key in the yellow box that you are carrying[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[?25h
+Ok
+
+
+[2K > [32mClose the yellow box that you are carrying[39m
+[2K   [32mDrop something[39m
+[2K   [32mGo south[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut something into the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[?25l[999D[7A[2K   [32mClose the yellow box that you are carrying[39m
+[2K > [32mDrop something[39m
+[2K   [32mGo south[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut something into the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[999D[7A[2K   [32mClose the yellow box that you are carrying[39m
+[2K   [32mDrop something[39m
+[2K > [32mGo south[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut something into the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[999D[7A[2K   [32mClose the yellow box that you are carrying[39m
+[2K   [32mDrop something[39m
+[2K   [32mGo south[39m
+[2K > [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut something into the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[999D[7A[2K   [32mClose the yellow box that you are carrying[39m
+[2K   [32mDrop something[39m
+[2K   [32mGo south[39m
+[2K   [32mList inventory[39m
+[2K > [32mLook at something[39m
+[2K   [32mPut something into the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[999D[7A[2K   [32mClose the yellow box that you are carrying[39m
+[2K   [32mDrop something[39m
+[2K   [32mGo south[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K > [32mPut something into the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[?25h
+
+[32mPut what into the yellow box that you are carrying?[39m
+[2K > [32mPut the yellow box into the yellow box that you are carrying[39m
+[2K   [32mPut the yellow key into the yellow box that you are carrying[39m
+[2K   [32mPut the red key into the yellow box that you are carrying[39m
+[2K   [32mPut the lamp into the yellow box that you are carrying[39m[?25l[999D[3A[2K   [32mPut the yellow box into the yellow box that you are carrying[39m
+[2K > [32mPut the yellow key into the yellow box that you are carrying[39m
+[2K   [32mPut the red key into the yellow box that you are carrying[39m
+[2K   [32mPut the lamp into the yellow box that you are carrying[39m[999D[3A[2K   [32mPut the yellow box into the yellow box that you are carrying[39m
+[2K   [32mPut the yellow key into the yellow box that you are carrying[39m
+[2K > [32mPut the red key into the yellow box that you are carrying[39m
+[2K   [32mPut the lamp into the yellow box that you are carrying[39m[?25h
+Ok
+
+
+[2K > [32mClose the yellow box that you are carrying[39m
+[2K   [32mDrop something[39m
+[2K   [32mGo south[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut something into the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the red key in the yellow box that you are carrying[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[?25l[?25h
+Ok
+
+
+[2K > [32mDrop something[39m
+[2K   [32mGo south[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[?25l[999D[6A[2K   [32mDrop something[39m
+[2K > [32mGo south[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[?25h
+Ok
+
+A non-descript room
+
+A:
+  contains:
+    you
+    a car
+    a blue table:
+      supports:
+        a hat
+  west:
+    a yellow door
+
+[2K > [32mDrop something[39m
+[2K   [32mGo north[39m
+[2K   [32mGo into the car[39m
+[2K   [32mLay something onto the blue table[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the hat on the blue table[39m
+[2Kv  [32mTurn off the lamp that you are carrying[39m[?25l[999D[9A[2K   [32mDrop something[39m
+[2K > [32mGo north[39m
+[2K   [32mGo into the car[39m
+[2K   [32mLay something onto the blue table[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the hat on the blue table[39m
+[2Kv  [32mTurn off the lamp that you are carrying[39m[999D[9A[2K   [32mDrop something[39m
+[2K   [32mGo north[39m
+[2K > [32mGo into the car[39m
+[2K   [32mLay something onto the blue table[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the hat on the blue table[39m
+[2Kv  [32mTurn off the lamp that you are carrying[39m[999D[9A[2K   [32mDrop something[39m
+[2K   [32mGo north[39m
+[2K   [32mGo into the car[39m
+[2K > [32mLay something onto the blue table[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the hat on the blue table[39m
+[2Kv  [32mTurn off the lamp that you are carrying[39m[999D[9A[2K   [32mDrop something[39m
+[2K   [32mGo north[39m
+[2K   [32mGo into the car[39m
+[2K   [32mLay something onto the blue table[39m
+[2K > [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the hat on the blue table[39m
+[2Kv  [32mTurn off the lamp that you are carrying[39m[999D[9A[2K   [32mDrop something[39m
+[2K   [32mGo north[39m
+[2K   [32mGo into the car[39m
+[2K   [32mLay something onto the blue table[39m
+[2K   [32mList inventory[39m
+[2K > [32mLook at something[39m
+[2K   [32mOpen the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the hat on the blue table[39m
+[2Kv  [32mTurn off the lamp that you are carrying[39m[999D[9A[2K   [32mDrop something[39m
+[2K   [32mGo north[39m
+[2K   [32mGo into the car[39m
+[2K   [32mLay something onto the blue table[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K > [32mOpen the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the hat on the blue table[39m
+[2Kv  [32mTurn off the lamp that you are carrying[39m[999D[9A[2K   [32mDrop something[39m
+[2K   [32mGo north[39m
+[2K   [32mGo into the car[39m
+[2K   [32mLay something onto the blue table[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen the yellow box that you are carrying[39m
+[2K > [32mQuit[39m
+[2K   [32mTake the hat on the blue table[39m
+[2Kv  [32mTurn off the lamp that you are carrying[39m[999D[9A[2K   [32mDrop something[39m
+[2K   [32mGo north[39m
+[2K   [32mGo into the car[39m
+[2K   [32mLay something onto the blue table[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K > [32mTake the hat on the blue table[39m
+[2Kv  [32mTurn off the lamp that you are carrying[39m[999D[9A[2K^  [32mGo north[39m
+[2K   [32mGo into the car[39m
+[2K   [32mLay something onto the blue table[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the hat on the blue table[39m
+[2K > [32mTurn off the lamp that you are carrying[39m
+[2K   [32mUnlock the yellow door with the yellow key[39m[999D[9A[2K^  [32mGo north[39m
+[2K   [32mGo into the car[39m
+[2K   [32mLay something onto the blue table[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the hat on the blue table[39m
+[2K   [32mTurn off the lamp that you are carrying[39m
+[2K > [32mUnlock the yellow door with the yellow key[39m[?25h
+Ok
+
+
+[2K > [32mDrop something[39m
+[2K   [32mGo north[39m
+[2K   [32mGo into the car[39m
+[2K   [32mLay something onto the blue table[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen something[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the hat on the blue table[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[?25l[999D[9A[2K   [32mDrop something[39m
+[2K > [32mGo north[39m
+[2K   [32mGo into the car[39m
+[2K   [32mLay something onto the blue table[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen something[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the hat on the blue table[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[999D[9A[2K   [32mDrop something[39m
+[2K   [32mGo north[39m
+[2K > [32mGo into the car[39m
+[2K   [32mLay something onto the blue table[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen something[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the hat on the blue table[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[999D[9A[2K   [32mDrop something[39m
+[2K   [32mGo north[39m
+[2K   [32mGo into the car[39m
+[2K > [32mLay something onto the blue table[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen something[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the hat on the blue table[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[999D[9A[2K   [32mDrop something[39m
+[2K   [32mGo north[39m
+[2K   [32mGo into the car[39m
+[2K   [32mLay something onto the blue table[39m
+[2K > [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen something[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the hat on the blue table[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[999D[9A[2K   [32mDrop something[39m
+[2K   [32mGo north[39m
+[2K   [32mGo into the car[39m
+[2K   [32mLay something onto the blue table[39m
+[2K   [32mList inventory[39m
+[2K > [32mLook at something[39m
+[2K   [32mOpen something[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the hat on the blue table[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[999D[9A[2K   [32mDrop something[39m
+[2K   [32mGo north[39m
+[2K   [32mGo into the car[39m
+[2K   [32mLay something onto the blue table[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K > [32mOpen something[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the hat on the blue table[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[?25h
+
+[32mOpen what?[39m
+[2K > [32mOpen the yellow box that you are carrying[39m
+[2K   [32mOpen the yellow door[39m[?25l[999D[1A[2K   [32mOpen the yellow box that you are carrying[39m
+[2K > [32mOpen the yellow door[39m[?25h
+Ok
+
+
+[2K > [32mClose the yellow door[39m
+[2K   [32mDrop something[39m
+[2K   [32mGo some way[39m
+[2K   [32mGo into the car[39m
+[2K   [32mLay something onto the blue table[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2Kv  [32mTake the hat on the blue table[39m[?25l[?25h
+Ok
+
+
+[2K > [32mDrop something[39m
+[2K   [32mGo north[39m
+[2K   [32mGo into the car[39m
+[2K   [32mLay something onto the blue table[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen something[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the hat on the blue table[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[?25l[999D[9A[2K   [32mDrop something[39m
+[2K > [32mGo north[39m
+[2K   [32mGo into the car[39m
+[2K   [32mLay something onto the blue table[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen something[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the hat on the blue table[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[999D[9A[2K   [32mDrop something[39m
+[2K   [32mGo north[39m
+[2K > [32mGo into the car[39m
+[2K   [32mLay something onto the blue table[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen something[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the hat on the blue table[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[999D[9A[2K   [32mDrop something[39m
+[2K   [32mGo north[39m
+[2K   [32mGo into the car[39m
+[2K > [32mLay something onto the blue table[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen something[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the hat on the blue table[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[999D[9A[2K   [32mDrop something[39m
+[2K   [32mGo north[39m
+[2K   [32mGo into the car[39m
+[2K   [32mLay something onto the blue table[39m
+[2K > [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen something[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the hat on the blue table[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[999D[9A[2K   [32mDrop something[39m
+[2K   [32mGo north[39m
+[2K   [32mGo into the car[39m
+[2K   [32mLay something onto the blue table[39m
+[2K   [32mList inventory[39m
+[2K > [32mLook at something[39m
+[2K   [32mOpen something[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the hat on the blue table[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[999D[9A[2K   [32mDrop something[39m
+[2K   [32mGo north[39m
+[2K   [32mGo into the car[39m
+[2K   [32mLay something onto the blue table[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K > [32mOpen something[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the hat on the blue table[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[?25h
+
+[32mOpen what?[39m
+[2K > [32mOpen the yellow box that you are carrying[39m
+[2K   [32mOpen the yellow door[39m[?25l[999D[1A[2K   [32mOpen the yellow box that you are carrying[39m
+[2K > [32mOpen the yellow door[39m[?25h
+Ok
+
+
+[2K > [32mClose the yellow door[39m
+[2K   [32mDrop something[39m
+[2K   [32mGo some way[39m
+[2K   [32mGo into the car[39m
+[2K   [32mLay something onto the blue table[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2Kv  [32mTake the hat on the blue table[39m[?25l[999D[9A[2K   [32mClose the yellow door[39m
+[2K > [32mDrop something[39m
+[2K   [32mGo some way[39m
+[2K   [32mGo into the car[39m
+[2K   [32mLay something onto the blue table[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2Kv  [32mTake the hat on the blue table[39m[999D[9A[2K   [32mClose the yellow door[39m
+[2K   [32mDrop something[39m
+[2K > [32mGo some way[39m
+[2K   [32mGo into the car[39m
+[2K   [32mLay something onto the blue table[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2Kv  [32mTake the hat on the blue table[39m[?25h
+
+[32mGo which way?[39m
+[2K > [32mGo north[39m
+[2K   [32mGo west[39m[?25l[999D[1A[2K   [32mGo north[39m
+[2K > [32mGo west[39m[?25h
+Ok
+
+a C:
+  contains:
+    you
+  east:
+    a yellow door
+
+[2K > [32mClose the yellow door[39m
+[2K   [32mDrop something[39m
+[2K   [32mGo east[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[?25l[999D[7A[2K   [32mClose the yellow door[39m
+[2K > [32mDrop something[39m
+[2K   [32mGo east[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[?25h
+
+[32mDrop what?[39m
+[2K > [32mDrop the yellow box[39m
+[2K   [32mDrop the yellow key[39m
+[2K   [32mDrop the lamp[39m[?25l[?25h
+Ok
+
+
+[2K > [32mClose the yellow door[39m
+[2K   [32mDrop something[39m
+[2K   [32mGo east[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen the yellow box[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the yellow box[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[?25l[999D[8A[2K   [32mClose the yellow door[39m
+[2K > [32mDrop something[39m
+[2K   [32mGo east[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen the yellow box[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the yellow box[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[999D[8A[2K   [32mClose the yellow door[39m
+[2K   [32mDrop something[39m
+[2K > [32mGo east[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen the yellow box[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the yellow box[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[999D[8A[2K   [32mClose the yellow door[39m
+[2K   [32mDrop something[39m
+[2K   [32mGo east[39m
+[2K > [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen the yellow box[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the yellow box[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[999D[8A[2K   [32mClose the yellow door[39m
+[2K   [32mDrop something[39m
+[2K   [32mGo east[39m
+[2K   [32mList inventory[39m
+[2K > [32mLook at something[39m
+[2K   [32mOpen the yellow box[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the yellow box[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[999D[8A[2K   [32mClose the yellow door[39m
+[2K   [32mDrop something[39m
+[2K   [32mGo east[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K > [32mOpen the yellow box[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the yellow box[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[999D[8A[2K   [32mClose the yellow door[39m
+[2K   [32mDrop something[39m
+[2K   [32mGo east[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen the yellow box[39m
+[2K > [32mQuit[39m
+[2K   [32mTake the yellow box[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[999D[8A[2K   [32mClose the yellow door[39m
+[2K   [32mDrop something[39m
+[2K   [32mGo east[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen the yellow box[39m
+[2K   [32mQuit[39m
+[2K > [32mTake the yellow box[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[?25h
+Ok
+
+
+[2K > [32mClose the yellow door[39m
+[2K   [32mDrop something[39m
+[2K   [32mGo east[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[?25l[999D[7A[2K   [32mClose the yellow door[39m
+[2K > [32mDrop something[39m
+[2K   [32mGo east[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[999D[7A[2K   [32mClose the yellow door[39m
+[2K   [32mDrop something[39m
+[2K > [32mGo east[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[999D[7A[2K   [32mClose the yellow door[39m
+[2K   [32mDrop something[39m
+[2K   [32mGo east[39m
+[2K > [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[?25h
+
+You:
+  carry:
+    a yellow box
+    a yellow key
+    a lamp
+
+
+[2K > [32mClose the yellow door[39m
+[2K   [32mDrop something[39m
+[2K   [32mGo east[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[?25l[999D[7A[2K   [32mClose the yellow door[39m
+[2K > [32mDrop something[39m
+[2K   [32mGo east[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[?25h
+
+[32mDrop what?[39m
+[2K > [32mDrop the yellow box[39m
+[2K   [32mDrop the yellow key[39m
+[2K   [32mDrop the lamp[39m[?25l[?25h
+Ok
+
+
+[2K > [32mClose the yellow door[39m
+[2K   [32mDrop something[39m
+[2K   [32mGo east[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen the yellow box[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the yellow box[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[?25l[999D[8A[2K   [32mClose the yellow door[39m
+[2K > [32mDrop something[39m
+[2K   [32mGo east[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen the yellow box[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the yellow box[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[999D[8A[2K   [32mClose the yellow door[39m
+[2K   [32mDrop something[39m
+[2K > [32mGo east[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen the yellow box[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the yellow box[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[999D[8A[2K   [32mClose the yellow door[39m
+[2K   [32mDrop something[39m
+[2K   [32mGo east[39m
+[2K > [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen the yellow box[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the yellow box[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[999D[8A[2K   [32mClose the yellow door[39m
+[2K   [32mDrop something[39m
+[2K   [32mGo east[39m
+[2K   [32mList inventory[39m
+[2K > [32mLook at something[39m
+[2K   [32mOpen the yellow box[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the yellow box[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[999D[8A[2K   [32mClose the yellow door[39m
+[2K   [32mDrop something[39m
+[2K   [32mGo east[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K > [32mOpen the yellow box[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the yellow box[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[999D[8A[2K   [32mClose the yellow door[39m
+[2K   [32mDrop something[39m
+[2K   [32mGo east[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen the yellow box[39m
+[2K > [32mQuit[39m
+[2K   [32mTake the yellow box[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[999D[8A[2K   [32mClose the yellow door[39m
+[2K   [32mDrop something[39m
+[2K   [32mGo east[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen the yellow box[39m
+[2K   [32mQuit[39m
+[2K > [32mTake the yellow box[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[?25h
+Ok
+
+
+[2K > [32mClose the yellow door[39m
+[2K   [32mDrop something[39m
+[2K   [32mGo east[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[?25l[999D[7A[2K   [32mClose the yellow door[39m
+[2K > [32mDrop something[39m
+[2K   [32mGo east[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[999D[7A[2K   [32mClose the yellow door[39m
+[2K   [32mDrop something[39m
+[2K > [32mGo east[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[999D[7A[2K   [32mClose the yellow door[39m
+[2K   [32mDrop something[39m
+[2K   [32mGo east[39m
+[2K > [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[999D[7A[2K   [32mClose the yellow door[39m
+[2K   [32mDrop something[39m
+[2K   [32mGo east[39m
+[2K   [32mList inventory[39m
+[2K > [32mLook at something[39m
+[2K   [32mOpen the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[999D[7A[2K   [32mClose the yellow door[39m
+[2K   [32mDrop something[39m
+[2K   [32mGo east[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K > [32mOpen the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[?25h
+Ok
+
+The yellow box:
+  contains:
+    a red key
+
+
+[2K > [32mClose something[39m
+[2K   [32mDrop something[39m
+[2K   [32mGo east[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut something into the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the red key in the yellow box that you are carrying[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[?25l[999D[8A[2K   [32mClose something[39m
+[2K > [32mDrop something[39m
+[2K   [32mGo east[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut something into the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the red key in the yellow box that you are carrying[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[999D[8A[2K   [32mClose something[39m
+[2K   [32mDrop something[39m
+[2K > [32mGo east[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut something into the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the red key in the yellow box that you are carrying[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[999D[8A[2K   [32mClose something[39m
+[2K   [32mDrop something[39m
+[2K   [32mGo east[39m
+[2K > [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut something into the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the red key in the yellow box that you are carrying[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[?25h
+
+You:
+  carry:
+    a yellow box:
+      contains:
+        a red key
+    a yellow key
+    a lamp
+
+
+[2K > [32mClose something[39m
+[2K   [32mDrop something[39m
+[2K   [32mGo east[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut something into the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the red key in the yellow box that you are carrying[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[?25l[999D[8A[2K   [32mClose something[39m
+[2K > [32mDrop something[39m
+[2K   [32mGo east[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut something into the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the red key in the yellow box that you are carrying[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[999D[8A[2K   [32mClose something[39m
+[2K   [32mDrop something[39m
+[2K > [32mGo east[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut something into the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the red key in the yellow box that you are carrying[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[999D[8A[2K   [32mClose something[39m
+[2K   [32mDrop something[39m
+[2K   [32mGo east[39m
+[2K > [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut something into the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the red key in the yellow box that you are carrying[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[999D[8A[2K   [32mClose something[39m
+[2K   [32mDrop something[39m
+[2K   [32mGo east[39m
+[2K   [32mList inventory[39m
+[2K > [32mLook at something[39m
+[2K   [32mPut something into the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the red key in the yellow box that you are carrying[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[?25h
+
+[32mLook at what?[39m
+[2K > [32mLook at yourself[39m
+[2K   [32mLook at the yellow key that you are carrying[39m
+[2K   [32mLook at the yellow door[39m[?25l[999D[2A[2K   [32mLook at yourself[39m
+[2K > [32mLook at the yellow key that you are carrying[39m
+[2K   [32mLook at the yellow door[39m[?25h
+It's yellow, duh!
+
+
+[2K > [32mClose something[39m
+[2K   [32mDrop something[39m
+[2K   [32mGo east[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut something into the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the red key in the yellow box that you are carrying[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[?25l[?25h
+
+[32mClose what?[39m
+[2K > [32mClose the yellow box that you are carrying[39m
+[2K   [32mClose the yellow door[39m[?25l[?25h
+Ok
+
+
+[2K > [32mClose the yellow door[39m
+[2K   [32mDrop something[39m
+[2K   [32mGo east[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[?25l[999D[7A[2K   [32mClose the yellow door[39m
+[2K > [32mDrop something[39m
+[2K   [32mGo east[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[?25h
+
+[32mDrop what?[39m
+[2K > [32mDrop the yellow box[39m
+[2K   [32mDrop the yellow key[39m
+[2K   [32mDrop the lamp[39m[?25l[999D[2A[2K   [32mDrop the yellow box[39m
+[2K > [32mDrop the yellow key[39m
+[2K   [32mDrop the lamp[39m[?25h
+Ok
+
+
+[2K > [32mClose the yellow door[39m
+[2K   [32mDrop something[39m
+[2K   [32mGo east[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the yellow key[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[?25l[999D[8A[2K   [32mClose the yellow door[39m
+[2K > [32mDrop something[39m
+[2K   [32mGo east[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the yellow key[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[999D[8A[2K   [32mClose the yellow door[39m
+[2K   [32mDrop something[39m
+[2K > [32mGo east[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the yellow key[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[?25h
+Ok
+
+A non-descript room
+
+A:
+  contains:
+    you
+    a car
+    a blue table:
+      supports:
+        a hat
+  west:
+    a yellow door
+
+[2K > [32mClose the yellow door[39m
+[2K   [32mDrop something[39m
+[2K   [32mGo some way[39m
+[2K   [32mGo into the car[39m
+[2K   [32mLay something onto the blue table[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2Kv  [32mTake the hat on the blue table[39m[?25l[999D[9A[2K   [32mClose the yellow door[39m
+[2K > [32mDrop something[39m
+[2K   [32mGo some way[39m
+[2K   [32mGo into the car[39m
+[2K   [32mLay something onto the blue table[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2Kv  [32mTake the hat on the blue table[39m[999D[9A[2K   [32mClose the yellow door[39m
+[2K   [32mDrop something[39m
+[2K > [32mGo some way[39m
+[2K   [32mGo into the car[39m
+[2K   [32mLay something onto the blue table[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2Kv  [32mTake the hat on the blue table[39m[999D[9A[2K   [32mClose the yellow door[39m
+[2K   [32mDrop something[39m
+[2K   [32mGo some way[39m
+[2K > [32mGo into the car[39m
+[2K   [32mLay something onto the blue table[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2Kv  [32mTake the hat on the blue table[39m[?25h
+Ok
+
+A non-descript room
+
+A:
+  contains:
+    a car:
+      contains:
+        you
+    a blue table:
+      supports:
+        a hat
+  west:
+    a yellow door
+
+[2K > [32mDrop something[39m
+[2K   [32mGo some way[39m
+[2K   [32mGo into the car[39m
+[2K   [32mLeave[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[?25l[999D[8A[2K   [32mDrop something[39m
+[2K > [32mGo some way[39m
+[2K   [32mGo into the car[39m
+[2K   [32mLeave[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[?25h
+
+[32mGo which way?[39m
+[2K > [32mGo north[39m
+[2K   [32mGo west[39m[?25l[?25h
+Ok
+
+
+[2K > [32mDrop something[39m
+[2K   [32mGo south[39m
+[2K   [32mGo into the car[39m
+[2K   [32mLeave[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at yourself in the car[39m
+[2K   [32mOpen the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[?25l[999D[8A[2K   [32mDrop something[39m
+[2K > [32mGo south[39m
+[2K   [32mGo into the car[39m
+[2K   [32mLeave[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at yourself in the car[39m
+[2K   [32mOpen the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[999D[8A[2K   [32mDrop something[39m
+[2K   [32mGo south[39m
+[2K > [32mGo into the car[39m
+[2K   [32mLeave[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at yourself in the car[39m
+[2K   [32mOpen the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[999D[8A[2K   [32mDrop something[39m
+[2K   [32mGo south[39m
+[2K   [32mGo into the car[39m
+[2K > [32mLeave[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at yourself in the car[39m
+[2K   [32mOpen the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[999D[8A[2K   [32mDrop something[39m
+[2K   [32mGo south[39m
+[2K   [32mGo into the car[39m
+[2K   [32mLeave[39m
+[2K > [32mList inventory[39m
+[2K   [32mLook at yourself in the car[39m
+[2K   [32mOpen the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[?25h
+
+You:
+  carry:
+    a yellow box
+    a lamp
+
+
+[2K > [32mDrop something[39m
+[2K   [32mGo south[39m
+[2K   [32mGo into the car[39m
+[2K   [32mLeave[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at yourself in the car[39m
+[2K   [32mOpen the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[?25l[999D[8A[2K   [32mDrop something[39m
+[2K > [32mGo south[39m
+[2K   [32mGo into the car[39m
+[2K   [32mLeave[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at yourself in the car[39m
+[2K   [32mOpen the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[?25h
+Ok
+
+
+[2K > [32mDrop something[39m
+[2K   [32mGo some way[39m
+[2K   [32mGo into the car[39m
+[2K   [32mLeave[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[?25l[999D[8A[2K   [32mDrop something[39m
+[2K > [32mGo some way[39m
+[2K   [32mGo into the car[39m
+[2K   [32mLeave[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[?25h
+
+[32mGo which way?[39m
+[2K > [32mGo north[39m
+[2K   [32mGo west[39m[?25l[999D[1A[2K   [32mGo north[39m
+[2K > [32mGo west[39m[?25h
+Ok
+
+
+[2K > [32mDrop something[39m
+[2K   [32mGo east[39m
+[2K   [32mGo into the car[39m
+[2K   [32mLeave[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[?25l[999D[8A[2K   [32mDrop something[39m
+[2K > [32mGo east[39m
+[2K   [32mGo into the car[39m
+[2K   [32mLeave[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[?25h
+Ok
+
+
+[2K > [32mDrop something[39m
+[2K   [32mGo some way[39m
+[2K   [32mGo into the car[39m
+[2K   [32mLeave[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[?25l[999D[8A[2K   [32mDrop something[39m
+[2K > [32mGo some way[39m
+[2K   [32mGo into the car[39m
+[2K   [32mLeave[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[999D[8A[2K   [32mDrop something[39m
+[2K   [32mGo some way[39m
+[2K > [32mGo into the car[39m
+[2K   [32mLeave[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[999D[8A[2K   [32mDrop something[39m
+[2K   [32mGo some way[39m
+[2K   [32mGo into the car[39m
+[2K > [32mLeave[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[999D[8A[2K   [32mDrop something[39m
+[2K   [32mGo some way[39m
+[2K   [32mGo into the car[39m
+[2K   [32mLeave[39m
+[2K > [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[999D[8A[2K   [32mDrop something[39m
+[2K   [32mGo some way[39m
+[2K   [32mGo into the car[39m
+[2K   [32mLeave[39m
+[2K   [32mList inventory[39m
+[2K > [32mLook at something[39m
+[2K   [32mOpen the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[999D[8A[2K   [32mDrop something[39m
+[2K   [32mGo some way[39m
+[2K   [32mGo into the car[39m
+[2K   [32mLeave[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K > [32mOpen the yellow box that you are carrying[39m
+[2K   [32mQuit[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[999D[8A[2K   [32mDrop something[39m
+[2K   [32mGo some way[39m
+[2K   [32mGo into the car[39m
+[2K   [32mLeave[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen the yellow box that you are carrying[39m
+[2K > [32mQuit[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[?25h
