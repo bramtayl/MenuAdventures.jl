@@ -2,6 +2,7 @@ module MenuAdventures
 
 using Base: disable_text_style, @kwdef, text_colors
 import Base: setindex!, show
+using OrderedCollections: OrderedDict
 using InteractiveUtils: subtypes
 using LightGraphs: DiGraph, inneighbors, outneighbors
 using MacroTools: @capture
@@ -949,7 +950,7 @@ end
 function (::ListInventory)(universe)
     player = universe.player
     interface = universe.interface
-    relations = Dict{Relationship, Vector{Answer}}()
+    relations = OrderedDict{Relationship, Vector{Answer}}()
     for (thing, relationship) in
         out_neighbors_relationships(universe.relationships_graph, player)
         # we automatically mention everything that is visible
@@ -986,7 +987,7 @@ function (action::Open)(universe, parent_thing)
     success(universe)
     if !(parent_thing isa Location)
         interface = universe.interface
-        relations = Dict{Relationship, Vector{Answer}}()
+        relations = OrderedDict{Relationship, Vector{Answer}}()
         for (thing, relationship) in
             out_neighbors_relationships(universe.relationships_graph, parent_thing)
             if relationship === containing
@@ -1300,7 +1301,7 @@ function add_thing_and_relations!(answers, universe, sentence, domain, parent_th
     if possible_now(universe, sentence, domain, parent_thing)
         push!(answers, make_answer(universe.player, parent_thing))
     end
-    sub_relations = Dict{Relationship, Vector{Answer}}()
+    sub_relations = OrderedDict{Relationship, Vector{Answer}}()
     for (thing, relationship) in
         out_neighbors_relationships(universe.relationships_graph, parent_thing)
         if !(blocking(domain, parent_thing, relationship, thing))
@@ -1431,7 +1432,7 @@ function print_relations(universe, indent, domain, parent_thing, relations)
         for answer in answers
             # don't need the answer text, just the object itself
             thing = answer.object
-            sub_relations = Dict{Relationship, Vector{Answer}}()
+            sub_relations = OrderedDict{Relationship, Vector{Answer}}()
             # we always stop at the player; inventory must be explicitly asked for
             if !(thing === universe.player)
                 for (sub_thing, sub_relationship) in
@@ -1459,7 +1460,7 @@ end
 function print_environment(universe; indent = 0, domain = Visible())
     interface = universe.interface
     blocking_thing, blocked_relationship = blocking_thing_and_relationship(universe, domain)
-    relations = Dict{Union{Relationship, Direction}, Vector{Answer}}()
+    relations = OrderedDict{Union{Relationship, Direction}, Vector{Answer}}()
     for (thing, relationship) in
         out_neighbors_relationships(universe.relationships_graph, blocking_thing)
         if relationship === blocked_relationship
