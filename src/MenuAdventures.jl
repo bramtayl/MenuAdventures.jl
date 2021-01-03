@@ -14,10 +14,10 @@ using TextWrap: println_wrapped
 """
     abstract type Domain end
 
-A domain refers to a search space for a specific argument to a action.
+A domain refers to a search space for a specific argument to an [`Action`](@ref).
 
 For example, you are only able to look at things in the `Visible` domain.
-Domains serve both as a way of distinguishing different arguments to a action, and also, categorizing the environment around the player.
+Domains serve both as a way of distinguishing different arguments to an action, and also, categorizing the environment around the player.
 Users could theoretically add a new domain.
 """
 abstract type Domain end
@@ -25,18 +25,18 @@ abstract type Domain end
 """
     struct Reachable <: Domain end
 
-Anything the player possible_now reach.
+Anything the player can reach.
 
-Players possible_now't reach through closed containers by default.
+Players can't reach through closed containers by default.
 """
 struct Reachable <: Domain end
 
 """
     struct Visible <: Domain end
 
-Anything the player possible_now see.
+Anything the player can see.
 
-Players possible_now't see into closed, opaque containers.
+By default, players can't see into closed, opaque containers.
 """
 struct Visible <: Domain end
 
@@ -66,9 +66,11 @@ struct ExitDirections <: Domain end
 
 Relationships show the relationshp of a `thing` to its `parent_thing`.
 
-A is `containing` B means B is in A 
-A is `incorporating` B means B is part of A 
-A is `supporting` B means B is on top of A
+- A is `carrying` B means B is carried by AbstractDoor
+- A is `containing` B means B is in A 
+- A is `incorporating` B means B is part of A 
+- A is `supporting` B means B is on top of A
+- A is `wearing` B means B is worn by A
 """
 @enum Relationship carrying containing incorporating supporting wearing
 
@@ -253,7 +255,7 @@ struct PutInto <: Action end
 """
     struct PutOnto <: Action end
 
-PutOnto something onto something
+Put something onto something
 """
 struct PutOnto <: Action end
 
@@ -311,10 +313,10 @@ Grammatical person
 
 Nouns must have the following fields:
 
-name::String
-plural::Bool
-grammatical_person::GrammaticalPerson
-indefinite_article::String
+- `name::String`
+- `plural::Bool`
+- `grammatical_person::GrammaticalPerson`
+- `indefinite_article::String`
 
 They are characterized by the following traits and methods:
 
@@ -361,7 +363,7 @@ is_providing_light(::Noun) = false
 """
     ever_possible(action::Action, domain::Domain, noun::Noun)
 
-Whether is is abstractly possible to apply a action to a `noun` from a particular `domain`.
+Whether is is abstractly possible to apply an [`Action`](@ref) to a [`Noun`](@ref) from a particular [`Domain`](@ref).
 
 For whether it is concretely possible for the player in at a certain moment, see [`possible_now`](@ref).
 Most possibilities default to `false`, with some exceptions:
@@ -382,10 +384,10 @@ ever_possible(::Lock, domain::Inventory, noun) =
 
 Certain possibilities come with required fields:
 
-`ever_possible(::TurnOn, ::Reachable, noun)` requires that `noun` has a mutable `on::Bool` field.
-`ever_possible(::Open, ::Reachable, noun` requires that `noun` has a mutable `closed::Bool` field.
-`ever_possible(::Unlock, ::Reachable, noun)` requires that `noun` has a `key::Noun` field and a mutable `locked::Bool` field.
-`ever_possible(::Take, ::Reachable, noun)` requires that `noun` has a mutable `handled::Bool` field.
+- `ever_possible(::TurnOn, ::Reachable, noun)` requires that `noun` has a mutable `on::Bool` field.
+- `ever_possible(::Open, ::Reachable, noun` requires that `noun` has a mutable `closed::Bool` field.
+- `ever_possible(::Unlock, ::Reachable, noun)` requires that `noun` has a `key::Noun` field and a mutable `locked::Bool` field.
+- `ever_possible(::Take, ::Reachable, noun)` requires that `noun` has a mutable `handled::Bool` field.
 """
 ever_possible(_, __, ___) = false
 
@@ -481,14 +483,13 @@ end
         choices_log::Vector{Int}
     )
 
-The universe contains a player, a text interface, an introduction, and the relationships between nouns and locations.
+The universe contains a player, a text interface, an introduction, and the relationships between [`Noun`](@ref)s and [`Location`]s(@ref).
 
-The universe is organized as interlinking web of locations connected by [`Direction`](@ref)s. For any origin and
-destination, there should be no more than one connection to a particular direction.
-Each location is the root of a [`Relationship`](@ref) tree. Every noun should have one and only one parent,
-(except for locations), which are at the root of trees and have no parent.
+The universe is organized as interlinking web of locations connected by [`Direction`](@ref)s.
+Each location is the root of a [`Relationship`](@ref) tree. 
+Every noun should have one and only one parent (except for [`Location`]s(@ref)), which are at the root of trees and have no parent.
 
-You can add a new thing to the universe, or change its location, by specifying its  relation to another thing:
+You can add a new thing to the `universe`, or change the location of something, by specifying its relation to another thing:
 
     universe[parent_thing, thing, silent = false] = relationship
 
@@ -1186,10 +1187,10 @@ end
 """
     possible_now(universe, sentence, domain, thing)
 
-Whether it is currently ever_possible to apply `sentence.action` to a `thing` in a `domain`.
+Whether it is currently possible to apply `sentence.action` to a `thing` in a `domain`.
 
 See [`ever_possible`](@ref) for a more abstract possibility. `sentence` will contain already chosen
-arguments should you wish to access them.
+arguments, should you wish to access them.
 """
 function possible_now(_, sentence, domain, thing)
     ever_possible(sentence.action, domain, thing)
@@ -1494,7 +1495,7 @@ end
 """
     function argument_domains(action::Action)
 
-A tuple of the [`Domain`](@ref)s for each argument of an `action`.
+A tuple of the [`Domain`](@ref)s for each argument of an [`Action`](@ref).
 """
 function argument_domains(::Union{Attach, Give})
     Inventory(), Reachable()
@@ -1714,9 +1715,6 @@ function turn!(universe; introduce = false, should_look_around = false)
     nothing
 end
 
-"""
-A door
-"""
 @kwdef mutable struct Door <: AbstractDoor
     name::String
     key::Noun
