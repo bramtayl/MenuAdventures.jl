@@ -95,18 +95,23 @@ end
 
 const KEY_PRESS = Dict(:up => "\e[A", :down => "\e[B", :enter => "\r")
 
-function test_turn_sequence(universe, option_numbers)
-    for option_number in option_numbers
+function run_turn_sequence(choices_log)
+    for option_number in choices_log
         for _ in 1:(option_number - 1)
             write(stdin.buffer, KEY_PRESS[:down])
         end
         write(stdin.buffer, KEY_PRESS[:enter])
     end
+end
+
+function test_turn_sequence(universe, choices_log)
+    run_turn_sequence(choices_log)
     turn!(universe; introduce = true)
     String(take!(universe.interface.out_stream))
 end
 
 if GENERATE
+    run_turn_sequence(readdlm("choices_log.txt"))
     universe = make_test_universe(; interactive = true)
     choices_log = universe.choices_log
     turn!(universe; introduce = true)

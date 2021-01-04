@@ -9,7 +9,9 @@ MenuAdventures takes user input as menu choices, rather than unconstrained text.
 
 Game designers will use regular Julia code to create the universe. Inform7 offers many different ways to design identical universes. This can make it difficult to learn how to code in Inform7.
 
-MenuAdventures also takes advantage the magic of multiple dispatch. I've left detailed documentation on how to create your own `Noun`s and `Action` subtypes. You can overload various methods to completely customize them.
+MenuAdventures also takes advantage the magic of multiple dispatch. I've left detailed documentation on how to create your own `Noun` and `Action` subtypes. You can overload various methods to completely customize them.
 
-MenuAdventures features a flexible boolean trait system. This allows you to make to create nouns with creative combinations of traits, such as edible boxes, or talking bananas. Beyond MenuAdventures, I think this system could serve as a nice model of how traits might be designed for Base Julia.
+MenuAdventures features a flexible boolean trait system. This allows you to create nouns with creative combinations of traits, such as edible boxes, or talking bananas. Beyond MenuAdventures, I think this system could serve as a model of how traits might be designed for Base Julia.
+
+I'm very curious to see what kind of games people make with MenuAdventures, mostly because I'd like to play them. Happy to take suggestions for design improvements!
 

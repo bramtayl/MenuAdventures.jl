@@ -18,7 +18,6 @@ A domain refers to a search space for a specific argument to an [`Action`](@ref)
 
 For example, you are only able to look at things in the `Visible` domain.
 Domains serve both as a way of distinguishing different arguments to an action, and also, categorizing the environment around the player.
-Users could theoretically add a new domain.
 """
 abstract type Domain end
 
@@ -192,7 +191,10 @@ you will need to define
 - [`ever_possible`](@ref) for abstract possibilities,
 - [`possible_now`](@ref) for concrete possibilities,
 - [`argument_domains`](@ref) to specify the domain of the arguments
-- [`print_sentence`](@ref) for printing the sentence. Note that the order arguments are printed need not match the order they are listed.
+- [`print_sentence`](@ref) for printing the sentence.
+
+Note that the order arguments are printed in need not match the order they are listed.
+However, the order of arguments for [`argument_domains`](@ref) must match the order of arguments for [`print_sentence`](@ref).
 
 Most importantly, define:
 
@@ -211,6 +213,8 @@ export Action
     struct Attach <: Action end
 
 `Attach` something from your [`Inventory`](@ref) to something else [`Reachable`](@ref).
+
+An [`Action`](@ref).
 """
 struct Attach <: Action end
 
@@ -220,6 +224,8 @@ export Attach
     struct Close <: Action end
 
 `Close` something [`Reachable`](@ref).
+
+An [`Action`](@ref).
 """
 struct Close <: Action end
 
@@ -229,6 +235,8 @@ export Close
     struct Dress <: Action end
 
 `Dress` someone [`Reachable`](@ref) in something from your [`Inventory`](@ref).
+
+An [`Action`](@ref).
 """
 struct Dress <: Action end
 
@@ -238,6 +246,8 @@ export Dress
     struct Drop <: Action end
 
 `Drop` something from your [`Inventory`](@ref).
+
+An [`Action`](@ref).
 """
 struct Drop <: Action end
 
@@ -247,6 +257,8 @@ export Drop
     struct Eat <: Action end
 
 `Eat` something [`Reachable`](@ref).
+
+An [`Action`](@ref).
 """
 struct Eat <: Action end
 
@@ -256,6 +268,8 @@ export Eat
     struct Give <: Action end
 
 `Give` something from your [`Inventory`](@ref) to someone [`Reachable`](@ref).
+
+An [`Action`](@ref).
 """
 struct Give <: Action end
 
@@ -265,6 +279,8 @@ export Give
     struct Go <: Action end
 
 `Go` in one of [`ExitDirections`](@ref).
+
+An [`Action`](@ref).
 """
 struct Go <: Action end
 
@@ -274,6 +290,8 @@ export Go
     struct GoInto <: Action end
 
 Go into something [`Immediate`](@ref).
+
+An [`Action`](@ref).
 """
 struct GoInto <: Action end
 
@@ -283,6 +301,8 @@ export GoInto
     struct GoOnto <: Action end
 
 Go onto something [`Immediate`](@ref).
+
+An [`Action`](@ref).
 """
 struct GoOnto <: Action end
 
@@ -292,6 +312,8 @@ export GoOnto
     struct Leave <: Action end
 
 Leave whatever the player is in/on.
+
+An [`Action`](@ref).
 """
 struct Leave <: Action end
 
@@ -301,6 +323,8 @@ export Leave
     struct ListInventory <: Action end
 
 List the player's inventory.
+
+An [`Action`](@ref).
 """
 struct ListInventory <: Action end
 
@@ -310,6 +334,8 @@ export ListInventory
     struct Lock <: Action end
 
 Lock something [`Reachable`](@ref) with something from your [`Inventory`](@ref).
+
+An [`Action`](@ref).
 """
 struct Lock <: Action end
 
@@ -319,6 +345,8 @@ export Lock
     struct LookAround <: Action end
 
 Look around.
+
+An [`Action`](@ref).
 """
 struct LookAround <: Action end
 
@@ -328,6 +356,8 @@ export LookAround
     struct LookAt <: Action end
 
 Look at something [`Visible`](@ref).
+
+An [`Action`](@ref).
 """
 struct LookAt <: Action end
 
@@ -337,6 +367,8 @@ export LookAt
     struct Open <: Action end
 
 Open something [`Reachable`](@ref).
+
+An [`Action`](@ref).
 """
 struct Open <: Action end
 
@@ -346,6 +378,8 @@ export Open
     struct Push <: Action end
 
 Push something [`Immediate`](@ref) in one of [`ExitDirections`](@ref).
+
+An [`Action`](@ref).
 """
 struct Push <: Action end
 
@@ -355,6 +389,8 @@ export Push
     struct PutInto <: Action end
 
 Put something from your [`Inventory`](@ref) into something [`Reachable`](@ref).
+
+An [`Action`](@ref).
 """
 struct PutInto <: Action end
 
@@ -364,6 +400,8 @@ export PutInto
     struct PutOnto <: Action end
 
 Put something from your [`Inventory`](@ref) onto something [`Reachable`](@ref).
+
+An [`Action`](@ref).
 """
 struct PutOnto <: Action end
 
@@ -373,6 +411,8 @@ export PutOnto
     struct Quit <: Action end
 
 Quit
+
+An [`Action`](@ref).
 """
 struct Quit <: Action end
 
@@ -382,6 +422,8 @@ export Quit
     struct Say <: Action end
 
 Say, to someone [`Visible`](@ref), some [`Dialog`](@ref).
+
+An [`Action`](@ref).
 """
 struct Say <: Action end
 
@@ -391,6 +433,8 @@ export Say
     struct Take <: Action end
 
 Take something [`Reachable`](@ref).
+
+An [`Action`](@ref).
 """
 struct Take <: Action end
 
@@ -400,6 +444,8 @@ export Take
     struct TakeOff <: Action end
 
 Take off part of your [`Outfit`](@ref).
+
+An [`Action`](@ref).
 """
 struct TakeOff <: Action end
 
@@ -409,6 +455,8 @@ export TakeOff
     struct TurnOn <: Action end
 
 Turn on something [`Reachable`](@ref).
+
+An [`Action`](@ref).
 """
 struct TurnOn <: Action end
 
@@ -418,6 +466,8 @@ export TurnOn
     struct TurnOff <: Action end
 
 Turn off something [`Reachable`](@ref).
+
+An [`Action`](@ref).
 """
 struct TurnOff <: Action end
 
@@ -427,6 +477,8 @@ export TurnOff
     struct Unlock <: Action end
 
 Unlock something [`Reachable`](@ref) with something from your [`Inventory`](@ref).
+
+An [`Action`](@ref).
 """
 struct Unlock <: Action end
 
@@ -436,6 +488,8 @@ export Unlock
     struct Wear <: Action end
 
 Wear something from your [`Inventory`](@ref).
+
+An [`Action`](@ref).
 """
 struct Wear <: Action end
 
@@ -471,7 +525,7 @@ They are characterized by the following traits and methods:
   - [`is_transparent`](@ref),
   - [`is_vehicle`](@ref).
 
-Set `indefinite_article` to `""` for proper nouns. The following IOContext components will be respected when showing nouns:
+Set `indefinite_article` to `""` for proper nouns. The following `IOContext` components will be respected when showing nouns:
 
 - `:capitalize::Bool => false`
 - `:known::Bool => true`, set to `false` to include the `indefinite article` if it exists.
@@ -1495,12 +1549,7 @@ function string_relationship_to(universe, thing_text, relationship, parent_thing
         print(io, subject_to_verb(parent_thing, BE))
         print(io, " wearing")
     else
-        print(io, thing_text)
-        print(io, ' ')
-        print(io, "to the ")
-        show(io, relationship)
-        print(io, " of ")
-        show(io, parent_thing)
+        error("Unsupported relationship")
     end
     String(take!(buffer))
 end
