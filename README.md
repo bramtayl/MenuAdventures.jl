@@ -3,6 +3,8 @@
 [![Latest](https://img.shields.io/badge/docs-dev-blue.svg)](https://bramtayl.github.io/MenuAdventures.jl/dev)
 [![CodeCov](https://codecov.io/gh/bramtayl/AudioSchedules.jl/branch/master/graph/badge.svg)](https://codecov.io/gh/bramtayl/MenuAdventures.jl)
 
+MenuAdventures is a Julia package for writing menu based adventures.
+
 MenuAdventures is heavily inspired by Inform7. Inform7 is an astounding achievement in terms of natural language programming. However, I've made some different choices for MenuAdventures.
 
 MenuAdventures takes user input as menu choices, rather than unconstrained text. I think this will allow for a much more enjoyable player experience, because players will not have to guess what word the parser will recognize. Moreover, I think this will enhance dialog with non-player characters. Because dialog options are specified by the game designer, they can be much more nuanced.
