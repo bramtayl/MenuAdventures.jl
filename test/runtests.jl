@@ -1,26 +1,22 @@
+using MenuAdventures
 using MenuAdventures:
     Box,
     Car,
     Clothes,
-    containing,
     Door,
     Food,
     Key,
     Lamp,
-    MenuAdventures,
-    north,
+    OrderedDict,
     Person,
     Room,
-    second_person,
     Table,
+    TakeOff,
     terminal,
-    turn!,
-    Universe,
-    west
+    TTYTerminal
 using Documenter: doctest
 using DelimitedFiles: readdlm, writedlm
 using Test: @test
-using REPL.Terminals: TTYTerminal
 
 # set to true to generate a new testing transcript
 GENERATE = false
@@ -32,6 +28,10 @@ function make_test_universe(; interactive = false)
         name = "matilda",
         grammatical_person = second_person,
         description = "a little worse for the wear",
+    )
+    bob = Person(
+        name = "Bob",
+        dialog = OrderedDict("Hello" => Answer("Hello", () -> nothing), "Goodbye" => Answer("Goodbye", () -> nothing))
     )
     A = Room(name = "A", description = "A non-descript room", indefinite_article = "")
     B = Room(name = "B"; providing_light = false)
@@ -66,6 +66,7 @@ function make_test_universe(; interactive = false)
             end
     )
     universe[A, you] = containing
+    universe[A, bob] = containing
     universe[A, yellow_car] = containing
     universe[A, table] = containing
     universe[A, hat] = containing
@@ -88,14 +89,14 @@ function test_turn_sequence(universe, option_numbers)
         end
         write(stdin.buffer, KEY_PRESS[:enter])
     end
-    turn!(universe; introduce = true, should_look_around = true)
+    turn!(universe; introduce = true)
     String(take!(universe.interface.out_stream))
 end
 
 if GENERATE
     universe = make_test_universe(; interactive = true)
     choices_log = universe.choices_log
-    turn!(universe; introduce = true, should_look_around = true)
+    turn!(universe; introduce = true)
     open("choices_log.txt", "w") do io
         writedlm(io, universe.choices_log)
     end

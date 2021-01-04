@@ -22,6 +22,53 @@ Users could theoretically add a new domain.
 """
 abstract type Domain end
 
+export Domain
+
+"""
+    struct Dialog <: Domain end
+
+Things a player might say.
+"""
+struct Dialog <: Domain end
+
+export Dialog
+
+"""
+    struct ExitDirections <: Domain end
+
+Directions that a player, or the vehicle a player is in, might exit in.
+"""
+struct ExitDirections <: Domain end
+
+export ExitDirections
+
+"""
+    struct Inventory <: Domain end
+
+Things the player is carrying.
+"""
+struct Inventory <: Domain end
+
+export Inventory
+
+"""
+    struct Immediate <: Domain end
+
+Thing that are in/on the same place the player could more from.
+"""
+struct Immediate <: Domain end
+
+export Immediate
+
+"""
+    struct Outfit <: Domain end
+
+Things the player is wearing.
+"""
+struct Outfit <: Domain end
+
+export Outfit
+
 """
     struct Reachable <: Domain end
 
@@ -30,6 +77,8 @@ Anything the player can reach.
 Players can't reach through closed containers by default.
 """
 struct Reachable <: Domain end
+
+export Reachable
 
 """
     struct Visible <: Domain end
@@ -40,39 +89,27 @@ By default, players can't see into closed, opaque containers.
 """
 struct Visible <: Domain end
 
-"""
-    struct Inventory <: Domain end
-
-Things the player is carrying.
-"""
-struct Inventory <: Domain end
-
-"""
-    struct MoveSiblings <: Domain end
-
-Thing that are in/on the same place the player could more from.
-"""
-struct MoveSiblings <: Domain end
-
-"""
-    struct ExitDirections <: Domain end
-
-Directions that a player, or the vehicle a player is in, might exit in.
-"""
-struct ExitDirections <: Domain end
+export Visible
 
 """
     @enum Relationship carrying containing incorporating supporting wearing
 
 Relationships show the relationshp of a `thing` to its `parent_thing`.
 
-- A is `carrying` B means B is carried by AbstractDoor
+- A is `carrying` B means B is carried by A
 - A is `containing` B means B is in A 
 - A is `incorporating` B means B is part of A 
 - A is `supporting` B means B is on top of A
 - A is `wearing` B means B is worn by A
 """
 @enum Relationship carrying containing incorporating supporting wearing
+
+export Relationship
+export carrying
+export containing
+export incorporating
+export supporting
+export wearing
 
 """
     @enum Direction north south west east north_west north_east south_west south_east up down inside outside
@@ -82,6 +119,20 @@ Directions show the relationships between [`Location`](@ref)s.
 You can use [`opposite`](@ref) to find the opposite of a direction.
 """
 @enum Direction north south west east north_west north_east south_west south_east up down inside outside
+
+export Direction
+export north
+export south
+export west
+export east
+export north_west
+export north_east
+export south_west
+export south_east
+export up
+export down
+export inside
+export outside
 
 """
     function opposite(direction::Direction)
@@ -118,16 +169,20 @@ function opposite(direction::Direction)
     end
 end
 
+export opposite
+
 """
     abstract type Action end
 
 A action is an action the player can take.
 
 It should be fairly easy to create new verbs:
-you will need to define [`ever_possible`](@ref) for abstract possibilities,
-[`possible_now`](@ref) for concrete possibilities,
-[`argument_domains`](@ref) to specify the domain of the arguments, and
-[`print_sentence`](@ref) for printing the sentence.
+you will need to define 
+
+- [`ever_possible`](@ref) for abstract possibilities,
+- [`possible_now`](@ref) for concrete possibilities,
+- [`argument_domains`](@ref) to specify the domain of the arguments
+- [`print_sentence`](@ref) for printing the sentence. Note that the order arguments are printed need not match the order they are listed.
 
 Most importantly, define:
 
@@ -140,124 +195,169 @@ Return `true` to end the game.
 """
 abstract type Action end
 
+export Action
+
 """
     struct Attach <: Action end
 
-`Attach` something to something else.
+`Attach` something from your [`Inventory`](@ref) to something else [`Reachable`](@ref).
 """
 struct Attach <: Action end
+
+export Attach
 
 """
     struct Close <: Action end
 
-`Close` something.
+`Close` something [`Reachable`](@ref).
 """
 struct Close <: Action end
+
+export Close
 
 """
     struct Dress <: Action end
 
-`Dress` someone in something.
+`Dress` someone [`Reachable`](@ref) in something from your [`Inventory`](@ref).
 """
 struct Dress <: Action end
+
+export Dress
 
 """
     struct Drop <: Action end
 
-`Drop` something.
+`Drop` something from your [`Inventory`](@ref).
 """
 struct Drop <: Action end
+
+export Drop
 
 """
     struct Eat <: Action end
 
-`Eat` something.
+`Eat` something [`Reachable`](@ref).
 """
 struct Eat <: Action end
+
+export Eat
 
 """
     struct Give <: Action end
 
-`Give` something to someone.
+`Give` something from your [`Inventory`](@ref) to someone [`Reachable`](@ref).
 """
 struct Give <: Action end
+
+export Give
 
 """
     struct Go <: Action end
 
-`Go` some way.
+`Go` in one of [`ExitDirections`](@ref).
 """
 struct Go <: Action end
+
+export Go
 
 """
     struct GoInto <: Action end
 
-Go into something.
+Go into something [`Immediate`](@ref).
 """
 struct GoInto <: Action end
+
+export GoInto
 
 """
     struct GoOnto <: Action end
 
-Go onto something.
+Go onto something [`Immediate`](@ref).
 """
 struct GoOnto <: Action end
+
+export GoOnto
 
 """
     struct Leave <: Action end
 
-Leave something.
+Leave whatever the player is in/on.
 """
 struct Leave <: Action end
+
+export Leave
 
 """
     struct ListInventory <: Action end
 
-List your inventory.
+List the player's inventory.
 """
 struct ListInventory <: Action end
+
+export ListInventory
 
 """
     struct Lock <: Action end
 
-Lock something with something.
+Lock something [`Reachable`](@ref) with something from your [`Inventory`](@ref).
 """
 struct Lock <: Action end
+
+export Lock
+
+"""
+    struct LookAround <: Action end
+
+Look around.
+"""
+struct LookAround <: Action end
+
+export LookAround
 
 """
     struct LookAt <: Action end
 
-Look at something.
+Look at something [`Visible`](@ref).
 """
 struct LookAt <: Action end
+
+export LookAt
 
 """
     struct Open <: Action end
 
-Open something.
+Open something [`Reachable`](@ref).
 """
 struct Open <: Action end
+
+export Open
 
 """
     struct Push <: Action end
 
-Push something some way.
+Push something [`Immediate`](@ref) in one of [`ExitDirections`](@ref).
 """
 struct Push <: Action end
+
+export Push
 
 """
     struct PutInto <: Action end
 
-Put something into something.
+Put something from your [`Inventory`](@ref) into something [`Reachable`](@ref).
 """
 struct PutInto <: Action end
+
+export PutInto
 
 """
     struct PutOnto <: Action end
 
-Put something onto something
+Put something from your [`Inventory`](@ref) onto something [`Reachable`](@ref).
 """
 struct PutOnto <: Action end
+
+export PutOnto
 
 """
     struct Quit <: Action end
@@ -266,40 +366,70 @@ Quit
 """
 struct Quit <: Action end
 
+export Quit
+
+"""
+    struct Say <: Action end
+
+Say, to someone [`Visible`](@ref), some [`Dialog`](@ref).
+"""
+struct Say <: Action end
+
+export Say
+
 """
     struct Take <: Action end
 
-Take something
+Take something [`Reachable`](@ref).
 """
 struct Take <: Action end
+
+export Take
+
+"""
+    struct TakeOff <: Action end
+
+Take off part of your [`Outfit`](@ref).
+"""
+struct TakeOff <: Action end
+
+export TakeOff
 
 """
     struct TurnOn <: Action end
 
-Turn something on
+Turn on something [`Reachable`](@ref).
 """
 struct TurnOn <: Action end
+
+export TurnOn
 
 """
     struct TurnOff <: Action end
 
-Turn something off
+Turn off something [`Reachable`](@ref).
 """
 struct TurnOff <: Action end
+
+export TurnOff
 
 """
     struct Unlock <: Action end
 
-Unlock something
+Unlock something [`Reachable`](@ref) with something from your [`Inventory`](@ref).
 """
 struct Unlock <: Action end
+
+export Unlock
 
 """
     struct Wear <: Action end
 
-Wear something.
+Wear something from your [`Inventory`](@ref).
 """
 struct Wear <: Action end
+
+export Wear
 
 """
     @enum GrammaticalPerson first_person second_person third_person
@@ -307,6 +437,11 @@ struct Wear <: Action end
 Grammatical person
 """
 @enum GrammaticalPerson first_person second_person third_person
+
+export GrammaticalPerson
+export first_person
+export second_person
+export third_person
 
 """
     abstract type Noun end
@@ -326,9 +461,29 @@ They are characterized by the following traits and methods:
   - [`is_transparent`](@ref),
   - [`is_vehicle`](@ref).
 
-Set `indefinite_article` to `""` for proper nouns.
+Set `indefinite_article` to `""` for proper nouns. The following IOContext components will be respected when showing nouns:
+
+- `:capitalize::Bool => false`
+- `:known::Bool => true`, set to `false` to include the `indefinite article` if it exists.
+- `:is_subject` => true`, whether the noun is the subject of the sentence. If this is set to `false, you must also include
+- `:subject::Noun`, the subject of the sentence.
+
+There are a handful of unexported `Noun` sub-types included mostly for testing purposes:
+
+- `MenuAdventures.Box`
+- `MenuAdventures.Car`
+- `MenuAdventures.Clothes`
+- `MenuAdventures.Door`
+- `MenuAdventures.Key`
+- `MenuAdventures.Lamp`
+- `MenuAdventures.Person`
+- `MenuAdventures.Table`
+
+Feel free to use them if you want, but for the most part, you will likely want to make your own custom `Noun` subtypes for almost everything in your game.
 """
 abstract type Noun end
+
+export Noun
 
 """
     get_description(universe, thing::Noun) = thing.description
@@ -339,12 +494,16 @@ Unless you overload `get_description`, nouns are required to have a description 
 """
 get_description(_, thing::Noun) = thing.description
 
+export get_description
+
 """
     is_transparent(thing::Noun) = false
 
 Whether you can see through `thing` into its contents.
 """
 is_transparent(::Noun) = false
+
+export is_transparent
 
 """
     is_vehicle(::Noun) = false
@@ -353,12 +512,16 @@ Whether something is a vehicle.
 """
 is_vehicle(::Noun) = false
 
+export is_vehicle
+
 """
     is_providing_light(::Noun) = false
 
 Whether something provides its own light. Naturally lit locations and light sources both are providing light.
 """
 is_providing_light(::Noun) = false
+
+export is_providing_light
 
 """
     ever_possible(action::Action, domain::Domain, noun::Noun)
@@ -372,6 +535,7 @@ Most possibilities default to `false`, with some exceptions:
 ever_possible(::PutInto, ::Inventory, _) = true
 ever_possible(::Drop, ::Inventory, _) = true
 ever_possible(::PutOnto, ::Inventory, _) = true
+ever_possible(::TakeOff, ::Outfit, _) = true
 ever_possible(action::TurnOff, domain::Reachable, noun) = 
     ever_possible(TurnOn(), domain, noun)
 ever_possible(action::Close, domain::Reachable, noun) = 
@@ -388,13 +552,20 @@ Certain possibilities come with required fields:
 - `ever_possible(::Open, ::Reachable, noun` requires that `noun` has a mutable `closed::Bool` field.
 - `ever_possible(::Unlock, ::Reachable, noun)` requires that `noun` has a `key::Noun` field and a mutable `locked::Bool` field.
 - `ever_possible(::Take, ::Reachable, noun)` requires that `noun` has a mutable `handled::Bool` field.
+- `ever_possible(::Say, ::Visible, noun) requires that `noun` have a `dialog::OrderedDict{String, Answer}` field. 
+
+For dialog, the keys will be things you can say, and answers will be replies, with the answer objects being function triggers that will be called with no arguments. 
+Dialog options will be removed after usage.
 """
 ever_possible(_, __, ___) = false
+
+export ever_possible
 
 # you possible_now put or drop anything in your inventory
 ever_possible(::PutInto, ::Inventory, _) = true
 ever_possible(::Drop, ::Inventory, _) = true
 ever_possible(::PutOnto, ::Inventory, _) = true
+ever_possible(::TakeOff, ::Outfit, _) = true
 ever_possible(::TurnOff, domain::Reachable, noun) = ever_possible(TurnOn(), domain, noun)
 ever_possible(::Close, domain::Reachable, noun) = ever_possible(Open(), domain, noun)
 ever_possible(::Lock, domain::Reachable, noun) = ever_possible(Unlock(), domain, noun)
@@ -411,26 +582,17 @@ end
 Create an English verb.
 
 Use [`subject_to_verb`](@ref) to get the form of a verb to agree with a subject.
+Unexported verbs include `MenuAdventures.DO`, `MenuAdventures.BE`, and `MenuAdventures.REPLY`.
 """
 function Verb(base; third_person_singular_present = string(base, "s"))
     Verb(base, third_person_singular_present)
 end
 
-"""
-    const VERB_FOR = Dict{Relationship, Verb}
-
-Get the verb form of a [`Relationship`](@ref), or roughly, remove the `ing`.
-"""
-const VERB_FOR = Dict{Relationship, Verb}(
-    carrying => Verb("carry"; third_person_singular_present = "carries"),
-    containing => Verb("contain"),
-    incorporating => Verb("incorporate"),
-    supporting => Verb("support"),
-    wearing => Verb("wear"),
-)
+export Verb
 
 const DO = Verb("do"; third_person_singular_present = "does")
 const BE = Verb("are"; third_person_singular_present = "is")
+const REPLY = Verb("reply"; third_person_singular_present = "replies")
 
 """
     subject_to_verb(subject, verb)
@@ -445,12 +607,16 @@ function subject_to_verb(subject, verb)
     end
 end
 
+export subject_to_verb
+
 """
     abstract type Location <: Noun end
 
 A location (room or door)
 """
 abstract type Location <: Noun end
+
+export Location
 
 """
     abstract type AbstractRoom <: Location end
@@ -459,10 +625,14 @@ Must have a mutable `visited` field.
 """
 abstract type AbstractRoom <: Location end
 
+export AbstractRoom
+
 """
 An abstract door
 """
 abstract type AbstractDoor <: Location end
+
+export AbstractDoor
 
 struct Universe
     player::Noun
@@ -485,17 +655,16 @@ end
 
 The universe contains a player, a text interface, an introduction, and the relationships between [`Noun`](@ref)s and [`Location`]s(@ref).
 
+The player will typically have `second_person` as their [`GrammaticalPerson`](@ref).
 The universe is organized as interlinking web of locations connected by [`Direction`](@ref)s.
 Each location is the root of a [`Relationship`](@ref) tree. 
 Every noun should have one and only one parent (except for [`Location`]s(@ref)), which are at the root of trees and have no parent.
 
 You can add a new thing to the `universe`, or change the location of something, by specifying its relation to another thing:
 
-    universe[parent_thing, thing, silent = false] = relationship
+    universe[parent_thing, thing] = relationship
 
-Set `silent = true` to suppress the "Ok" message.
-
-You possible_now add a connection between locations too, optionally interspersed by a door:
+You can add a connection between locations too, optionally interspersed by a door:
 
     universe[parent_thing, destination, one_way = false] = direction
     universe[parent_thing, destination, one_way = false] = door, direction
@@ -520,6 +689,13 @@ function Universe(
     )
 end
 
+export Universe
+
+"""
+    function get_parent(universe, thing)
+
+Get the parent of thing in the universe.
+"""
 function get_parent(universe, thing)
     relationships_graph = universe.relationships_graph
     label_for(
@@ -528,20 +704,23 @@ function get_parent(universe, thing)
     )
 end
 
+export get_parent
+
+"""
+    function get_parent_relationship(universe, thing)
+
+Get the parent of `thing` in the universe, and the [`Relationship`](@ref) of `thing` to it.
+"""
 function get_parent_relationship(universe, thing)
     relationships_graph = universe.relationships_graph
     parent = get_parent(universe, thing)
     parent, relationships_graph[parent, thing]
 end
 
+export get_parent_relationship
+
 function over_out_neighbor_codes(a_function, meta_graph, parent_thing)
     Iterators.map(a_function, outneighbors(meta_graph, code_for(meta_graph, parent_thing)))
-end
-
-function out_neighbors(meta_graph, parent_thing)
-    over_out_neighbor_codes(function (code)
-        label_for(meta_graph, code)
-    end, meta_graph, parent_thing)
 end
 
 function out_neighbors_relationships(meta_graph, parent_thing)
@@ -555,10 +734,40 @@ function out_neighbors_relationships(meta_graph, parent_thing)
     )
 end
 
+"""
+    function get_children_relationships(universe, parent_thing)
+
+Get the children of `parent_thing` in the universe, and the [`Relationship`](@ref)s of `parent_thing` to them.
+"""
+function get_children_relationships(universe, parent_thing)
+    out_neighbors_relationships(universe.relationships_graph, parent_thing)
+end
+
+export get_children_relationships
+
+"""
+    function get_exit_directions(universe, location)
+
+Get the exits from `location`, and the [`Direction`](@ref)s to them.
+"""
+function get_exit_directions(universe, location)
+    out_neighbors_relationships(universe.directions_graph, location)
+end
+
+export get_exit_directions
+
+"""
+    function blocking_thing_and_relationship(universe, domain)
+
+Starting from the player, search upwards in the [`Relationships`] tree until a [`blocking`](@ref) relationship is reached, or until the root of the tree is reached.
+Return the blocking thing and the blocked relationship.
+"""
 function blocking_thing_and_relationship(universe, ::Reachable)
     # you can't reach outside of the thing that you are in/on/etc.
     get_parent_relationship(universe, universe.player)
 end
+
+export blocking_thing_and_relationship
 
 function blocking_thing_and_relationship(universe, domain::Visible)
     relationships_graph = universe.relationships_graph
@@ -573,20 +782,27 @@ function blocking_thing_and_relationship(universe, domain::Visible)
     blocking_thing, blocked_relationship
 end
 
-function mover(universe)
+"""
+    function get_mover(universe)
+
+Return the thing that can move: either the player, or the vehicle the player is in, if it [`is_vehicle`](@ref).
+"""
+function get_mover(universe)
     player = universe.player
     relationships_graph = universe.relationships_graph
-    blocking_thing, blocked_relationship = get_parent_relationship(universe, player)
-    if is_vehicle(blocking_thing)
-        blocking_thing
+    mover = get_parent(universe, player)
+    if is_vehicle(mover)
+        mover
     else
         player
     end
 end
 
+export get_mover
+
 function blocking_thing_and_relationship(universe, ::ExitDirections)
     relationships_graph = universe.relationships_graph
-    get_parent_relationship(universe, mover(universe))
+    get_parent_relationship(universe, get_mover(universe))
 end
 
 function get_first_destination(universe, blocking_thing, direction)
@@ -594,15 +810,28 @@ function get_first_destination(universe, blocking_thing, direction)
         function ((location, possible_direction),)
             possible_direction === direction
         end,
-        out_neighbors_relationships(universe.directions_graph, blocking_thing),
+        get_exit_directions(universe, blocking_thing),
     ))[1]
 end
 
+"""
+    function get_first_destination(universe, direction)
+
+Get the first destination if `universe.player` moves in direction (a location or a door).
+"""
 function get_first_destination(universe, direction)
     blocking_thing, _ = blocking_thing_and_relationship(universe, ExitDirections())
     get_first_destination(universe, blocking_thing, direction)
 end
 
+export get_first_destination
+
+"""
+    function get_final_destination(universe, direction)
+
+Get the final destination if `universe.player` moves in direction. 
+Players always continue through doors to a new final destination.
+"""
 function get_final_destination(universe, direction)
     blocking_thing, _ = blocking_thing_and_relationship(universe, ExitDirections())
     maybe_door = get_first_destination(universe, blocking_thing, direction)
@@ -613,12 +842,13 @@ function get_final_destination(universe, direction)
     end
 end
 
+export get_final_destination
+
 function setindex!(
     universe::Universe,
     relationship::Relationship,
     parent_thing::Noun,
     thing::Noun;
-    silent = false,
 )
     relationships_graph = universe.relationships_graph
     relationships_graph[parent_thing] = nothing
@@ -631,9 +861,6 @@ function setindex!(
         relationships_graph[thing] = nothing
     end
     relationships_graph[parent_thing, thing] = relationship
-    if !silent
-        success(universe)
-    end
     nothing
 end
 
@@ -753,13 +980,16 @@ function show(io::IO, thing::Noun)
     end
 end
 
-function string_in_color(color, arguments...)
+"""
+    function string_in_color(color::Symbol, arguments...)
+
+Use ASCII escape codes add a `color` to the `arguments` collected as a string.
+"""
+function string_in_color(color::Symbol, arguments...)
     string(text_colors[color], arguments..., text_colors[:default])
 end
 
-function success(universe)
-    println(universe.interface, "Ok")
-end
+export string_in_color
 
 function (::Attach)(universe, thing, parent_thing)
     universe[parent_thing, thing] = incorporating
@@ -777,6 +1007,8 @@ function print_sentence(io, ::Attach, thing_text, parent_thing_text)
     print(io, " to ")
     print(io, parent_thing_text)
 end
+
+export print_sentence
 
 function (::Dress)(universe, parent_thing, thing)
     universe[parent_thing, thing] = wearing
@@ -814,8 +1046,8 @@ function print_sentence(io, ::PutOnto, thing_text, parent_thing_text)
     print(io, parent_thing_text)
 end
 
-function (::PutInto)(universe, thing, parent_thing; silent = false)
-    universe[parent_thing, thing, silent = silent] = containing
+function (::PutInto)(universe, thing, parent_thing)
+    universe[parent_thing, thing] = containing
     return false
 end
 
@@ -828,7 +1060,7 @@ end
 
 # add relations to player
 function (::GoInto)(universe, place)
-    PutInto()(universe, mover(universe), place)
+    PutInto()(universe, get_mover(universe), place)
     return false
 end
 
@@ -838,7 +1070,7 @@ function print_sentence(io, ::GoInto, place_text)
 end
 
 function (::GoOnto)(universe, place)
-    PutOnto()(universe, mover(universe), place)
+    PutOnto()(universe, get_mover(universe), place)
     return false
 end
 
@@ -858,6 +1090,15 @@ function print_sentence(io, ::Take, thing_text)
     print(io, thing_text)
 end
 
+function (::TakeOff)(universe, thing)
+    Take()(universe, thing)
+end
+
+function print_sentence(io, ::TakeOff, thing_text)
+    print(io, "Take off ")
+    print(io, thing_text)
+end
+
 function (::Wear)(universe, thing)
     Dress()(universe, universe.player, thing)
 end
@@ -870,7 +1111,6 @@ end
 # miscellaneous
 function (::Close)(universe, thing)
     thing.closed = true
-    success(universe)
     return false
 end
 
@@ -891,7 +1131,6 @@ end
 
 function (::Eat)(universe, thing)
     delete!(universe.relationships_graph, get_parent(universe, thing), thing)
-    success(universe)
     return false
 end
 
@@ -912,7 +1151,6 @@ end
 function (::Lock)(universe, door, key)
     if door.key === key
         door.locked = true
-        success(universe)
     else
         println_wrapped(
             universe.interface,
@@ -953,9 +1191,9 @@ function (::ListInventory)(universe)
     interface = universe.interface
     relations = OrderedDict{Relationship, Vector{Answer}}()
     for (thing, relationship) in
-        out_neighbors_relationships(universe.relationships_graph, player)
+        get_children_relationships(universe, player)
         # we automatically mention everything that is visible
-        push!(get!(relations, relationship, Answer[]), make_answer(player, thing))
+        push!(get!(relations, relationship, Answer[]), make_answer(universe, thing))
     end
     println(interface)
     show(IOContext(interface, :known => false, :is_subject => true, :capitalize => true), player)
@@ -967,6 +1205,52 @@ end
 
 function print_sentence(io, ::ListInventory)
     print(io, "List inventory")
+end
+
+function (::LookAround)(universe)
+    lit = is_player_lit(universe)
+    interface = universe.interface
+    if !lit
+        println_wrapped(interface, "In darkness")
+    else
+        indent = 0
+        domain = Visible()
+        blocking_thing, blocked_relationship = blocking_thing_and_relationship(universe, domain)
+        relations = OrderedDict{Union{Relationship, Direction}, Vector{Answer}}()
+        for (thing, relationship) in
+            get_children_relationships(universe, blocking_thing)
+            if relationship === blocked_relationship
+                # we automatically mention everything that is visible
+                push!(get!(relations, relationship, Answer[]), make_blurb(thing))
+            end
+        end
+        directions_graph = universe.directions_graph
+        if haskey(directions_graph, blocking_thing)
+            for (location, direction) in
+                get_exit_directions(universe, blocking_thing)
+                if location isa AbstractDoor
+                    push!(get!(relations, direction, Answer[]), make_blurb(location))
+                end
+            end
+        end
+        print(interface, ' '^indent)
+        show(IOContext(interface, :known => false, :is_subject => true), blocking_thing)
+        if !isempty(relations)
+            print(interface, ':')
+        end
+        println(interface)
+        print_relations(universe, indent, domain, blocking_thing, relations)
+        description = get_description(universe, blocking_thing)
+        if !isempty(description)
+            println(interface)
+            println_wrapped(interface, description)
+        end
+    end
+    return false
+end
+
+function print_sentence(io, ::LookAround)
+    print(io, "Look around")
 end
 
 function (::LookAt)(universe, thing)
@@ -985,15 +1269,14 @@ end
 
 function (action::Open)(universe, parent_thing)
     parent_thing.closed = false
-    success(universe)
     if !(parent_thing isa Location)
         interface = universe.interface
         relations = OrderedDict{Relationship, Vector{Answer}}()
         for (thing, relationship) in
-            out_neighbors_relationships(universe.relationships_graph, parent_thing)
+            get_children_relationships(universe, parent_thing)
             if relationship === containing
                 # we automatically mention everything that is visible
-                push!(get!(relations, relationship, Answer[]), make_answer(universe.player, thing))
+                push!(get!(relations, relationship, Answer[]), make_answer(universe, thing))
             end
         end
 
@@ -1019,7 +1302,7 @@ end
 
 function (::Push)(universe, thing, direction)
     final_destination = get_final_destination(universe, direction)
-    PutInto()(universe, thing, final_destination; silent = true)
+    PutInto()(universe, thing, final_destination)
     Go()(universe, final_destination)
 end
 
@@ -1037,9 +1320,32 @@ function print_sentence(io, ::Quit)
     print(io, "Quit")
 end
 
-function (::TurnOff)(universe, thing)
+function (::Say)(universe, person, text)
+    interface = universe.interface
+    dialog = person.dialog
+    answer = dialog[text]
+    delete!(dialog, text)
+    buffer = IOBuffer()
+    show(IOContext(buffer, :capitalize => true, :is_subject => true), person)
+    print(buffer, ' ')
+    print(buffer, subject_to_verb(person, REPLY))
+    print(buffer, " \"")
+    print(buffer, answer.text)
+    print(buffer, '"')
+    println_wrapped(interface, String(take!(buffer)))
+    answer.object()
+    return false
+end
+
+function print_sentence(io, ::Say, person_text, text)
+    print(io, "Say ")
+    print(io, text)
+    print(io, " to ")
+    print(io, person_text)
+end
+
+function (::TurnOff)(_, thing)
     thing.on = false
-    success(universe)
     return false
 end
 
@@ -1050,7 +1356,6 @@ end
 
 function (::TurnOn)(universe, thing)
     thing.on = true
-    success(universe)
     return false
 end
 
@@ -1062,7 +1367,6 @@ end
 function (::Unlock)(universe, door, key)
     if door.key === key
         door.locked = false
-        success(universe)
     else
         println_wrapped(
             universe.interface,
@@ -1079,16 +1383,48 @@ function print_sentence(io, ::Unlock, door_text, key_text)
     print(io, key_text)
 end
 
+
+"""
+    mutable struct Answer
+
+An answer has to fields: `text`, which will be how the option is displayed in a menu, and `object`.
+`object` might be a noun, direction, trigger, or even another [`Question`](@ref).
+"""
 mutable struct Answer
     text::String
     # could be an noun, a direction, or another question
     object::Any
 end
 
-function make_answer(subject, thing)
+export Answer
+
+function make_answer(universe, thing)
     buffer = IOBuffer()
     # things will have already been mentioned in the room descrption
-    show(IOContext(buffer, :known => true, :is_subject => false, :subject => subject), thing)
+    show(IOContext(buffer, :is_subject => false, :subject => universe.player), thing)
+    Answer(String(take!(buffer)), thing)
+end
+
+export make_answer
+
+function make_blurb(thing)
+    buffer = IOBuffer()
+    # things will have already been mentioned in the room descrption
+    show(IOContext(buffer, :known => false, :is_subject => true), thing)
+    if ever_possible(Open(), Reachable(), thing)
+        if thing.closed
+            print(buffer, " (closed)")
+        else
+            print(buffer, " (open)")
+        end
+    end
+    if ever_possible(Unlock(), Reachable(), thing)
+        if thing.locked
+            print(buffer, " (locked)")
+        else
+            print(buffer, " (unlocked)")
+        end
+    end
     Answer(String(take!(buffer)), thing)
 end
 
@@ -1097,18 +1433,27 @@ mutable struct Question
     answers::Vector{Answer}
 end
 
+"""
+    struct Sentence{Action}
+
+A sentence has two fields: `action`, the [`Action`](@ref) to tbe taken, and `arguments`, the arguments to the action. 
+
+The subject is implicitly `universe.player`.
+"""
 struct Sentence{Action}
     action::Action
     arguments::Vector{Answer}
 end
 
+export Sentence
+
 function Sentence(action::Action; arguments = Answer[])
     Sentence(action, arguments)
 end
 
-function string_relationship_to(subject, thing_text, relationship, parent_thing)
+function string_relationship_to(universe, thing_text, relationship, parent_thing)
     buffer = IOBuffer()
-    io = IOContext(buffer, :known => true, :is_subject => false, :subject => subject)
+    io = IOContext(buffer, :is_subject => false, :subject => universe.player)
     if relationship === carrying
         print(io, thing_text)
         print(io, ' ')
@@ -1136,7 +1481,7 @@ function string_relationship_to(subject, thing_text, relationship, parent_thing)
         print(io, thing_text)
         print(io, ' ')
         print(io, "that ")
-        show(IOContext(io, :known => true, :is_subject => true), parent_thing)
+        show(IOContext(io, :is_subject => true), parent_thing)
         print(io, ' ')
         print(io, subject_to_verb(parent_thing, BE))
         print(io, " wearing")
@@ -1150,6 +1495,14 @@ function string_relationship_to(subject, thing_text, relationship, parent_thing)
     end
     String(take!(buffer))
 end
+
+const VERB_FOR = Dict{Relationship, Verb}(
+    carrying => Verb("carry"; third_person_singular_present = "carries"),
+    containing => Verb("contain"),
+    incorporating => Verb("incorporate"),
+    supporting => Verb("support"),
+    wearing => Verb("wear"),
+)
 
 function print_relationship_as_verb(io, parent_thing, relationship::Relationship)
     print(io, subject_to_verb(parent_thing, VERB_FOR[relationship]))
@@ -1179,6 +1532,8 @@ function blocking(::Reachable, parent_thing, relationship, _)
     relationship === containing && is_closable_and_closed(parent_thing)
 end
 
+export blocking
+
 function blocking(::Visible, parent_thing, relationship, thing)
     blocking(Reachable(), parent_thing, relationship, thing) &&
         !(is_transparent(parent_thing))
@@ -1196,6 +1551,8 @@ function possible_now(_, sentence, domain, thing)
     ever_possible(sentence.action, domain, thing)
 end
 
+export possible_now
+
 function possible_now(_, sentence::Sentence{Close}, domain::Reachable, thing)
     ever_possible(sentence.action, domain, thing) && !(thing.closed)
 end
@@ -1204,16 +1561,16 @@ function possible_now(universe, ::Sentence{<:Union{Go, Push}}, ::ExitDirections,
     !(is_closable_and_closed(get_first_destination(universe, direction)))
 end
 
-function possible_now(universe, sentence::Sentence{GoInto}, domain::MoveSiblings, thing)
+function possible_now(universe, sentence::Sentence{GoInto}, domain::Immediate, thing)
     get_parent(universe, universe.player) !== thing && ever_possible(sentence.action, domain, thing) && !(is_closable_and_closed(thing))
 end
 
-function possible_now(universe, sentence::Sentence{PutOnto}, domain::MoveSiblings, thing)
+function possible_now(universe, sentence::Sentence{PutOnto}, domain::Immediate, thing)
     get_parent(universe, universe.player) !== thing && ever_possible(sentence.action, domain, thing)
 end
 function possible_now(_, sentence::Sentence{Lock}, domain::Reachable, thing)
-    MenuAdventures.is_closable_and_closed(thing) &&
-        MenuAdventures.ever_possible(sentence.action, domain, thing) &&
+    is_closable_and_closed(thing) &&
+        ever_possible(sentence.action, domain, thing) &&
         !(thing.locked)
 end
 
@@ -1237,9 +1594,12 @@ function possible_now(universe, sentence::Sentence{Take}, domain::Reachable, thi
         false
     else
         parent_thing, relationship = get_parent_relationship(universe, thing)
-        ever_possible(sentence.action, domain, thing) &&
-            !(parent_thing === universe.player && relationship === carrying)
+        ever_possible(sentence.action, domain, thing) && !(parent_thing === universe.player)
     end
+end
+
+function possible_now(_, sentence::Sentence{Say}, domain::Visible, person)
+    ever_possible(sentence.action, domain, person) && !isempty(person.dialog)
 end
 
 function possible_now(_, sentence::Sentence{TurnOff}, domain::Reachable, thing)
@@ -1265,19 +1625,19 @@ function append_parent_relationship_to(_, noun::Noun, __, ___)
     noun
 end
 
-function append_parent_relationship_to(subject, answer::Answer, relationship, parent_thing)
+function append_parent_relationship_to(universe, answer::Answer, relationship, parent_thing)
     Answer(
-        string_relationship_to(subject, answer.text, relationship, parent_thing),
-        append_parent_relationship_to(subject, answer.object, relationship, parent_thing),
+        string_relationship_to(universe, answer.text, relationship, parent_thing),
+        append_parent_relationship_to(universe, answer.object, relationship, parent_thing),
     )
 end
 
-function append_parent_relationship_to(subject, question::Question, relationship, parent_thing)
+function append_parent_relationship_to(universe, question::Question, relationship, parent_thing)
     Question(
-        string_relationship_to(subject, question.text, relationship, parent_thing),
+        string_relationship_to(universe, question.text, relationship, parent_thing),
         map(
             function (answer)
-                append_parent_relationship_to(subject, answer, relationship, parent_thing)
+                append_parent_relationship_to(universe, answer, relationship, parent_thing)
             end,
             question.answers,
         ),
@@ -1300,11 +1660,11 @@ end
 function add_thing_and_relations!(answers, universe, sentence, domain, parent_thing)
     action = sentence.action
     if possible_now(universe, sentence, domain, parent_thing)
-        push!(answers, make_answer(universe.player, parent_thing))
+        push!(answers, make_answer(universe, parent_thing))
     end
     sub_relations = OrderedDict{Relationship, Vector{Answer}}()
     for (thing, relationship) in
-        out_neighbors_relationships(universe.relationships_graph, parent_thing)
+        get_children_relationships(universe, parent_thing)
         if !(blocking(domain, parent_thing, relationship, thing))
             add_thing_and_relations!(
                 get!(sub_relations, relationship, Answer[]),
@@ -1322,12 +1682,12 @@ function add_thing_and_relations!(answers, universe, sentence, domain, parent_th
             push!(
                 answers,
                 append_parent_relationship_to(
-                    universe.player,
+                    universe,
                     if length(sub_answers) == 1
                         only(sub_answers)
                     else
                         Answer(
-                            MenuAdventures.indefinite_for(domain),
+                            indefinite_for(domain),
                             Question(interrogative_for(domain), sub_answers),
                         )
                     end,
@@ -1342,7 +1702,7 @@ end
 function add_siblings_and_doors!(answers, universe, sentence, domain)
     blocking_thing, blocked_relationship = blocking_thing_and_relationship(universe, domain)
     for (thing, relationship) in
-        out_neighbors_relationships(universe.relationships_graph, blocking_thing)
+        get_children_relationships(universe, blocking_thing)
         if relationship === blocked_relationship
             add_thing_and_relations!(answers, universe, sentence, domain, thing)
         end
@@ -1350,7 +1710,7 @@ function add_siblings_and_doors!(answers, universe, sentence, domain)
     directions_graph = universe.directions_graph
     if haskey(directions_graph, blocking_thing)
         for (location, direction) in
-            out_neighbors_relationships(directions_graph, blocking_thing)
+            get_exit_directions(universe, blocking_thing)
             if location isa AbstractDoor
                 add_thing_and_relations!(answers, universe, sentence, domain, location)
             end
@@ -1358,10 +1718,59 @@ function add_siblings_and_doors!(answers, universe, sentence, domain)
     end
 end
 
-function find_in_domain(universe, sentence, domain::Visible; lit = true)
+function find_in_domain(universe, sentence, ::Dialog; lit = true)
+    [Answer(repr(text), text) for text in keys(sentence.arguments[1].object.dialog)]
+end
+
+function find_in_domain(universe, sentence, domain::ExitDirections; lit = true)
+    blocking_thing, _ = blocking_thing_and_relationship(universe, domain)
     answers = Answer[]
+    directions_graph = universe.directions_graph
+    if haskey(directions_graph, blocking_thing)
+        for (location, direction) in
+            get_exit_directions(universe, blocking_thing)
+            if possible_now(universe, sentence, domain, direction)
+                push!(answers, make_answer(universe, direction))
+            end
+        end
+    end
+    answers
+end
+
+function find_in_domain(universe, sentence, domain::Inventory; lit = true)
+    answers = Answer[]
+    for (thing, relationship) in
+        get_children_relationships(universe, universe.player)
+        if relationship === carrying && possible_now(universe, sentence, domain, thing)
+            push!(answers, make_answer(universe, thing))
+        end
+    end
+    answers
+end
+
+function find_in_domain(universe, sentence, domain::Outfit; lit = true)
+    answers = Answer[]
+    for (thing, relationship) in
+        get_children_relationships(universe, universe.player)
+        if relationship === wearing && possible_now(universe, sentence, domain, thing)
+            push!(answers, make_answer(universe, thing))
+        end
+    end
+    answers
+end
+
+function find_in_domain(universe, sentence, domain::Immediate; lit = true)
+    answers = Answer[]
+    blocking_thing, blocked_relationship =
+        blocking_thing_and_relationship(universe, ExitDirections())
     if lit
-        add_siblings_and_doors!(answers, universe, sentence, domain)
+        for (thing, relationship) in
+            get_children_relationships(universe, blocking_thing)
+            if relationship === blocked_relationship &&
+               possible_now(universe, sentence, domain, thing)
+                push!(answers, make_answer(universe, thing))
+            end
+        end
     end
     answers
 end
@@ -1372,51 +1781,17 @@ function find_in_domain(universe, sentence, domain::Reachable; lit = true)
         add_siblings_and_doors!(answers, universe, sentence, domain)
     else
         for (thing, relationship) in
-            out_neighbors_relationships(universe.relationships_graph, universe.player)
+            get_children_relationships(universe, universe.player)
             add_thing_and_relations!(answers, universe, sentence, domain, thing)
         end
     end
     answers
 end
 
-function find_in_domain(universe, sentence, domain::ExitDirections; lit = true)
-    blocking_thing, _ = blocking_thing_and_relationship(universe, domain)
+function find_in_domain(universe, sentence, domain::Visible; lit = true)
     answers = Answer[]
-    directions_graph = universe.directions_graph
-    if haskey(directions_graph, blocking_thing)
-        for (location, direction) in
-            out_neighbors_relationships(universe.directions_graph, blocking_thing)
-            if possible_now(universe, sentence, domain, direction)
-                push!(answers, make_answer(universe.player, direction))
-            end
-        end
-    end
-    answers
-end
-
-function find_in_domain(universe, sentence, domain::MoveSiblings; lit = true)
-    answers = Answer[]
-    blocking_thing, blocked_relationship =
-        blocking_thing_and_relationship(universe, ExitDirections())
     if lit
-        for (thing, relationship) in
-            out_neighbors_relationships(universe.relationships_graph, blocking_thing)
-            if relationship === blocked_relationship &&
-               possible_now(universe, sentence, domain, thing)
-                push!(answers, make_answer(universe.player, thing))
-            end
-        end
-    end
-    answers
-end
-
-function find_in_domain(universe, sentence, domain::Inventory; lit = true)
-    answers = Answer[]
-    for (thing, relationship) in
-        out_neighbors_relationships(universe.relationships_graph, universe.player)
-        if relationship === carrying && possible_now(universe, sentence, domain, thing)
-            push!(answers, make_answer(universe.player, thing))
-        end
+        add_siblings_and_doors!(answers, universe, sentence, domain)
     end
     answers
 end
@@ -1437,58 +1812,24 @@ function print_relations(universe, indent, domain, parent_thing, relations)
             # we always stop at the player; inventory must be explicitly asked for
             if !(thing === universe.player)
                 for (sub_thing, sub_relationship) in
-                    out_neighbors_relationships(universe.relationships_graph, thing)
+                    get_children_relationships(universe, thing)
                     if !(blocking(domain, thing, sub_relationship, sub_thing))
                         # we automatically mention everything that is visible
                         push!(
                             get!(sub_relations, sub_relationship, Answer[]),
-                            make_answer(universe.player, sub_thing),
+                            make_blurb(sub_thing),
                         )
                     end
                 end
             end
             print(interface, ' '^sub_indent)
-            show(IOContext(interface, :known => false, :is_subject => false, :subject => parent_thing), thing)
+            print(interface, make_blurb(thing).text)
             if !isempty(sub_relations)
                 print(interface, ':')
             end
             println(interface)
             print_relations(universe, sub_indent, domain, thing, sub_relations)
         end
-    end
-end
-
-function print_environment(universe; indent = 0, domain = Visible())
-    interface = universe.interface
-    blocking_thing, blocked_relationship = blocking_thing_and_relationship(universe, domain)
-    relations = OrderedDict{Union{Relationship, Direction}, Vector{Answer}}()
-    for (thing, relationship) in
-        out_neighbors_relationships(universe.relationships_graph, blocking_thing)
-        if relationship === blocked_relationship
-            # we automatically mention everything that is visible
-            push!(get!(relations, relationship, Answer[]), make_answer(universe.player, thing))
-        end
-    end
-    directions_graph = universe.directions_graph
-    if haskey(directions_graph, blocking_thing)
-        for (location, direction) in
-            out_neighbors_relationships(directions_graph, blocking_thing)
-            if location isa AbstractDoor
-                push!(get!(relations, direction, Answer[]), make_answer(universe.player, location))
-            end
-        end
-    end
-    print(interface, ' '^indent)
-    show(IOContext(interface, :known => false, :is_subject => true), blocking_thing)
-    if !isempty(relations)
-        print(interface, ':')
-    end
-    println(interface)
-    print_relations(universe, indent, domain, blocking_thing, relations)
-    description = get_description(universe, blocking_thing)
-    if !isempty(description)
-        println(interface)
-        println_wrapped(interface, description)
     end
 end
 
@@ -1510,9 +1851,9 @@ function argument_domains(::Go)
     (ExitDirections(),)
 end
 function argument_domains(::Union{GoInto, GoOnto})
-    (MoveSiblings(),)
+    (Immediate(),)
 end
-function argument_domains(::Union{ListInventory, Quit})
+function argument_domains(::Union{ListInventory, LookAround, Quit})
     ()
 end
 function argument_domains(::PutOnto)
@@ -1528,10 +1869,16 @@ function argument_domains(::LookAt)
     (Visible(),)
 end
 function argument_domains(::Push)
-    MoveSiblings(), ExitDirections()
+    Immediate(), ExitDirections()
 end
 function argument_domains(::PutInto)
     Inventory(), Reachable()
+end
+function argument_domains(::Say)
+    Visible(), Dialog()
+end
+function argument_domains(::TakeOff)
+    (Outfit(),)
 end
 
 """
@@ -1547,7 +1894,7 @@ function possible_now(universe, ::Leave)
     !(get_parent(universe, universe.player) isa Location)
 end
 function possible_now(universe, ::ListInventory)
-    !isempty(out_neighbors_relationships(universe.relationships_graph, universe.player))
+    !isempty(get_children_relationships(universe, universe.player))
 end
 
 function choose(universe, sentence, index, answer)
@@ -1567,7 +1914,7 @@ function choose(universe, sentence, index, answer)
             ),
             RadioMenu(map(
                 function (sub_answer)
-                    string(replace_argument(sentence, index, sub_answer.text))
+                    sprint(show, replace_argument(sentence, index, sub_answer.text), context = :color => :green)
                 end,
                 answers,
             )),
@@ -1580,7 +1927,8 @@ function choose(universe, sentence, index, answer)
 end
 
 function show(io::IO, sentence::Sentence)
-    print(io, text_colors[:green])
+    color = get(io, :color, :default)
+    print(io, text_colors[color])
     print_sentence(
         io,
         sentence.action,
@@ -1604,9 +1952,9 @@ function is_player_lit(universe; domain = Visible())
         true
     else
         for (thing, relationship) in
-            out_neighbors_relationships(universe.relationships_graph, blocking_thing)
+            get_children_relationships(universe, blocking_thing)
             if relationship === blocked_relationship &&
-               is_lit(universe, thing; domain = domain)
+                is_lit(universe, thing; domain = domain)
                 return true
             end
         end
@@ -1619,7 +1967,7 @@ function is_lit(universe, parent_thing; domain = Visible())
         true
     else
         for (thing, relationship) in
-            out_neighbors_relationships(universe.relationships_graph, parent_thing)
+            get_children_relationships(universe, parent_thing)
             if !(blocking(domain, parent_thing, relationship, thing))
                 if is_lit(universe, thing)
                     return true
@@ -1631,11 +1979,11 @@ function is_lit(universe, parent_thing; domain = Visible())
 end
 
 """
-    turn!(universe; introduce = false, should_look_around = false)
+    turn!(universe; introduce = false)
 
 Start a turn in the [`Universe`](@ref), and keep going until the user wins or quits.
 """
-function turn!(universe; introduce = false, should_look_around = false)
+function turn!(universe; introduce = false)
     interface = universe.interface
     relationships_graph = universe.relationships_graph
     player = universe.player
@@ -1649,15 +1997,6 @@ function turn!(universe; introduce = false, should_look_around = false)
 
     # reintroduce the player to their surroundings if the end the turn in a new loaction
     lit = is_player_lit(universe)
-
-    if should_look_around
-        println(interface)
-        if lit
-            print_environment(universe)
-        else
-            println_wrapped(interface, "In darkness")
-        end
-    end
 
     immediate_location = get_parent(universe, universe.player)
     if !immediate_location.visited
@@ -1693,7 +2032,12 @@ function turn!(universe; introduce = false, should_look_around = false)
         end
     end
 
-    choice = request(interface, "", RadioMenu(map(string, sentences)))
+    choice = request(interface, "", RadioMenu(map(
+        function (sentence)
+            sprint(show, sentence, context = :color => :green)
+        end, 
+        sentences
+    )))
     push!(universe.choices_log, choice)
 
     sentence = sentences[choice]
@@ -1706,14 +2050,12 @@ function turn!(universe; introduce = false, should_look_around = false)
         answer.object
     end, arguments)...)
     if !end_game
-        turn!(
-            universe;
-            should_look_around = (get_parent(universe, universe.player) !==
-                                 immediate_location) || (is_player_lit(universe) != lit)
-        )
+        turn!(universe)
     end
     nothing
 end
+
+export turn!
 
 @kwdef mutable struct Door <: AbstractDoor
     name::String
@@ -1732,10 +2074,13 @@ ever_possible(::Unlock, ::Reachable, ::Door) = true
 @kwdef struct Person <: Noun
     name::String
     description::String = ""
+    dialog::OrderedDict{String, Answer} = OrderedDict{String, Answer}()
     grammatical_person::GrammaticalPerson = third_person
     indefinite_article::String = "a"
     plural::Bool = false
 end
+
+ever_possible(::Say, ::Visible, ::Person) = true
 
 @kwdef mutable struct Key <: Noun
     name::String
@@ -1786,7 +2131,7 @@ ever_possible(::PutInto, ::Reachable, ::Box) = true
     visited::Bool = false
 end
 
-ever_possible(::GoInto, ::MoveSiblings, ::Car) = true
+ever_possible(::GoInto, ::Immediate, ::Car) = true
 is_vehicle(::Car) = true
 is_transparent(::Car) = true
 
@@ -1836,13 +2181,8 @@ end
 
 is_providing_light(room::Room) = room.providing_light
 
-# TODO: try out porting Bronze to see what happens
-# TODO: tests
-# TODO: backdrops
-# TODO: visible and reachable tests
-# TODO: tell whether things are locked or closed
-# TODO: take off?
-# TODO: reshow environment when driving
-# TODO: fix extra OKs
+# TODO: add docs about argument order 
+# TODO: add docs about IOContext
+# TODO: add docs about dialog
 
 end
