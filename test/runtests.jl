@@ -10,6 +10,7 @@ using MenuAdventures:
     OrderedDict,
     Person,
     Room,
+    StickyThing,
     Table,
     TakeOff,
     terminal,
@@ -54,6 +55,7 @@ function make_test_universe(; interactive = false)
     table = Table(name = "blue table")
     hat = Clothes(name = "hat")
     apple = Food(name = "apple")
+    gum = StickyThing(name = "gum")
     output = IOBuffer()
     universe = Universe(
         you,
@@ -71,12 +73,23 @@ function make_test_universe(; interactive = false)
     universe[A, table] = containing
     universe[A, hat] = containing
     universe[A, apple] = containing
+    universe[A, gum] = containing
     universe[B, yellow_box] = containing
     universe[yellow_box, yellow_key] = containing
     universe[yellow_box, red_key] = containing
     universe[A, lamp] = containing
     universe[A, B] = north
     universe[A, C] = yellow_door, west
+    universe[C, Room(name = "D")] = north_east
+    universe[C, Room(name = "E")] = south_west
+    universe[C, Room(name = "F")] = south
+    universe[C, Room(name = "G")] = south_east
+    universe[A, Room(name = "H")] = east
+    universe[C, Room(name = "I")] = up 
+    universe[C, Room(name = "J")] = down
+    universe[C, Room(name = "K")] = inside
+    universe[C, Room(name = "L")] = outside
+    universe[C, Room(name = "M")] = north_west
     universe
 end
 
@@ -109,3 +122,11 @@ else
     choices_log = readdlm("choices_log.txt")
     @test test_turn_sequence(make_test_universe(), choices_log) == read("transcript.txt", String)
 end
+
+# make sure to lock and unlock with the wrong key
+# open an empty box
+# look around to get both open/closed and locked/unlocked
+# push between rooms
+# go onto
+# give
+# attach

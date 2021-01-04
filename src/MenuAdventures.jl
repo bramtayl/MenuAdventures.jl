@@ -28,6 +28,8 @@ export Domain
     struct Dialog <: Domain end
 
 Things a player might say.
+
+A [`Domain`](@ref).
 """
 struct Dialog <: Domain end
 
@@ -37,6 +39,8 @@ export Dialog
     struct ExitDirections <: Domain end
 
 Directions that a player, or the vehicle a player is in, might exit in.
+
+A [`Domain`](@ref).
 """
 struct ExitDirections <: Domain end
 
@@ -46,6 +50,8 @@ export ExitDirections
     struct Inventory <: Domain end
 
 Things the player is carrying.
+
+A [`Domain`](@ref).
 """
 struct Inventory <: Domain end
 
@@ -55,6 +61,8 @@ export Inventory
     struct Immediate <: Domain end
 
 Thing that are in/on the same place the player could more from.
+
+A [`Domain`](@ref).
 """
 struct Immediate <: Domain end
 
@@ -64,6 +72,8 @@ export Immediate
     struct Outfit <: Domain end
 
 Things the player is wearing.
+
+A [`Domain`](@ref).
 """
 struct Outfit <: Domain end
 
@@ -74,7 +84,7 @@ export Outfit
 
 Anything the player can reach.
 
-Players can't reach through closed containers by default.
+A [`Domain`](@ref). Players can't reach through closed containers by default.
 """
 struct Reachable <: Domain end
 
@@ -85,7 +95,7 @@ export Reachable
 
 Anything the player can see.
 
-By default, players can't see into closed, opaque containers.
+A [`Domain`](@ref). By default, players can't see into closed, opaque containers.
 """
 struct Visible <: Domain end
 
@@ -450,7 +460,7 @@ Nouns must have the following fields:
 
 - `name::String`
 - `plural::Bool`
-- `grammatical_person::GrammaticalPerson`
+- `grammatical_person::GrammaticalPerson` (see [`GrammaticalPerson`](@ref))
 - `indefinite_article::String`
 
 They are characterized by the following traits and methods:
@@ -465,7 +475,7 @@ Set `indefinite_article` to `""` for proper nouns. The following IOContext compo
 
 - `:capitalize::Bool => false`
 - `:known::Bool => true`, set to `false` to include the `indefinite article` if it exists.
-- `:is_subject` => true`, whether the noun is the subject of the sentence. If this is set to `false, you must also include
+- `:is_subject => true`, whether the noun is the subject of the sentence. If this is set to `false`, you must also include
 - `:subject::Noun`, the subject of the sentence.
 
 There are a handful of unexported `Noun` sub-types included mostly for testing purposes:
@@ -477,6 +487,7 @@ There are a handful of unexported `Noun` sub-types included mostly for testing p
 - `MenuAdventures.Key`
 - `MenuAdventures.Lamp`
 - `MenuAdventures.Person`
+- `MenuAdventures.StickyThing`
 - `MenuAdventures.Table`
 
 Feel free to use them if you want, but for the most part, you will likely want to make your own custom `Noun` subtypes for almost everything in your game.
@@ -526,24 +537,24 @@ export is_providing_light
 """
     ever_possible(action::Action, domain::Domain, noun::Noun)
 
-Whether is is abstractly possible to apply an [`Action`](@ref) to a [`Noun`](@ref) from a particular [`Domain`](@ref).
+Whether it is abstractly possible to apply an [`Action`](@ref) to a [`Noun`](@ref) from a particular [`Domain`](@ref).
 
 For whether it is concretely possible for the player in at a certain moment, see [`possible_now`](@ref).
 Most possibilities default to `false`, with some exceptions:
 
 ```
-ever_possible(::PutInto, ::Inventory, _) = true
 ever_possible(::Drop, ::Inventory, _) = true
+ever_possible(::Give, ::Inventory, _) = true
+ever_possible(::Attach, ::Reachable, _) = true
 ever_possible(::PutOnto, ::Inventory, _) = true
+ever_possible(::PutInto, ::Inventory, _) = true
 ever_possible(::TakeOff, ::Outfit, _) = true
-ever_possible(action::TurnOff, domain::Reachable, noun) = 
-    ever_possible(TurnOn(), domain, noun)
-ever_possible(action::Close, domain::Reachable, noun) = 
-    ever_possible(Open(), domain, noun)
-ever_possible(action::Lock, domain::Reachable, noun) = 
-    ever_possible(Unlock(), domain, noun)
-ever_possible(::Lock, domain::Inventory, noun) = 
-    ever_possible(Unlock(), domain, noun)
+
+ever_possible(::Dress, domain::Inventory, noun) = ever_possible(Wear(), domain, noun)
+ever_possible(::TurnOff, domain::Reachable, noun) = ever_possible(TurnOn(), domain, noun)
+ever_possible(::Close, domain::Reachable, noun) = ever_possible(Open(), domain, noun)
+ever_possible(::Lock, domain::Reachable, noun) = ever_possible(Unlock(), domain, noun)
+ever_possible(::Lock, domain::Inventory, noun) = ever_possible(Unlock(), domain, noun)
 ```
 
 Certain possibilities come with required fields:
@@ -552,24 +563,31 @@ Certain possibilities come with required fields:
 - `ever_possible(::Open, ::Reachable, noun` requires that `noun` has a mutable `closed::Bool` field.
 - `ever_possible(::Unlock, ::Reachable, noun)` requires that `noun` has a `key::Noun` field and a mutable `locked::Bool` field.
 - `ever_possible(::Take, ::Reachable, noun)` requires that `noun` has a mutable `handled::Bool` field.
-- `ever_possible(::Say, ::Visible, noun) requires that `noun` have a `dialog::OrderedDict{String, Answer}` field. 
+- `ever_possible(::Say, ::Visible, noun)` requires that `noun` have a `dialog::OrderedDict{String, Answer}` field. 
+- `ever_possible(::GoInto, ::Immediate, noun)` and `ever_possible(::GoOnto, ::Immediate, noun)` require than `noun` has a mutable `visited::Bool` field.
 
 For dialog, the keys will be things you can say, and answers will be replies, with the answer objects being function triggers that will be called with no arguments. 
 Dialog options will be removed after usage.
 """
 ever_possible(_, __, ___) = false
 
-export ever_possible
-
-# you possible_now put or drop anything in your inventory
-ever_possible(::PutInto, ::Inventory, _) = true
 ever_possible(::Drop, ::Inventory, _) = true
+ever_possible(::Give, ::Inventory, _) = true
+ever_possible(::Attach, ::Reachable, _) = true
 ever_possible(::PutOnto, ::Inventory, _) = true
+ever_possible(::PutInto, ::Inventory, _) = true
 ever_possible(::TakeOff, ::Outfit, _) = true
+
+ever_possible(::Dress, domain::Inventory, noun) = ever_possible(Wear(), domain, noun)
 ever_possible(::TurnOff, domain::Reachable, noun) = ever_possible(TurnOn(), domain, noun)
 ever_possible(::Close, domain::Reachable, noun) = ever_possible(Open(), domain, noun)
 ever_possible(::Lock, domain::Reachable, noun) = ever_possible(Unlock(), domain, noun)
 ever_possible(::Lock, domain::Inventory, noun) = ever_possible(Unlock(), domain, noun)
+
+export ever_possible
+
+# you possible_now put or drop anything in your inventory
+
 
 struct Verb
     base::String
@@ -621,7 +639,7 @@ export Location
 """
     abstract type AbstractRoom <: Location end
 
-Must have a mutable `visited` field.
+Must have a mutable `visited::Bool` field.
 """
 abstract type AbstractRoom <: Location end
 
@@ -653,12 +671,13 @@ end
         choices_log::Vector{Int}
     )
 
-The universe contains a player, a text interface, an introduction, and the relationships between [`Noun`](@ref)s and [`Location`]s(@ref).
+The universe contains a player, a text interface, an introduction, and the relationships between [`Noun`](@ref)s and [`Location`](@ref)s.
 
 The player will typically have `second_person` as their [`GrammaticalPerson`](@ref).
 The universe is organized as interlinking web of locations connected by [`Direction`](@ref)s.
 Each location is the root of a [`Relationship`](@ref) tree. 
-Every noun should have one and only one parent (except for [`Location`]s(@ref)), which are at the root of trees and have no parent.
+[`Location`](@ref)s are at the root of trees and have no parent.
+Every other noun should have one and only one parent in the relationship tree.
 
 You can add a new thing to the `universe`, or change the location of something, by specifying its relation to another thing:
 
@@ -694,7 +713,7 @@ export Universe
 """
     function get_parent(universe, thing)
 
-Get the parent of thing in the universe.
+Get the parent of `thing` in the [`Relationship`](@ref) tree.
 """
 function get_parent(universe, thing)
     relationships_graph = universe.relationships_graph
@@ -709,7 +728,7 @@ export get_parent
 """
     function get_parent_relationship(universe, thing)
 
-Get the parent of `thing` in the universe, and the [`Relationship`](@ref) of `thing` to it.
+Get the parent of a `thing` in the universe, and the parent's [`Relationship`](@ref) to it.
 """
 function get_parent_relationship(universe, thing)
     relationships_graph = universe.relationships_graph
@@ -748,7 +767,7 @@ export get_children_relationships
 """
     function get_exit_directions(universe, location)
 
-Get the exits from `location`, and the [`Direction`](@ref)s to them.
+Get the exits from a `location`, and the [`Direction`](@ref)s to them.
 """
 function get_exit_directions(universe, location)
     out_neighbors_relationships(universe.directions_graph, location)
@@ -759,7 +778,7 @@ export get_exit_directions
 """
     function blocking_thing_and_relationship(universe, domain)
 
-Starting from the player, search upwards in the [`Relationships`] tree until a [`blocking`](@ref) relationship is reached, or until the root of the tree is reached.
+Starting from the player, search upwards in the [`Relationship`](@ref)s tree until a [`blocking`](@ref) relationship is reached, or until the root of the tree is reached.
 Return the blocking thing and the blocked relationship.
 """
 function blocking_thing_and_relationship(universe, ::Reachable)
@@ -960,17 +979,6 @@ function show(io::IO, thing::Noun)
                         maybe_capitalize(capitalize, "yourself")
                     else
                         maybe_capitalize(capitalize, "you")
-                    end
-                end
-            elseif grammmatical_person === first_person
-                if is_subject
-                    maybe_capitalize(capitalize, "I")
-                else
-                    subject = get(io, :subject, nothing)
-                    if subject === thing
-                        maybe_capitalize(capitalize, "myself")
-                    else
-                        maybe_capitalize(capitalize, "me")
                     end
                 end
             else
@@ -1303,12 +1311,13 @@ end
 function (::Push)(universe, thing, direction)
     final_destination = get_final_destination(universe, direction)
     PutInto()(universe, thing, final_destination)
-    Go()(universe, final_destination)
+    Go()(universe, direction)
 end
 
 function print_sentence(io, ::Push, thing_text, direction_text)
     print(io, "Push ")
     print(io, thing_text)
+    print(io, ' ')
     print(io, direction_text)
 end
 
@@ -1385,12 +1394,12 @@ end
 
 
 """
-    mutable struct Answer
+    struct Answer
 
-An answer has to fields: `text`, which will be how the option is displayed in a menu, and `object`.
-`object` might be a noun, direction, trigger, or even another [`Question`](@ref).
+An answer has two fields: `text`, which will be how the option is displayed in a menu, and `object`.
+`object` might be a noun, direction, trigger, or even a question.
 """
-mutable struct Answer
+struct Answer
     text::String
     # could be an noun, a direction, or another question
     object::Any
@@ -1428,7 +1437,7 @@ function make_blurb(thing)
     Answer(String(take!(buffer)), thing)
 end
 
-mutable struct Question
+struct Question
     text::String
     answers::Vector{Answer}
 end
@@ -1585,7 +1594,7 @@ end
 function possible_now(_, sentence::Sentence{PutInto}, domain::Reachable, thing)
     ever_possible(sentence.action, domain, thing) &&
         !(is_closable_and_closed(thing)) &&
-        # possible_now't put something into itself
+        # can't put something into itself
         thing !== sentence.arguments[1].object
 end
 
@@ -1594,8 +1603,19 @@ function possible_now(universe, sentence::Sentence{Take}, domain::Reachable, thi
         false
     else
         parent_thing, relationship = get_parent_relationship(universe, thing)
-        ever_possible(sentence.action, domain, thing) && !(parent_thing === universe.player)
+        ever_possible(sentence.action, domain, thing) && !(
+            # use take off instead of take for wearing
+            # you can't take something you are carring
+            (relationship === wearing || relationship === carrying) &&
+            parent_thing === universe.player
+        )
     end
+end
+
+# use wear instead of dressing yourself
+# you can't give yourself something you are already carrying
+function possible_now(universe, sentence::Sentence{AVerb}, domain::Reachable, thing) where AVerb <: Union{Dress, Give}
+    ever_possible(sentence.action, domain, thing) && thing !== universe.player
 end
 
 function possible_now(_, sentence::Sentence{Say}, domain::Visible, person)
@@ -1836,7 +1856,7 @@ end
 """
     function argument_domains(action::Action)
 
-A tuple of the [`Domain`](@ref)s for each argument of an [`Action`](@ref).
+Return a tuple of the [`Domain`](@ref)s for each argument of an [`Action`](@ref).
 """
 function argument_domains(::Union{Attach, Give})
     Inventory(), Reachable()
@@ -1981,7 +2001,7 @@ end
 """
     turn!(universe; introduce = false)
 
-Start a turn in the [`Universe`](@ref), and keep going until the user wins or quits.
+Start a turn in the [`Universe`](@ref), and keep going until an [`Action`](@ref) returns `true`.
 """
 function turn!(universe; introduce = false)
     interface = universe.interface
@@ -2080,6 +2100,8 @@ ever_possible(::Unlock, ::Reachable, ::Door) = true
     plural::Bool = false
 end
 
+ever_possible(::Dress, ::Reachable, ::Person) = true
+ever_possible(::Give, ::Reachable, ::Person) = true
 ever_possible(::Say, ::Visible, ::Person) = true
 
 @kwdef mutable struct Key <: Noun
@@ -2131,18 +2153,21 @@ ever_possible(::PutInto, ::Reachable, ::Box) = true
     visited::Bool = false
 end
 
+ever_possible(::Push, ::Immediate, ::Car) = true
 ever_possible(::GoInto, ::Immediate, ::Car) = true
 is_vehicle(::Car) = true
 is_transparent(::Car) = true
 
-@kwdef struct Table <: Noun
+@kwdef mutable struct Table <: Noun
     name::String
     description::String = ""
     grammatical_person::GrammaticalPerson = third_person
     indefinite_article::String = "a"
     plural::Bool = false
+    visited::Bool = false
 end
 
+ever_possible(::GoOnto, ::Immediate, ::Table) = true
 ever_possible(::PutOnto, ::Reachable, ::Table) = true
 
 @kwdef mutable struct Clothes <: Noun
@@ -2180,6 +2205,19 @@ ever_possible(::Take, ::Reachable, ::Food) = true
 end
 
 is_providing_light(room::Room) = room.providing_light
+
+@kwdef mutable struct StickyThing <: Noun
+    name::String
+    description::String = ""
+    grammatical_person::GrammaticalPerson = third_person
+    handled::Bool = false
+    indefinite_article::String = "a"
+    plural::Bool = false
+    taken::Bool = false
+end
+
+ever_possible(::Take, ::Reachable, ::StickyThing) = true
+ever_possible(::Attach, ::Inventory, ::StickyThing) = true
 
 # TODO: add docs about argument order 
 # TODO: add docs about IOContext
