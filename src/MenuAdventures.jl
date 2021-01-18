@@ -37,12 +37,17 @@ julia> ever_possible(::OpenOrClose, ::Reachable, ::LockableDoor) = true;
 
 julia> ever_possible(::UnlockOrLock, ::Reachable, ::LockableDoor) = true;
 
-julia> @noun struct Basket <: Noun
+julia> @noun mutable struct Chest <: Noun
+            key::Noun
+            closed::Bool = true
+            locked::Bool = true
         end;
 
-julia> ever_possible(::Take, ::Reachable, ::Basket) = true;
+julia> ever_possible(::OpenOrClose, ::Reachable, ::Chest) = true;
 
-julia> ever_possible(::PutInto, ::Reachable, ::Basket) = true;
+julia> ever_possible(::UnlockOrLock, ::Reachable, ::Chest) = true;
+
+julia> ever_possible(::PutInto, ::Reachable, ::Chest) = true;
 
 julia> @noun struct Car <: Noun
         end;
@@ -66,17 +71,19 @@ julia> cd(joinpath(pkgdir(MenuAdventures), "test")) do
                     description = (universe, self) -> "The entrance to the castle",
                     indefinite_article = ""
                 )
-                right_key = Key("the right key", indefinite_article = "")
+                small_key = Key("small key")
+                large_key = Key("large key")
+                chest = Chest("chest", small_key)
                 universe = Universe(
                     you,
                     introduction = "Welcome!",
                     interface = interface
                 )
-                universe[entrance, Room("the castle", indefinite_article = "")] = LockableDoor("door", right_key), West()
+                universe[entrance, Room("the castle", indefinite_article = "")] = LockableDoor("door", large_key), West()
                 universe[entrance, you] = Containing()
-                universe[entrance, right_key] = Containing()
-                universe[entrance, Key("the wrong key", indefinite_article = "")] = Containing()
-                universe[entrance, Basket("basket")] = Containing()
+                universe[entrance, small_key] = Containing()
+                universe[entrance, chest] = Containing()
+                universe[chest, large_key] = Containing()
                 universe[entrance, Car("car")] = Containing()
                 universe
             end
@@ -1569,12 +1576,12 @@ function choose(universe, sentence, index, answer)
             interface,
             sprint(
                 show,
-                replace_argument(sentence, index, object.text);
+                replace_argument(sentence, index, Answer(object.text, nothing));
                 context = :suffix => "?"
             ),
             RadioMenu(map(
                 function (sub_answer)
-                    sprint(show, replace_argument(sentence, index, sub_answer.text), context = :color => :green)
+                    sprint(show, replace_argument(sentence, index, sub_answer), context = :color => :green)
                 end,
                 answers,
             )),
@@ -1600,7 +1607,7 @@ end
 
 function replace_argument(sentence, blank_index, replacement)
     argument_answers_copy = copy(sentence.argument_answers)
-    argument_answers_copy[blank_index] = Answer(replacement, nothing)
+    argument_answers_copy[blank_index] = replacement
     Sentence(sentence.action, argument_answers_copy)
 end
 

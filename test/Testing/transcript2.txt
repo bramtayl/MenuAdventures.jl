@@ -1,0 +1,5 @@
+
+A room:
+  contains:
+    you
+

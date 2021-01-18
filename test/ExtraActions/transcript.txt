@@ -2,214 +2,339 @@
 A light room:
   contains:
     you
-    a friend
+    your friend
     a lamp (off)
-    a food
+    a other lamp (off)
+    some food
     a anvil
 
 [2K > [32mEat the food[39m
 [2K   [32mGo north[39m
 [2K   [32mPush the anvil north[39m
 [2K   [32mQuit[39m
-[2K   [32mTake the lamp[39m
-[2K   [32mTurn on the lamp[39m[?25l[?25h
+[2K   [32mTake something[39m
+[2K   [32mTurn on or off something[39m[?25l[?25h
 
 A light room:
   contains:
     you
-    a friend
+    your friend
     a lamp (off)
+    a other lamp (off)
     a anvil
 
 [2K > [32mGo north[39m
 [2K   [32mPush the anvil north[39m
 [2K   [32mQuit[39m
-[2K   [32mTake the lamp[39m
-[2K   [32mTurn on the lamp[39m[?25l[999D[4A[2K   [32mGo north[39m
+[2K   [32mTake something[39m
+[2K   [32mTurn on or off something[39m[?25l[999D[4A[2K   [32mGo north[39m
 [2K > [32mPush the anvil north[39m
 [2K   [32mQuit[39m
-[2K   [32mTake the lamp[39m
-[2K   [32mTurn on the lamp[39m[999D[4A[2K   [32mGo north[39m
+[2K   [32mTake something[39m
+[2K   [32mTurn on or off something[39m[999D[4A[2K   [32mGo north[39m
 [2K   [32mPush the anvil north[39m
 [2K > [32mQuit[39m
-[2K   [32mTake the lamp[39m
-[2K   [32mTurn on the lamp[39m[999D[4A[2K   [32mGo north[39m
+[2K   [32mTake something[39m
+[2K   [32mTurn on or off something[39m[999D[4A[2K   [32mGo north[39m
 [2K   [32mPush the anvil north[39m
 [2K   [32mQuit[39m
+[2K > [32mTake something[39m
+[2K   [32mTurn on or off something[39m[999D[4A[2K   [32mGo north[39m
+[2K   [32mPush the anvil north[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m
+[2K > [32mTurn on or off something[39m[?25h
+
+[39mTurn on or off what?[39m
+[2K > [32mTurn on the lamp[39m
+[2K   [32mTurn on the other lamp[39m[?25l[?25h
+
+A light room:
+  contains:
+    you
+    your friend
+    a lamp (on)
+    a other lamp (off)
+    a anvil
+
+[2K > [32mGo north[39m
+[2K   [32mPush the anvil north[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m
+[2K   [32mTurn on or off something[39m[?25l[999D[4A[2K   [32mGo north[39m
+[2K > [32mPush the anvil north[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m
+[2K   [32mTurn on or off something[39m[999D[4A[2K   [32mGo north[39m
+[2K   [32mPush the anvil north[39m
+[2K > [32mQuit[39m
+[2K   [32mTake something[39m
+[2K   [32mTurn on or off something[39m[999D[4A[2K   [32mGo north[39m
+[2K   [32mPush the anvil north[39m
+[2K   [32mQuit[39m
+[2K > [32mTake something[39m
+[2K   [32mTurn on or off something[39m[999D[4A[2K   [32mGo north[39m
+[2K   [32mPush the anvil north[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m
+[2K > [32mTurn on or off something[39m[?25h
+
+[39mTurn on or off what?[39m
+[2K > [32mTurn off the lamp[39m
+[2K   [32mTurn on the other lamp[39m[?25l[999D[1A[2K   [32mTurn off the lamp[39m
+[2K > [32mTurn on the other lamp[39m[?25h
+
+A light room:
+  contains:
+    you
+    your friend
+    a lamp (on)
+    a other lamp (on)
+    a anvil
+
+[2K > [32mGo north[39m
+[2K   [32mPush the anvil north[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m
+[2K   [32mTurn on or off something[39m[?25l[999D[4A[2K   [32mGo north[39m
+[2K > [32mPush the anvil north[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m
+[2K   [32mTurn on or off something[39m[999D[4A[2K   [32mGo north[39m
+[2K   [32mPush the anvil north[39m
+[2K > [32mQuit[39m
+[2K   [32mTake something[39m
+[2K   [32mTurn on or off something[39m[999D[4A[2K   [32mGo north[39m
+[2K   [32mPush the anvil north[39m
+[2K   [32mQuit[39m
+[2K > [32mTake something[39m
+[2K   [32mTurn on or off something[39m[999D[4A[2K   [32mGo north[39m
+[2K   [32mPush the anvil north[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m
+[2K > [32mTurn on or off something[39m[?25h
+
+[39mTurn on or off what?[39m
+[2K > [32mTurn off the lamp[39m
+[2K   [32mTurn off the other lamp[39m[?25l[999D[1A[2K   [32mTurn off the lamp[39m
+[2K > [32mTurn off the other lamp[39m[?25h
+
+A light room:
+  contains:
+    you
+    your friend
+    a lamp (on)
+    a other lamp (off)
+    a anvil
+
+[2K > [32mGo north[39m
+[2K   [32mPush the anvil north[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m
+[2K   [32mTurn on or off something[39m[?25l[999D[4A[2K   [32mGo north[39m
+[2K > [32mPush the anvil north[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m
+[2K   [32mTurn on or off something[39m[999D[4A[2K   [32mGo north[39m
+[2K   [32mPush the anvil north[39m
+[2K > [32mQuit[39m
+[2K   [32mTake something[39m
+[2K   [32mTurn on or off something[39m[999D[4A[2K   [32mGo north[39m
+[2K   [32mPush the anvil north[39m
+[2K   [32mQuit[39m
+[2K > [32mTake something[39m
+[2K   [32mTurn on or off something[39m[?25h
+
+[39mTake what?[39m
 [2K > [32mTake the lamp[39m
-[2K   [32mTurn on the lamp[39m[?25h
+[2K   [32mTake the other lamp[39m[?25l[?25h
 
 A light room:
   contains:
     you
-    a friend
+    your friend
+    a other lamp (off)
     a anvil
 
 [2K > [32mDrop the lamp[39m
-[2K   [32mGive the lamp to the friend[39m
+[2K   [32mGive the lamp to your friend[39m
 [2K   [32mGo north[39m
 [2K   [32mList inventory[39m
 [2K   [32mPush the anvil north[39m
 [2K   [32mQuit[39m
-[2K   [32mTurn on the lamp that you are carrying[39m[?25l[999D[6A[2K   [32mDrop the lamp[39m
-[2K > [32mGive the lamp to the friend[39m
+[2K   [32mTake the other lamp[39m
+[2K   [32mTurn on or off something[39m[?25l[999D[7A[2K   [32mDrop the lamp[39m
+[2K > [32mGive the lamp to your friend[39m
 [2K   [32mGo north[39m
 [2K   [32mList inventory[39m
 [2K   [32mPush the anvil north[39m
 [2K   [32mQuit[39m
-[2K   [32mTurn on the lamp that you are carrying[39m[?25h
+[2K   [32mTake the other lamp[39m
+[2K   [32mTurn on or off something[39m[999D[7A[2K   [32mDrop the lamp[39m
+[2K   [32mGive the lamp to your friend[39m
+[2K > [32mGo north[39m
+[2K   [32mList inventory[39m
+[2K   [32mPush the anvil north[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the other lamp[39m
+[2K   [32mTurn on or off something[39m[999D[7A[2K   [32mDrop the lamp[39m
+[2K   [32mGive the lamp to your friend[39m
+[2K   [32mGo north[39m
+[2K > [32mList inventory[39m
+[2K   [32mPush the anvil north[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the other lamp[39m
+[2K   [32mTurn on or off something[39m[999D[7A[2K   [32mDrop the lamp[39m
+[2K   [32mGive the lamp to your friend[39m
+[2K   [32mGo north[39m
+[2K   [32mList inventory[39m
+[2K > [32mPush the anvil north[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the other lamp[39m
+[2K   [32mTurn on or off something[39m[999D[7A[2K   [32mDrop the lamp[39m
+[2K   [32mGive the lamp to your friend[39m
+[2K   [32mGo north[39m
+[2K   [32mList inventory[39m
+[2K   [32mPush the anvil north[39m
+[2K > [32mQuit[39m
+[2K   [32mTake the other lamp[39m
+[2K   [32mTurn on or off something[39m[999D[7A[2K   [32mDrop the lamp[39m
+[2K   [32mGive the lamp to your friend[39m
+[2K   [32mGo north[39m
+[2K   [32mList inventory[39m
+[2K   [32mPush the anvil north[39m
+[2K   [32mQuit[39m
+[2K > [32mTake the other lamp[39m
+[2K   [32mTurn on or off something[39m[?25h
 
 A light room:
   contains:
     you
-    a friend:
+    your friend
+    a anvil
+
+[2K > [32mDrop something[39m
+[2K   [32mGive something to your friend[39m
+[2K   [32mGo north[39m
+[2K   [32mList inventory[39m
+[2K   [32mPush the anvil north[39m
+[2K   [32mQuit[39m
+[2K   [32mTurn on or off something that you are carrying[39m[?25l[?25h
+
+[39mDrop what?[39m
+[2K > [32mDrop the lamp[39m
+[2K   [32mDrop the other lamp[39m[?25l[999D[1A[2K   [32mDrop the lamp[39m
+[2K > [32mDrop the other lamp[39m[?25h
+
+A light room:
+  contains:
+    you
+    your friend
+    a other lamp (off)
+    a anvil
+
+[2K > [32mDrop the lamp[39m
+[2K   [32mGive the lamp to your friend[39m
+[2K   [32mGo north[39m
+[2K   [32mList inventory[39m
+[2K   [32mPush the anvil north[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the other lamp[39m
+[2K   [32mTurn on or off something[39m[?25l[999D[7A[2K   [32mDrop the lamp[39m
+[2K > [32mGive the lamp to your friend[39m
+[2K   [32mGo north[39m
+[2K   [32mList inventory[39m
+[2K   [32mPush the anvil north[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the other lamp[39m
+[2K   [32mTurn on or off something[39m[?25h
+
+A light room:
+  contains:
+    you
+    your friend:
       carries:
-        a lamp (off)
+        a lamp (on)
+    a other lamp (off)
     a anvil
 
 [2K > [32mGo north[39m
 [2K   [32mPush the anvil north[39m
 [2K   [32mQuit[39m
-[2K   [32mTake the lamp that the friend is carrying[39m
-[2K   [32mTurn on the lamp that the friend is carrying[39m[?25l[999D[4A[2K   [32mGo north[39m
+[2K   [32mTake something[39m
+[2K   [32mTurn on or off something[39m[?25l[999D[4A[2K   [32mGo north[39m
 [2K > [32mPush the anvil north[39m
 [2K   [32mQuit[39m
-[2K   [32mTake the lamp that the friend is carrying[39m
-[2K   [32mTurn on the lamp that the friend is carrying[39m[999D[4A[2K   [32mGo north[39m
+[2K   [32mTake something[39m
+[2K   [32mTurn on or off something[39m[999D[4A[2K   [32mGo north[39m
 [2K   [32mPush the anvil north[39m
 [2K > [32mQuit[39m
-[2K   [32mTake the lamp that the friend is carrying[39m
-[2K   [32mTurn on the lamp that the friend is carrying[39m[999D[4A[2K   [32mGo north[39m
+[2K   [32mTake something[39m
+[2K   [32mTurn on or off something[39m[999D[4A[2K   [32mGo north[39m
 [2K   [32mPush the anvil north[39m
 [2K   [32mQuit[39m
-[2K > [32mTake the lamp that the friend is carrying[39m
-[2K   [32mTurn on the lamp that the friend is carrying[39m[?25h
+[2K > [32mTake something[39m
+[2K   [32mTurn on or off something[39m[?25h
+
+[39mTake what?[39m
+[2K > [32mTake the lamp that your friend is carrying[39m
+[2K   [32mTake the other lamp[39m[?25l[?25h
 
 A light room:
   contains:
     you
-    a friend
+    your friend
+    a other lamp (off)
     a anvil
 
 [2K > [32mDrop the lamp[39m
-[2K   [32mGive the lamp to the friend[39m
+[2K   [32mGive the lamp to your friend[39m
 [2K   [32mGo north[39m
 [2K   [32mList inventory[39m
 [2K   [32mPush the anvil north[39m
 [2K   [32mQuit[39m
-[2K   [32mTurn on the lamp that you are carrying[39m[?25l[999D[6A[2K   [32mDrop the lamp[39m
-[2K > [32mGive the lamp to the friend[39m
+[2K   [32mTake the other lamp[39m
+[2K   [32mTurn on or off something[39m[?25l[999D[7A[2K   [32mDrop the lamp[39m
+[2K > [32mGive the lamp to your friend[39m
 [2K   [32mGo north[39m
 [2K   [32mList inventory[39m
 [2K   [32mPush the anvil north[39m
 [2K   [32mQuit[39m
-[2K   [32mTurn on the lamp that you are carrying[39m[999D[6A[2K   [32mDrop the lamp[39m
-[2K   [32mGive the lamp to the friend[39m
+[2K   [32mTake the other lamp[39m
+[2K   [32mTurn on or off something[39m[999D[7A[2K   [32mDrop the lamp[39m
+[2K   [32mGive the lamp to your friend[39m
 [2K > [32mGo north[39m
 [2K   [32mList inventory[39m
 [2K   [32mPush the anvil north[39m
 [2K   [32mQuit[39m
-[2K   [32mTurn on the lamp that you are carrying[39m[999D[6A[2K   [32mDrop the lamp[39m
-[2K   [32mGive the lamp to the friend[39m
-[2K   [32mGo north[39m
-[2K > [32mList inventory[39m
-[2K   [32mPush the anvil north[39m
-[2K   [32mQuit[39m
-[2K   [32mTurn on the lamp that you are carrying[39m[999D[6A[2K   [32mDrop the lamp[39m
-[2K   [32mGive the lamp to the friend[39m
-[2K   [32mGo north[39m
-[2K   [32mList inventory[39m
-[2K > [32mPush the anvil north[39m
-[2K   [32mQuit[39m
-[2K   [32mTurn on the lamp that you are carrying[39m[999D[6A[2K   [32mDrop the lamp[39m
-[2K   [32mGive the lamp to the friend[39m
-[2K   [32mGo north[39m
-[2K   [32mList inventory[39m
-[2K   [32mPush the anvil north[39m
-[2K > [32mQuit[39m
-[2K   [32mTurn on the lamp that you are carrying[39m[999D[6A[2K   [32mDrop the lamp[39m
-[2K   [32mGive the lamp to the friend[39m
-[2K   [32mGo north[39m
-[2K   [32mList inventory[39m
-[2K   [32mPush the anvil north[39m
-[2K   [32mQuit[39m
-[2K > [32mTurn on the lamp that you are carrying[39m[?25h
+[2K   [32mTake the other lamp[39m
+[2K   [32mTurn on or off something[39m[?25h
 
-A light room:
+A dark room:
   contains:
     you
-    a friend
-    a anvil
 
 [2K > [32mDrop the lamp[39m
-[2K   [32mGive the lamp to the friend[39m
-[2K   [32mGo north[39m
+[2K   [32mGo south[39m
 [2K   [32mList inventory[39m
-[2K   [32mPush the anvil north[39m
 [2K   [32mQuit[39m
-[2K   [32mTurn off the lamp that you are carrying[39m[?25l[999D[6A[2K   [32mDrop the lamp[39m
-[2K > [32mGive the lamp to the friend[39m
-[2K   [32mGo north[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[?25l[999D[4A[2K   [32mDrop the lamp[39m
+[2K > [32mGo south[39m
 [2K   [32mList inventory[39m
-[2K   [32mPush the anvil north[39m
 [2K   [32mQuit[39m
-[2K   [32mTurn off the lamp that you are carrying[39m[999D[6A[2K   [32mDrop the lamp[39m
-[2K   [32mGive the lamp to the friend[39m
-[2K > [32mGo north[39m
-[2K   [32mList inventory[39m
-[2K   [32mPush the anvil north[39m
-[2K   [32mQuit[39m
-[2K   [32mTurn off the lamp that you are carrying[39m[999D[6A[2K   [32mDrop the lamp[39m
-[2K   [32mGive the lamp to the friend[39m
-[2K   [32mGo north[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[999D[4A[2K   [32mDrop the lamp[39m
+[2K   [32mGo south[39m
 [2K > [32mList inventory[39m
-[2K   [32mPush the anvil north[39m
 [2K   [32mQuit[39m
-[2K   [32mTurn off the lamp that you are carrying[39m[999D[6A[2K   [32mDrop the lamp[39m
-[2K   [32mGive the lamp to the friend[39m
-[2K   [32mGo north[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[999D[4A[2K   [32mDrop the lamp[39m
+[2K   [32mGo south[39m
 [2K   [32mList inventory[39m
-[2K > [32mPush the anvil north[39m
-[2K   [32mQuit[39m
-[2K   [32mTurn off the lamp that you are carrying[39m[999D[6A[2K   [32mDrop the lamp[39m
-[2K   [32mGive the lamp to the friend[39m
-[2K   [32mGo north[39m
-[2K   [32mList inventory[39m
-[2K   [32mPush the anvil north[39m
 [2K > [32mQuit[39m
-[2K   [32mTurn off the lamp that you are carrying[39m[999D[6A[2K   [32mDrop the lamp[39m
-[2K   [32mGive the lamp to the friend[39m
-[2K   [32mGo north[39m
+[2K   [32mTurn off the lamp that you are carrying[39m[999D[4A[2K   [32mDrop the lamp[39m
+[2K   [32mGo south[39m
 [2K   [32mList inventory[39m
-[2K   [32mPush the anvil north[39m
 [2K   [32mQuit[39m
 [2K > [32mTurn off the lamp that you are carrying[39m[?25h
-
-A light room:
-  contains:
-    you
-    a friend
-    a anvil
-
-[2K > [32mDrop the lamp[39m
-[2K   [32mGive the lamp to the friend[39m
-[2K   [32mGo north[39m
-[2K   [32mList inventory[39m
-[2K   [32mPush the anvil north[39m
-[2K   [32mQuit[39m
-[2K   [32mTurn on the lamp that you are carrying[39m[?25l[999D[6A[2K   [32mDrop the lamp[39m
-[2K > [32mGive the lamp to the friend[39m
-[2K   [32mGo north[39m
-[2K   [32mList inventory[39m
-[2K   [32mPush the anvil north[39m
-[2K   [32mQuit[39m
-[2K   [32mTurn on the lamp that you are carrying[39m[999D[6A[2K   [32mDrop the lamp[39m
-[2K   [32mGive the lamp to the friend[39m
-[2K > [32mGo north[39m
-[2K   [32mList inventory[39m
-[2K   [32mPush the anvil north[39m
-[2K   [32mQuit[39m
-[2K   [32mTurn on the lamp that you are carrying[39m[?25h
 In darkness
 
 [2K > [32mDrop the lamp[39m
@@ -268,118 +393,51 @@ A dark room:
 [2K > [32mGo south[39m
 [2K   [32mList inventory[39m
 [2K   [32mQuit[39m
-[2K   [32mTurn off the lamp that you are carrying[39m[999D[4A[2K   [32mDrop the lamp[39m
-[2K   [32mGo south[39m
-[2K > [32mList inventory[39m
-[2K   [32mQuit[39m
-[2K   [32mTurn off the lamp that you are carrying[39m[999D[4A[2K   [32mDrop the lamp[39m
-[2K   [32mGo south[39m
-[2K   [32mList inventory[39m
-[2K > [32mQuit[39m
-[2K   [32mTurn off the lamp that you are carrying[39m[999D[4A[2K   [32mDrop the lamp[39m
-[2K   [32mGo south[39m
-[2K   [32mList inventory[39m
-[2K   [32mQuit[39m
-[2K > [32mTurn off the lamp that you are carrying[39m[?25h
-In darkness
-
-[2K > [32mDrop the lamp[39m
-[2K   [32mGo south[39m
-[2K   [32mList inventory[39m
-[2K   [32mQuit[39m
-[2K   [32mTurn on the lamp[39m[?25l[999D[4A[2K   [32mDrop the lamp[39m
-[2K > [32mGo south[39m
-[2K   [32mList inventory[39m
-[2K   [32mQuit[39m
-[2K   [32mTurn on the lamp[39m[?25h
-
-A light room:
-  contains:
-    you
-    a friend
-    a anvil
-
-[2K > [32mDrop the lamp[39m
-[2K   [32mGive the lamp to the friend[39m
-[2K   [32mGo north[39m
-[2K   [32mList inventory[39m
-[2K   [32mPush the anvil north[39m
-[2K   [32mQuit[39m
-[2K   [32mTurn on the lamp that you are carrying[39m[?25l[999D[6A[2K   [32mDrop the lamp[39m
-[2K > [32mGive the lamp to the friend[39m
-[2K   [32mGo north[39m
-[2K   [32mList inventory[39m
-[2K   [32mPush the anvil north[39m
-[2K   [32mQuit[39m
-[2K   [32mTurn on the lamp that you are carrying[39m[999D[6A[2K   [32mDrop the lamp[39m
-[2K   [32mGive the lamp to the friend[39m
-[2K > [32mGo north[39m
-[2K   [32mList inventory[39m
-[2K   [32mPush the anvil north[39m
-[2K   [32mQuit[39m
-[2K   [32mTurn on the lamp that you are carrying[39m[999D[6A[2K   [32mDrop the lamp[39m
-[2K   [32mGive the lamp to the friend[39m
-[2K   [32mGo north[39m
-[2K > [32mList inventory[39m
-[2K   [32mPush the anvil north[39m
-[2K   [32mQuit[39m
-[2K   [32mTurn on the lamp that you are carrying[39m[999D[6A[2K   [32mDrop the lamp[39m
-[2K   [32mGive the lamp to the friend[39m
-[2K   [32mGo north[39m
-[2K   [32mList inventory[39m
-[2K > [32mPush the anvil north[39m
-[2K   [32mQuit[39m
-[2K   [32mTurn on the lamp that you are carrying[39m[999D[6A[2K   [32mDrop the lamp[39m
-[2K   [32mGive the lamp to the friend[39m
-[2K   [32mGo north[39m
-[2K   [32mList inventory[39m
-[2K   [32mPush the anvil north[39m
-[2K > [32mQuit[39m
-[2K   [32mTurn on the lamp that you are carrying[39m[999D[6A[2K   [32mDrop the lamp[39m
-[2K   [32mGive the lamp to the friend[39m
-[2K   [32mGo north[39m
-[2K   [32mList inventory[39m
-[2K   [32mPush the anvil north[39m
-[2K   [32mQuit[39m
-[2K > [32mTurn on the lamp that you are carrying[39m[?25h
-
-A light room:
-  contains:
-    you
-    a friend
-    a anvil
-
-[2K > [32mDrop the lamp[39m
-[2K   [32mGive the lamp to the friend[39m
-[2K   [32mGo north[39m
-[2K   [32mList inventory[39m
-[2K   [32mPush the anvil north[39m
-[2K   [32mQuit[39m
-[2K   [32mTurn off the lamp that you are carrying[39m[?25l[999D[6A[2K   [32mDrop the lamp[39m
-[2K > [32mGive the lamp to the friend[39m
-[2K   [32mGo north[39m
-[2K   [32mList inventory[39m
-[2K   [32mPush the anvil north[39m
-[2K   [32mQuit[39m
-[2K   [32mTurn off the lamp that you are carrying[39m[999D[6A[2K   [32mDrop the lamp[39m
-[2K   [32mGive the lamp to the friend[39m
-[2K > [32mGo north[39m
-[2K   [32mList inventory[39m
-[2K   [32mPush the anvil north[39m
-[2K   [32mQuit[39m
-[2K   [32mTurn off the lamp that you are carrying[39m[999D[6A[2K   [32mDrop the lamp[39m
-[2K   [32mGive the lamp to the friend[39m
-[2K   [32mGo north[39m
-[2K > [32mList inventory[39m
-[2K   [32mPush the anvil north[39m
-[2K   [32mQuit[39m
-[2K   [32mTurn off the lamp that you are carrying[39m[999D[6A[2K   [32mDrop the lamp[39m
-[2K   [32mGive the lamp to the friend[39m
-[2K   [32mGo north[39m
-[2K   [32mList inventory[39m
-[2K > [32mPush the anvil north[39m
-[2K   [32mQuit[39m
 [2K   [32mTurn off the lamp that you are carrying[39m[?25h
+
+A light room:
+  contains:
+    you
+    your friend
+    a other lamp (off)
+    a anvil
+
+[2K > [32mDrop the lamp[39m
+[2K   [32mGive the lamp to your friend[39m
+[2K   [32mGo north[39m
+[2K   [32mList inventory[39m
+[2K   [32mPush the anvil north[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the other lamp[39m
+[2K   [32mTurn on or off something[39m[?25l[999D[7A[2K   [32mDrop the lamp[39m
+[2K > [32mGive the lamp to your friend[39m
+[2K   [32mGo north[39m
+[2K   [32mList inventory[39m
+[2K   [32mPush the anvil north[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the other lamp[39m
+[2K   [32mTurn on or off something[39m[999D[7A[2K   [32mDrop the lamp[39m
+[2K   [32mGive the lamp to your friend[39m
+[2K > [32mGo north[39m
+[2K   [32mList inventory[39m
+[2K   [32mPush the anvil north[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the other lamp[39m
+[2K   [32mTurn on or off something[39m[999D[7A[2K   [32mDrop the lamp[39m
+[2K   [32mGive the lamp to your friend[39m
+[2K   [32mGo north[39m
+[2K > [32mList inventory[39m
+[2K   [32mPush the anvil north[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the other lamp[39m
+[2K   [32mTurn on or off something[39m[999D[7A[2K   [32mDrop the lamp[39m
+[2K   [32mGive the lamp to your friend[39m
+[2K   [32mGo north[39m
+[2K   [32mList inventory[39m
+[2K > [32mPush the anvil north[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the other lamp[39m
+[2K   [32mTurn on or off something[39m[?25h
 
 A dark room:
   contains:
@@ -401,62 +459,37 @@ A dark room:
 A light room:
   contains:
     you
-    a friend
+    your friend
+    a other lamp (off)
 
 [2K > [32mDrop the lamp[39m
-[2K   [32mGive the lamp to the friend[39m
+[2K   [32mGive the lamp to your friend[39m
 [2K   [32mGo north[39m
 [2K   [32mList inventory[39m
 [2K   [32mQuit[39m
-[2K   [32mTurn off the lamp that you are carrying[39m[?25l[999D[5A[2K   [32mDrop the lamp[39m
-[2K > [32mGive the lamp to the friend[39m
+[2K   [32mTake the other lamp[39m
+[2K   [32mTurn on or off something[39m[?25l[999D[6A[2K   [32mDrop the lamp[39m
+[2K > [32mGive the lamp to your friend[39m
 [2K   [32mGo north[39m
 [2K   [32mList inventory[39m
 [2K   [32mQuit[39m
-[2K   [32mTurn off the lamp that you are carrying[39m[999D[5A[2K   [32mDrop the lamp[39m
-[2K   [32mGive the lamp to the friend[39m
+[2K   [32mTake the other lamp[39m
+[2K   [32mTurn on or off something[39m[999D[6A[2K   [32mDrop the lamp[39m
+[2K   [32mGive the lamp to your friend[39m
 [2K > [32mGo north[39m
 [2K   [32mList inventory[39m
 [2K   [32mQuit[39m
-[2K   [32mTurn off the lamp that you are carrying[39m[999D[5A[2K   [32mDrop the lamp[39m
-[2K   [32mGive the lamp to the friend[39m
+[2K   [32mTake the other lamp[39m
+[2K   [32mTurn on or off something[39m[999D[6A[2K   [32mDrop the lamp[39m
+[2K   [32mGive the lamp to your friend[39m
 [2K   [32mGo north[39m
 [2K > [32mList inventory[39m
 [2K   [32mQuit[39m
-[2K   [32mTurn off the lamp that you are carrying[39m[?25h
-
-You:
-  carry:
-    a lamp (on)
-
-A light room:
-  contains:
-    you
-    a friend
-
-[2K > [32mDrop the lamp[39m
-[2K   [32mGive the lamp to the friend[39m
-[2K   [32mGo north[39m
-[2K   [32mList inventory[39m
-[2K   [32mQuit[39m
-[2K   [32mTurn off the lamp that you are carrying[39m[?25l[999D[5A[2K   [32mDrop the lamp[39m
-[2K > [32mGive the lamp to the friend[39m
-[2K   [32mGo north[39m
-[2K   [32mList inventory[39m
-[2K   [32mQuit[39m
-[2K   [32mTurn off the lamp that you are carrying[39m[999D[5A[2K   [32mDrop the lamp[39m
-[2K   [32mGive the lamp to the friend[39m
-[2K > [32mGo north[39m
-[2K   [32mList inventory[39m
-[2K   [32mQuit[39m
-[2K   [32mTurn off the lamp that you are carrying[39m[999D[5A[2K   [32mDrop the lamp[39m
-[2K   [32mGive the lamp to the friend[39m
-[2K   [32mGo north[39m
-[2K > [32mList inventory[39m
-[2K   [32mQuit[39m
-[2K   [32mTurn off the lamp that you are carrying[39m[999D[5A[2K   [32mDrop the lamp[39m
-[2K   [32mGive the lamp to the friend[39m
+[2K   [32mTake the other lamp[39m
+[2K   [32mTurn on or off something[39m[999D[6A[2K   [32mDrop the lamp[39m
+[2K   [32mGive the lamp to your friend[39m
 [2K   [32mGo north[39m
 [2K   [32mList inventory[39m
 [2K > [32mQuit[39m
-[2K   [32mTurn off the lamp that you are carrying[39m[?25h
+[2K   [32mTake the other lamp[39m
+[2K   [32mTurn on or off something[39m[?25h

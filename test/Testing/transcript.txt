@@ -1,0 +1,6 @@
+
+A room:
+  contains:
+    you
+
+ > [32mquit[39m

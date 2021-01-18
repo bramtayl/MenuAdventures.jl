@@ -6,7 +6,7 @@ makedocs(
     modules = [MenuAdventures],
     doctest = false,
     pages = [
-        "Basic Interface" => "index.md",
+        "Public interface" => "index.md",
         "Internals" => "internals.md",
         "ExtraDirections extension" => "ExtraDirections.md",
         "ExtraActions extension" => "ExtraActions.md",

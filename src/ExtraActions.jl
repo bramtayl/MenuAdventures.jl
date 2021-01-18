@@ -56,9 +56,10 @@ julia> cd(joinpath(pkgdir(MenuAdventures), "test", "ExtraActions")) do
                 universe = Universe(you, interface = interface)
                 universe[light_room, dark_room] = North()
                 universe[light_room, you] = Containing()
-                universe[light_room, Person("friend")] = Containing()
+                universe[light_room, Person("your friend", indefinite_article = "")] = Containing()
                 universe[light_room, Lamp("lamp")] = Containing()
-                universe[light_room, Food("food")] = Containing()
+                universe[light_room, Lamp("other lamp")] = Containing()
+                universe[light_room, Food("food", indefinite_article = "some")] = Containing()
                 universe[light_room, Anvil("anvil")] = Containing()
                 universe
             end

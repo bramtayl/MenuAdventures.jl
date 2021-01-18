@@ -1,3 +1,59 @@
+"""
+    MenuAdventures.Testing
+
+A sub-module for testing your universe.
+
+```jldoctest
+julia> using MenuAdventures
+
+julia> using MenuAdventures.Testing
+
+julia> @universe struct Universe <: AbstractUniverse
+        end;
+
+julia> @noun struct Room <: AbstractRoom
+            already_lit::Bool = true
+        end;
+
+julia> @noun struct Person <: Noun
+        end;
+
+julia> function make_universe(interface)
+            you = Person(
+                "Brandon",
+                grammatical_person = second_person,
+                indefinite_article = "",
+            )
+            universe = Universe(you, interface = interface)
+            universe[Room("room"), you] = Containing()
+            universe
+        end;
+
+julia> cd(joinpath(pkgdir(MenuAdventures), "test", "Testing")) do
+            check_choices(make_universe)
+        end
+Conflict in line 6
+Existing transcript: " > [control]quit[control]"
+New transcript: " > [control]Quit[control]"
+false
+
+julia> cd(joinpath(pkgdir(MenuAdventures), "test", "Testing")) do
+            check_choices(make_universe, transcript_file = "transcript2.txt")
+        end
+Conflict in line 6
+Existing transcript: ""
+New transcript: " > [control]Quit[control]"
+false
+
+julia> cd(joinpath(pkgdir(MenuAdventures), "test", "Testing")) do
+            check_choices(make_universe, transcript_file = "transcript3.txt")
+        end
+Conflict in line 7
+Existing transcript: " more"
+New transcript: ""
+false
+```
+"""
 module Testing
 
 using DelimitedFiles: readdlm, writedlm
@@ -69,15 +125,25 @@ function find_line_difference(string1, string2)
     number_of_lines1 = length(lines1)
     number_of_lines2 = length(lines2)
     if number_of_lines2 > number_of_lines1
-        return "", lines2[number_of_lines1 + 1]
+        next_line = number_of_lines1 + 1
+        return next_line, "", lines2[next_line]
     elseif number_of_lines1 > number_of_lines2
-        return lines1[number_of_lines2 + 1], ""
+        next_line = number_of_lines2 + 1
+        return next_line, lines1[next_line], ""
     else
-        error("Strings must be different")
+        return nothing
     end
 end
 
 export save_choices
+
+function replace_escape_codes(text)
+    replace(
+        text,
+        r"\x1b\[([\x30-\x3F]*)([\x20-\x2F]*)([\x40-\x7E])" =>
+        s"[control]"
+    )
+end
                 
 """
     check_choices(make_universe;
@@ -102,19 +168,23 @@ function check_choices(make_universe;
     universe = make_universe(TTYTerminal("unix", stdin, output, stderr))
     run_turn_sequence(stdin.buffer, readdlm(choices_file))
     turn!(universe)
-    old_result = read("transcript.txt", String)
+    old_result = read(transcript_file, String)
     new_result = String(take!(output))
     matches = old_result == new_result
-    if !matches
-        line_number, expected_line, received_line = find_line_difference(old_result, new_result)
-        println("Line:")
+    difference = find_line_difference(old_result, new_result)
+    the_same = difference === nothing
+    if !the_same
+        line_number, expected_line, received_line = difference
+        print("Conflict in line ")
         println(line_number)
-        println("Expected:")
-        println(replace(expected_line, "\x1b" => ""))
-        println("Got:")
-        println(replace(received_line, "\x1b" => ""))
+        print("Existing transcript: ")
+        show(replace_escape_codes(expected_line))
+        println()
+        print("New transcript: ")
+        show(replace_escape_codes(received_line))
+        println()
     end
-    matches
+    the_same
 end
 
 export check_choices

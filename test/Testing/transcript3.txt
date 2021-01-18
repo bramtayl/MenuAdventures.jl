@@ -1,0 +1,7 @@
+
+A room:
+  contains:
+    you
+
+ > [32mQuit[39m
+ more
