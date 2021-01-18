@@ -10,6 +10,10 @@ julia> using MenuAdventures.Testing
 
 julia> import MenuAdventures: ever_possible, is_transparent, is_vehicle
 
+julia> @universe not_a_struct
+ERROR: LoadError: ArgumentError: Cannot parse user struct definition
+[...]
+
 julia> @universe struct Universe <: AbstractUniverse
         end;
 
@@ -530,7 +534,7 @@ function (::MyNewAction)(universe, arguments...) -> Bool
 which will conduct the action based on user choices. 
 Return `true` to end the game, or `false` to continue onto the next turn.
 You can overload `Action` calls for a [`Noun`](@ref) subtype.
-Use `Base.invoke` to avoid replicating the `Action` machinery.
+Use `Core.invoke` to avoid replicating the `Action` machinery.
 """
 abstract type Action end
 
@@ -1649,7 +1653,7 @@ end
 Look around a lit location.
 
 You can overload `look_around` for a [`Noun`](@ref) subtype.
-Use `Base.invoke` to avoid replicating the `look_around` machinery.
+Use `Core.invoke` to avoid replicating the `look_around` machinery.
 """
 function look_around(universe, domain, blocking_thing, blocked_relationship)
     interface = universe.interface
@@ -1687,7 +1691,7 @@ end
 Start a turn in the [`AbstractUniverse`](@ref), and keep going until an [`Action`](@ref) returns `true`.
 
 You can overload `turn!` for an [`AbstractUniverse`](@ref).
-Use `Base.invoke` to avoid replicating the `turn!` machinery.
+Use `Core.invoke` to avoid replicating the `turn!` machinery.
 """
 function turn!(universe; introduce = true)
     interface = universe.interface
@@ -1806,7 +1810,7 @@ function add_defaults(user_definition, defaults, location)
     )
         is_mutable = true
     else
-        error("Cannot parse user struct definition")
+        throw(ArgumentError("Cannot parse user struct definition"))
     end
     positional_arguments = []
     keyword_arguments = []
