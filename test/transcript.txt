@@ -3,355 +3,1088 @@ Welcome!
 The entrance:
   contains:
     you
-    an old key
+    the right key
+    the wrong key
+    a basket
+    a car
   west:
-    a big door (closed) (locked)
+    a door (closed) (locked)
 
+[2K > [32mGo into the car[39m
+[2K   [32mLook at something[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m[?25l[999D[3A[2K   [32mGo into the car[39m
 [2K > [32mLook at something[39m
 [2K   [32mQuit[39m
-[2K   [32mTake the old key[39m[?25l[?25h
+[2K   [32mTake something[39m[999D[3A[2K   [32mGo into the car[39m
+[2K   [32mLook at something[39m
+[2K > [32mQuit[39m
+[2K   [32mTake something[39m[999D[3A[2K   [32mGo into the car[39m
+[2K   [32mLook at something[39m
+[2K   [32mQuit[39m
+[2K > [32mTake something[39m[?25h
 
-[39mLook at what?[39m
-[2K > [32mLook at the big door[39m
-[2K   [32mLook at the entrance[39m
-[2K   [32mLook at the old key[39m
-[2K   [32mLook at yourself[39m[?25l[?25h
-It looks big?
+[39mTake what?[39m
+[2K > [32mTake the basket[39m
+[2K   [32mTake the right key[39m
+[2K   [32mTake the wrong key[39m[?25l[999D[2A[2K   [32mTake the basket[39m
+[2K > [32mTake the right key[39m
+[2K   [32mTake the wrong key[39m[?25h
 
 The entrance:
   contains:
     you
-    an old key
+    the wrong key
+    a basket
+    a car
   west:
-    a big door (closed) (locked)
+    a door (closed) (locked)
 
+[2K > [32mDrop the right key[39m
+[2K   [32mGo into the car[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut the right key into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m
+[2K   [32mUnlock the door with the right key[39m[?25l[999D[7A[2K   [32mDrop the right key[39m
+[2K > [32mGo into the car[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut the right key into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m
+[2K   [32mUnlock the door with the right key[39m[999D[7A[2K   [32mDrop the right key[39m
+[2K   [32mGo into the car[39m
+[2K > [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut the right key into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m
+[2K   [32mUnlock the door with the right key[39m[999D[7A[2K   [32mDrop the right key[39m
+[2K   [32mGo into the car[39m
+[2K   [32mList inventory[39m
+[2K > [32mLook at something[39m
+[2K   [32mPut the right key into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m
+[2K   [32mUnlock the door with the right key[39m[999D[7A[2K   [32mDrop the right key[39m
+[2K   [32mGo into the car[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K > [32mPut the right key into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m
+[2K   [32mUnlock the door with the right key[39m[999D[7A[2K   [32mDrop the right key[39m
+[2K   [32mGo into the car[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut the right key into the basket[39m
+[2K > [32mQuit[39m
+[2K   [32mTake something[39m
+[2K   [32mUnlock the door with the right key[39m[999D[7A[2K   [32mDrop the right key[39m
+[2K   [32mGo into the car[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut the right key into the basket[39m
+[2K   [32mQuit[39m
+[2K > [32mTake something[39m
+[2K   [32mUnlock the door with the right key[39m[?25h
+
+[39mTake what?[39m
+[2K > [32mTake the basket[39m
+[2K   [32mTake the wrong key[39m[?25l[999D[1A[2K   [32mTake the basket[39m
+[2K > [32mTake the wrong key[39m[?25h
+
+The entrance:
+  contains:
+    you
+    a basket
+    a car
+  west:
+    a door (closed) (locked)
+
+[2K > [32mDrop something[39m
+[2K   [32mGo into the car[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut something into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the basket[39m
+[2K   [32mUnlock the door with something[39m[?25l[999D[7A[2K   [32mDrop something[39m
+[2K > [32mGo into the car[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut something into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the basket[39m
+[2K   [32mUnlock the door with something[39m[999D[7A[2K   [32mDrop something[39m
+[2K   [32mGo into the car[39m
+[2K > [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut something into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the basket[39m
+[2K   [32mUnlock the door with something[39m[999D[7A[2K   [32mDrop something[39m
+[2K   [32mGo into the car[39m
+[2K   [32mList inventory[39m
+[2K > [32mLook at something[39m
+[2K   [32mPut something into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the basket[39m
+[2K   [32mUnlock the door with something[39m[999D[7A[2K   [32mDrop something[39m
+[2K   [32mGo into the car[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K > [32mPut something into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the basket[39m
+[2K   [32mUnlock the door with something[39m[999D[7A[2K   [32mDrop something[39m
+[2K   [32mGo into the car[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut something into the basket[39m
+[2K > [32mQuit[39m
+[2K   [32mTake the basket[39m
+[2K   [32mUnlock the door with something[39m[999D[7A[2K   [32mDrop something[39m
+[2K   [32mGo into the car[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut something into the basket[39m
+[2K   [32mQuit[39m
+[2K > [32mTake the basket[39m
+[2K   [32mUnlock the door with something[39m[999D[7A[2K   [32mDrop something[39m
+[2K   [32mGo into the car[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut something into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the basket[39m
+[2K > [32mUnlock the door with something[39m[?25h
+
+[39mUnlock the door with what?[39m
+[2K > [32mUnlock the door with the right key[39m
+[2K   [32mUnlock the door with the wrong key[39m[?25l[999D[1A[2K   [32mUnlock the door with the right key[39m
+[2K > [32mUnlock the door with the wrong key[39m[?25h
+[31mThe wrong key doesn't fit![39m
+
+The entrance:
+  contains:
+    you
+    a basket
+    a car
+  west:
+    a door (closed) (locked)
+
+[2K > [32mDrop something[39m
+[2K   [32mGo into the car[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut something into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the basket[39m
+[2K   [32mUnlock the door with something[39m[?25l[999D[7A[2K   [32mDrop something[39m
+[2K > [32mGo into the car[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut something into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the basket[39m
+[2K   [32mUnlock the door with something[39m[999D[7A[2K   [32mDrop something[39m
+[2K   [32mGo into the car[39m
+[2K > [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut something into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the basket[39m
+[2K   [32mUnlock the door with something[39m[999D[7A[2K   [32mDrop something[39m
+[2K   [32mGo into the car[39m
+[2K   [32mList inventory[39m
+[2K > [32mLook at something[39m
+[2K   [32mPut something into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the basket[39m
+[2K   [32mUnlock the door with something[39m[999D[7A[2K   [32mDrop something[39m
+[2K   [32mGo into the car[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K > [32mPut something into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the basket[39m
+[2K   [32mUnlock the door with something[39m[?25h
+
+[39mPut what into the basket?[39m
+[2K > [32mPut the right key into the basket[39m
+[2K   [32mPut the wrong key into the basket[39m[?25l[?25h
+
+The entrance:
+  contains:
+    you
+    a basket:
+      contains:
+        the right key
+    a car
+  west:
+    a door (closed) (locked)
+
+[2K > [32mDrop the wrong key[39m
+[2K   [32mGo into the car[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut the wrong key into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m
+[2K   [32mUnlock the door with the wrong key[39m[?25l[999D[7A[2K   [32mDrop the wrong key[39m
+[2K > [32mGo into the car[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut the wrong key into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m
+[2K   [32mUnlock the door with the wrong key[39m[999D[7A[2K   [32mDrop the wrong key[39m
+[2K   [32mGo into the car[39m
+[2K > [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut the wrong key into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m
+[2K   [32mUnlock the door with the wrong key[39m[999D[7A[2K   [32mDrop the wrong key[39m
+[2K   [32mGo into the car[39m
+[2K   [32mList inventory[39m
+[2K > [32mLook at something[39m
+[2K   [32mPut the wrong key into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m
+[2K   [32mUnlock the door with the wrong key[39m[999D[7A[2K   [32mDrop the wrong key[39m
+[2K   [32mGo into the car[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K > [32mPut the wrong key into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m
+[2K   [32mUnlock the door with the wrong key[39m[?25h
+
+The entrance:
+  contains:
+    you
+    a basket:
+      contains:
+        the right key
+        the wrong key
+    a car
+  west:
+    a door (closed) (locked)
+
+[2K > [32mGo into the car[39m
+[2K   [32mLook at something[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m[?25l[999D[3A[2K   [32mGo into the car[39m
 [2K > [32mLook at something[39m
 [2K   [32mQuit[39m
-[2K   [32mTake the old key[39m[?25l[?25h
+[2K   [32mTake something[39m[999D[3A[2K   [32mGo into the car[39m
+[2K   [32mLook at something[39m
+[2K > [32mQuit[39m
+[2K   [32mTake something[39m[999D[3A[2K   [32mGo into the car[39m
+[2K   [32mLook at something[39m
+[2K   [32mQuit[39m
+[2K > [32mTake something[39m[?25h
+
+[39mTake what?[39m
+[2K > [32mTake something in the basket[39m
+[2K   [32mTake the basket[39m[?25l[?25h
+
+[39mTake what in the basket?[39m
+[2K > [32mTake the right key in the basket[39m
+[2K   [32mTake the wrong key in the basket[39m[?25l[?25h
+
+The entrance:
+  contains:
+    you
+    a basket:
+      contains:
+        the wrong key
+    a car
+  west:
+    a door (closed) (locked)
+
+[2K > [32mDrop the right key[39m
+[2K   [32mGo into the car[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut the right key into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m
+[2K   [32mUnlock the door with the right key[39m[?25l[999D[7A[2K   [32mDrop the right key[39m
+[2K > [32mGo into the car[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut the right key into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m
+[2K   [32mUnlock the door with the right key[39m[999D[7A[2K   [32mDrop the right key[39m
+[2K   [32mGo into the car[39m
+[2K > [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut the right key into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m
+[2K   [32mUnlock the door with the right key[39m[999D[7A[2K   [32mDrop the right key[39m
+[2K   [32mGo into the car[39m
+[2K   [32mList inventory[39m
+[2K > [32mLook at something[39m
+[2K   [32mPut the right key into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m
+[2K   [32mUnlock the door with the right key[39m[999D[7A[2K   [32mDrop the right key[39m
+[2K   [32mGo into the car[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K > [32mPut the right key into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m
+[2K   [32mUnlock the door with the right key[39m[999D[7A[2K   [32mDrop the right key[39m
+[2K   [32mGo into the car[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut the right key into the basket[39m
+[2K > [32mQuit[39m
+[2K   [32mTake something[39m
+[2K   [32mUnlock the door with the right key[39m[999D[7A[2K   [32mDrop the right key[39m
+[2K   [32mGo into the car[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut the right key into the basket[39m
+[2K   [32mQuit[39m
+[2K > [32mTake something[39m
+[2K   [32mUnlock the door with the right key[39m[?25h
+
+[39mTake what?[39m
+[2K > [32mTake the basket[39m
+[2K   [32mTake the wrong key in the basket[39m[?25l[999D[1A[2K   [32mTake the basket[39m
+[2K > [32mTake the wrong key in the basket[39m[?25h
+
+The entrance:
+  contains:
+    you
+    a basket
+    a car
+  west:
+    a door (closed) (locked)
+
+[2K > [32mDrop something[39m
+[2K   [32mGo into the car[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut something into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the basket[39m
+[2K   [32mUnlock the door with something[39m[?25l[?25h
+
+[39mDrop what?[39m
+[2K > [32mDrop the right key[39m
+[2K   [32mDrop the wrong key[39m[?25l[999D[1A[2K   [32mDrop the right key[39m
+[2K > [32mDrop the wrong key[39m[?25h
+
+The entrance:
+  contains:
+    you
+    the wrong key
+    a basket
+    a car
+  west:
+    a door (closed) (locked)
+
+[2K > [32mDrop the right key[39m
+[2K   [32mGo into the car[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut the right key into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m
+[2K   [32mUnlock the door with the right key[39m[?25l[999D[7A[2K   [32mDrop the right key[39m
+[2K > [32mGo into the car[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut the right key into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m
+[2K   [32mUnlock the door with the right key[39m[999D[7A[2K   [32mDrop the right key[39m
+[2K   [32mGo into the car[39m
+[2K > [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut the right key into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m
+[2K   [32mUnlock the door with the right key[39m[?25h
+
+You:
+  carry:
+    the right key
+
+The entrance:
+  contains:
+    you
+    the wrong key
+    a basket
+    a car
+  west:
+    a door (closed) (locked)
+
+[2K > [32mDrop the right key[39m
+[2K   [32mGo into the car[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut the right key into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m
+[2K   [32mUnlock the door with the right key[39m[?25l[999D[7A[2K   [32mDrop the right key[39m
+[2K > [32mGo into the car[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut the right key into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m
+[2K   [32mUnlock the door with the right key[39m[999D[7A[2K   [32mDrop the right key[39m
+[2K   [32mGo into the car[39m
+[2K > [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut the right key into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m
+[2K   [32mUnlock the door with the right key[39m[999D[7A[2K   [32mDrop the right key[39m
+[2K   [32mGo into the car[39m
+[2K   [32mList inventory[39m
+[2K > [32mLook at something[39m
+[2K   [32mPut the right key into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m
+[2K   [32mUnlock the door with the right key[39m[999D[7A[2K   [32mDrop the right key[39m
+[2K   [32mGo into the car[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K > [32mPut the right key into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m
+[2K   [32mUnlock the door with the right key[39m[999D[7A[2K   [32mDrop the right key[39m
+[2K   [32mGo into the car[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut the right key into the basket[39m
+[2K > [32mQuit[39m
+[2K   [32mTake something[39m
+[2K   [32mUnlock the door with the right key[39m[999D[7A[2K   [32mDrop the right key[39m
+[2K   [32mGo into the car[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut the right key into the basket[39m
+[2K   [32mQuit[39m
+[2K > [32mTake something[39m
+[2K   [32mUnlock the door with the right key[39m[999D[7A[2K   [32mDrop the right key[39m
+[2K   [32mGo into the car[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut the right key into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m
+[2K > [32mUnlock the door with the right key[39m[?25h
+
+The entrance:
+  contains:
+    you
+    the wrong key
+    a basket
+    a car
+  west:
+    a door (closed) (unlocked)
+
+[2K > [32mDrop the right key[39m
+[2K   [32mGo into the car[39m
+[2K   [32mList inventory[39m
+[2K   [32mLock the door with the right key[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen the door[39m
+[2K   [32mPut the right key into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m[?25l[999D[8A[2K   [32mDrop the right key[39m
+[2K > [32mGo into the car[39m
+[2K   [32mList inventory[39m
+[2K   [32mLock the door with the right key[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen the door[39m
+[2K   [32mPut the right key into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m[999D[8A[2K   [32mDrop the right key[39m
+[2K   [32mGo into the car[39m
+[2K > [32mList inventory[39m
+[2K   [32mLock the door with the right key[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen the door[39m
+[2K   [32mPut the right key into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m[999D[8A[2K   [32mDrop the right key[39m
+[2K   [32mGo into the car[39m
+[2K   [32mList inventory[39m
+[2K > [32mLock the door with the right key[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen the door[39m
+[2K   [32mPut the right key into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m[?25h
+
+The entrance:
+  contains:
+    you
+    the wrong key
+    a basket
+    a car
+  west:
+    a door (closed) (locked)
+
+[2K > [32mDrop the right key[39m
+[2K   [32mGo into the car[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut the right key into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m
+[2K   [32mUnlock the door with the right key[39m[?25l[999D[7A[2K   [32mDrop the right key[39m
+[2K > [32mGo into the car[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut the right key into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m
+[2K   [32mUnlock the door with the right key[39m[999D[7A[2K   [32mDrop the right key[39m
+[2K   [32mGo into the car[39m
+[2K > [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut the right key into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m
+[2K   [32mUnlock the door with the right key[39m[999D[7A[2K   [32mDrop the right key[39m
+[2K   [32mGo into the car[39m
+[2K   [32mList inventory[39m
+[2K > [32mLook at something[39m
+[2K   [32mPut the right key into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m
+[2K   [32mUnlock the door with the right key[39m[999D[7A[2K   [32mDrop the right key[39m
+[2K   [32mGo into the car[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K > [32mPut the right key into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m
+[2K   [32mUnlock the door with the right key[39m[999D[7A[2K   [32mDrop the right key[39m
+[2K   [32mGo into the car[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut the right key into the basket[39m
+[2K > [32mQuit[39m
+[2K   [32mTake something[39m
+[2K   [32mUnlock the door with the right key[39m[999D[7A[2K   [32mDrop the right key[39m
+[2K   [32mGo into the car[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut the right key into the basket[39m
+[2K   [32mQuit[39m
+[2K > [32mTake something[39m
+[2K   [32mUnlock the door with the right key[39m[999D[7A[2K   [32mDrop the right key[39m
+[2K   [32mGo into the car[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut the right key into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m
+[2K > [32mUnlock the door with the right key[39m[?25h
+
+The entrance:
+  contains:
+    you
+    the wrong key
+    a basket
+    a car
+  west:
+    a door (closed) (unlocked)
+
+[2K > [32mDrop the right key[39m
+[2K   [32mGo into the car[39m
+[2K   [32mList inventory[39m
+[2K   [32mLock the door with the right key[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen the door[39m
+[2K   [32mPut the right key into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m[?25l[999D[8A[2K   [32mDrop the right key[39m
+[2K > [32mGo into the car[39m
+[2K   [32mList inventory[39m
+[2K   [32mLock the door with the right key[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen the door[39m
+[2K   [32mPut the right key into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m[999D[8A[2K   [32mDrop the right key[39m
+[2K   [32mGo into the car[39m
+[2K > [32mList inventory[39m
+[2K   [32mLock the door with the right key[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen the door[39m
+[2K   [32mPut the right key into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m[999D[8A[2K   [32mDrop the right key[39m
+[2K   [32mGo into the car[39m
+[2K   [32mList inventory[39m
+[2K > [32mLock the door with the right key[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen the door[39m
+[2K   [32mPut the right key into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m[999D[8A[2K   [32mDrop the right key[39m
+[2K   [32mGo into the car[39m
+[2K   [32mList inventory[39m
+[2K   [32mLock the door with the right key[39m
+[2K > [32mLook at something[39m
+[2K   [32mOpen the door[39m
+[2K   [32mPut the right key into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m[999D[8A[2K   [32mDrop the right key[39m
+[2K   [32mGo into the car[39m
+[2K   [32mList inventory[39m
+[2K   [32mLock the door with the right key[39m
+[2K   [32mLook at something[39m
+[2K > [32mOpen the door[39m
+[2K   [32mPut the right key into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m[?25h
+
+The entrance:
+  contains:
+    you
+    the wrong key
+    a basket
+    a car
+  west:
+    a door (open) (unlocked)
+
+[2K > [32mClose the door[39m
+[2K   [32mDrop the right key[39m
+[2K   [32mGo into the car[39m
+[2K   [32mGo west[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut the right key into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m[?25l[?25h
+
+The entrance:
+  contains:
+    you
+    the wrong key
+    a basket
+    a car
+  west:
+    a door (closed) (unlocked)
+
+[2K > [32mDrop the right key[39m
+[2K   [32mGo into the car[39m
+[2K   [32mList inventory[39m
+[2K   [32mLock the door with the right key[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen the door[39m
+[2K   [32mPut the right key into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m[?25l[999D[8A[2K   [32mDrop the right key[39m
+[2K > [32mGo into the car[39m
+[2K   [32mList inventory[39m
+[2K   [32mLock the door with the right key[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen the door[39m
+[2K   [32mPut the right key into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m[999D[8A[2K   [32mDrop the right key[39m
+[2K   [32mGo into the car[39m
+[2K > [32mList inventory[39m
+[2K   [32mLock the door with the right key[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen the door[39m
+[2K   [32mPut the right key into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m[999D[8A[2K   [32mDrop the right key[39m
+[2K   [32mGo into the car[39m
+[2K   [32mList inventory[39m
+[2K > [32mLock the door with the right key[39m
+[2K   [32mLook at something[39m
+[2K   [32mOpen the door[39m
+[2K   [32mPut the right key into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m[999D[8A[2K   [32mDrop the right key[39m
+[2K   [32mGo into the car[39m
+[2K   [32mList inventory[39m
+[2K   [32mLock the door with the right key[39m
+[2K > [32mLook at something[39m
+[2K   [32mOpen the door[39m
+[2K   [32mPut the right key into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m[999D[8A[2K   [32mDrop the right key[39m
+[2K   [32mGo into the car[39m
+[2K   [32mList inventory[39m
+[2K   [32mLock the door with the right key[39m
+[2K   [32mLook at something[39m
+[2K > [32mOpen the door[39m
+[2K   [32mPut the right key into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m[?25h
+
+The entrance:
+  contains:
+    you
+    the wrong key
+    a basket
+    a car
+  west:
+    a door (open) (unlocked)
+
+[2K > [32mClose the door[39m
+[2K   [32mDrop the right key[39m
+[2K   [32mGo into the car[39m
+[2K   [32mGo west[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut the right key into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m[?25l[999D[8A[2K   [32mClose the door[39m
+[2K > [32mDrop the right key[39m
+[2K   [32mGo into the car[39m
+[2K   [32mGo west[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut the right key into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m[999D[8A[2K   [32mClose the door[39m
+[2K   [32mDrop the right key[39m
+[2K > [32mGo into the car[39m
+[2K   [32mGo west[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut the right key into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m[999D[8A[2K   [32mClose the door[39m
+[2K   [32mDrop the right key[39m
+[2K   [32mGo into the car[39m
+[2K > [32mGo west[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut the right key into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m[999D[8A[2K   [32mClose the door[39m
+[2K   [32mDrop the right key[39m
+[2K   [32mGo into the car[39m
+[2K   [32mGo west[39m
+[2K > [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut the right key into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m[?25h
+
+You:
+  carry:
+    the right key
+
+The entrance:
+  contains:
+    you
+    the wrong key
+    a basket
+    a car
+  west:
+    a door (open) (unlocked)
+
+[2K > [32mClose the door[39m
+[2K   [32mDrop the right key[39m
+[2K   [32mGo into the car[39m
+[2K   [32mGo west[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut the right key into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m[?25l[999D[8A[2K   [32mClose the door[39m
+[2K > [32mDrop the right key[39m
+[2K   [32mGo into the car[39m
+[2K   [32mGo west[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut the right key into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m[999D[8A[2K   [32mClose the door[39m
+[2K   [32mDrop the right key[39m
+[2K > [32mGo into the car[39m
+[2K   [32mGo west[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut the right key into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m[999D[8A[2K   [32mClose the door[39m
+[2K   [32mDrop the right key[39m
+[2K   [32mGo into the car[39m
+[2K > [32mGo west[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut the right key into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m[999D[8A[2K   [32mClose the door[39m
+[2K   [32mDrop the right key[39m
+[2K   [32mGo into the car[39m
+[2K   [32mGo west[39m
+[2K > [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut the right key into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m[999D[8A[2K   [32mClose the door[39m
+[2K   [32mDrop the right key[39m
+[2K   [32mGo into the car[39m
+[2K   [32mGo west[39m
+[2K   [32mList inventory[39m
+[2K > [32mLook at something[39m
+[2K   [32mPut the right key into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m[?25h
 
 [39mLook at what?[39m
-[2K > [32mLook at the big door[39m
-[2K   [32mLook at the entrance[39m
-[2K   [32mLook at the old key[39m
-[2K   [32mLook at yourself[39m[?25l[999D[3A[2K   [32mLook at the big door[39m
 [2K > [32mLook at the entrance[39m
-[2K   [32mLook at the old key[39m
-[2K   [32mLook at yourself[39m[?25h
+[2K   [32mLook at yourself[39m[?25l[?25h
 The entrance to the castle
 
 The entrance:
   contains:
     you
-    an old key
+    the wrong key
+    a basket
+    a car
   west:
-    a big door (closed) (locked)
+    a door (open) (unlocked)
 
-[2K > [32mLook at something[39m
+[2K > [32mClose the door[39m
+[2K   [32mDrop the right key[39m
+[2K   [32mGo into the car[39m
+[2K   [32mGo west[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut the right key into the basket[39m
 [2K   [32mQuit[39m
-[2K   [32mTake the old key[39m[?25l[?25h
+[2K   [32mTake something[39m[?25l[999D[8A[2K   [32mClose the door[39m
+[2K > [32mDrop the right key[39m
+[2K   [32mGo into the car[39m
+[2K   [32mGo west[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut the right key into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m[999D[8A[2K   [32mClose the door[39m
+[2K   [32mDrop the right key[39m
+[2K > [32mGo into the car[39m
+[2K   [32mGo west[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut the right key into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m[999D[8A[2K   [32mClose the door[39m
+[2K   [32mDrop the right key[39m
+[2K   [32mGo into the car[39m
+[2K > [32mGo west[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut the right key into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m[999D[8A[2K   [32mClose the door[39m
+[2K   [32mDrop the right key[39m
+[2K   [32mGo into the car[39m
+[2K   [32mGo west[39m
+[2K > [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut the right key into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m[999D[8A[2K   [32mClose the door[39m
+[2K   [32mDrop the right key[39m
+[2K   [32mGo into the car[39m
+[2K   [32mGo west[39m
+[2K   [32mList inventory[39m
+[2K > [32mLook at something[39m
+[2K   [32mPut the right key into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m[?25h
 
 [39mLook at what?[39m
-[2K > [32mLook at the big door[39m
-[2K   [32mLook at the entrance[39m
-[2K   [32mLook at the old key[39m
-[2K   [32mLook at yourself[39m[?25l[999D[3A[2K   [32mLook at the big door[39m
 [2K > [32mLook at the entrance[39m
-[2K   [32mLook at the old key[39m
-[2K   [32mLook at yourself[39m[999D[3A[2K   [32mLook at the big door[39m
-[2K   [32mLook at the entrance[39m
-[2K > [32mLook at the old key[39m
-[2K   [32mLook at yourself[39m[?25h
-It looks old?
-
-The entrance:
-  contains:
-    you
-    an old key
-  west:
-    a big door (closed) (locked)
-
-[2K > [32mLook at something[39m
-[2K   [32mQuit[39m
-[2K   [32mTake the old key[39m[?25l[?25h
-
-[39mLook at what?[39m
-[2K > [32mLook at the big door[39m
-[2K   [32mLook at the entrance[39m
-[2K   [32mLook at the old key[39m
-[2K   [32mLook at yourself[39m[?25l[999D[3A[2K   [32mLook at the big door[39m
-[2K > [32mLook at the entrance[39m
-[2K   [32mLook at the old key[39m
-[2K   [32mLook at yourself[39m[999D[3A[2K   [32mLook at the big door[39m
-[2K   [32mLook at the entrance[39m
-[2K > [32mLook at the old key[39m
-[2K   [32mLook at yourself[39m[999D[3A[2K   [32mLook at the big door[39m
-[2K   [32mLook at the entrance[39m
-[2K   [32mLook at the old key[39m
+[2K   [32mLook at yourself[39m[?25l[999D[1A[2K   [32mLook at the entrance[39m
 [2K > [32mLook at yourself[39m[?25h
 What a dork!
 
 The entrance:
   contains:
     you
-    an old key
+    the wrong key
+    a basket
+    a car
   west:
-    a big door (closed) (locked)
+    a door (open) (unlocked)
 
-[2K > [32mLook at something[39m
-[2K   [32mQuit[39m
-[2K   [32mTake the old key[39m[?25l[999D[2A[2K   [32mLook at something[39m
-[2K > [32mQuit[39m
-[2K   [32mTake the old key[39m[999D[2A[2K   [32mLook at something[39m
-[2K   [32mQuit[39m
-[2K > [32mTake the old key[39m[?25h
-
-The entrance:
-  contains:
-    you
-  west:
-    a big door (closed) (locked)
-
-[2K > [32mDrop the old key[39m
-[2K   [32mList inventory[39m
-[2K   [32mLook at something[39m
-[2K   [32mQuit[39m
-[2K   [32mUnlock the big door with the old key[39m[?25l[999D[4A[2K   [32mDrop the old key[39m
-[2K > [32mList inventory[39m
-[2K   [32mLook at something[39m
-[2K   [32mQuit[39m
-[2K   [32mUnlock the big door with the old key[39m[?25h
-
-You:
-  carry:
-    an old key
-
-The entrance:
-  contains:
-    you
-  west:
-    a big door (closed) (locked)
-
-[2K > [32mDrop the old key[39m
-[2K   [32mList inventory[39m
-[2K   [32mLook at something[39m
-[2K   [32mQuit[39m
-[2K   [32mUnlock the big door with the old key[39m[?25l[?25h
-
-The entrance:
-  contains:
-    you
-    an old key
-  west:
-    a big door (closed) (locked)
-
-[2K > [32mLook at something[39m
-[2K   [32mQuit[39m
-[2K   [32mTake the old key[39m[?25l[999D[2A[2K   [32mLook at something[39m
-[2K > [32mQuit[39m
-[2K   [32mTake the old key[39m[999D[2A[2K   [32mLook at something[39m
-[2K   [32mQuit[39m
-[2K > [32mTake the old key[39m[?25h
-
-The entrance:
-  contains:
-    you
-  west:
-    a big door (closed) (locked)
-
-[2K > [32mDrop the old key[39m
-[2K   [32mList inventory[39m
-[2K   [32mLook at something[39m
-[2K   [32mQuit[39m
-[2K   [32mUnlock the big door with the old key[39m[?25l[999D[4A[2K   [32mDrop the old key[39m
-[2K > [32mList inventory[39m
-[2K   [32mLook at something[39m
-[2K   [32mQuit[39m
-[2K   [32mUnlock the big door with the old key[39m[999D[4A[2K   [32mDrop the old key[39m
-[2K   [32mList inventory[39m
-[2K > [32mLook at something[39m
-[2K   [32mQuit[39m
-[2K   [32mUnlock the big door with the old key[39m[999D[4A[2K   [32mDrop the old key[39m
-[2K   [32mList inventory[39m
-[2K   [32mLook at something[39m
-[2K > [32mQuit[39m
-[2K   [32mUnlock the big door with the old key[39m[999D[4A[2K   [32mDrop the old key[39m
-[2K   [32mList inventory[39m
-[2K   [32mLook at something[39m
-[2K   [32mQuit[39m
-[2K > [32mUnlock the big door with the old key[39m[?25h
-
-The entrance:
-  contains:
-    you
-  west:
-    a big door (closed) (unlocked)
-
-[2K > [32mDrop the old key[39m
-[2K   [32mList inventory[39m
-[2K   [32mLock the big door with the old key[39m
-[2K   [32mLook at something[39m
-[2K   [32mOpen the big door[39m
-[2K   [32mQuit[39m[?25l[999D[5A[2K   [32mDrop the old key[39m
-[2K > [32mList inventory[39m
-[2K   [32mLock the big door with the old key[39m
-[2K   [32mLook at something[39m
-[2K   [32mOpen the big door[39m
-[2K   [32mQuit[39m[999D[5A[2K   [32mDrop the old key[39m
-[2K   [32mList inventory[39m
-[2K > [32mLock the big door with the old key[39m
-[2K   [32mLook at something[39m
-[2K   [32mOpen the big door[39m
-[2K   [32mQuit[39m[?25h
-
-The entrance:
-  contains:
-    you
-  west:
-    a big door (closed) (locked)
-
-[2K > [32mDrop the old key[39m
-[2K   [32mList inventory[39m
-[2K   [32mLook at something[39m
-[2K   [32mQuit[39m
-[2K   [32mUnlock the big door with the old key[39m[?25l[999D[4A[2K   [32mDrop the old key[39m
-[2K > [32mList inventory[39m
-[2K   [32mLook at something[39m
-[2K   [32mQuit[39m
-[2K   [32mUnlock the big door with the old key[39m[999D[4A[2K   [32mDrop the old key[39m
-[2K   [32mList inventory[39m
-[2K > [32mLook at something[39m
-[2K   [32mQuit[39m
-[2K   [32mUnlock the big door with the old key[39m[999D[4A[2K   [32mDrop the old key[39m
-[2K   [32mList inventory[39m
-[2K   [32mLook at something[39m
-[2K > [32mQuit[39m
-[2K   [32mUnlock the big door with the old key[39m[999D[4A[2K   [32mDrop the old key[39m
-[2K   [32mList inventory[39m
-[2K   [32mLook at something[39m
-[2K   [32mQuit[39m
-[2K > [32mUnlock the big door with the old key[39m[?25h
-
-The entrance:
-  contains:
-    you
-  west:
-    a big door (closed) (unlocked)
-
-[2K > [32mDrop the old key[39m
-[2K   [32mList inventory[39m
-[2K   [32mLock the big door with the old key[39m
-[2K   [32mLook at something[39m
-[2K   [32mOpen the big door[39m
-[2K   [32mQuit[39m[?25l[999D[5A[2K   [32mDrop the old key[39m
-[2K > [32mList inventory[39m
-[2K   [32mLock the big door with the old key[39m
-[2K   [32mLook at something[39m
-[2K   [32mOpen the big door[39m
-[2K   [32mQuit[39m[999D[5A[2K   [32mDrop the old key[39m
-[2K   [32mList inventory[39m
-[2K > [32mLock the big door with the old key[39m
-[2K   [32mLook at something[39m
-[2K   [32mOpen the big door[39m
-[2K   [32mQuit[39m[999D[5A[2K   [32mDrop the old key[39m
-[2K   [32mList inventory[39m
-[2K   [32mLock the big door with the old key[39m
-[2K > [32mLook at something[39m
-[2K   [32mOpen the big door[39m
-[2K   [32mQuit[39m[999D[5A[2K   [32mDrop the old key[39m
-[2K   [32mList inventory[39m
-[2K   [32mLock the big door with the old key[39m
-[2K   [32mLook at something[39m
-[2K > [32mOpen the big door[39m
-[2K   [32mQuit[39m[?25h
-
-The entrance:
-  contains:
-    you
-  west:
-    a big door (open) (unlocked)
-
-[2K > [32mClose the big door[39m
-[2K   [32mDrop the old key[39m
+[2K > [32mClose the door[39m
+[2K   [32mDrop the right key[39m
+[2K   [32mGo into the car[39m
 [2K   [32mGo west[39m
 [2K   [32mList inventory[39m
 [2K   [32mLook at something[39m
-[2K   [32mQuit[39m[?25l[?25h
-
-The entrance:
-  contains:
-    you
-  west:
-    a big door (closed) (unlocked)
-
-[2K > [32mDrop the old key[39m
-[2K   [32mList inventory[39m
-[2K   [32mLock the big door with the old key[39m
-[2K   [32mLook at something[39m
-[2K   [32mOpen the big door[39m
-[2K   [32mQuit[39m[?25l[999D[5A[2K   [32mDrop the old key[39m
-[2K > [32mList inventory[39m
-[2K   [32mLock the big door with the old key[39m
-[2K   [32mLook at something[39m
-[2K   [32mOpen the big door[39m
-[2K   [32mQuit[39m[999D[5A[2K   [32mDrop the old key[39m
-[2K   [32mList inventory[39m
-[2K > [32mLock the big door with the old key[39m
-[2K   [32mLook at something[39m
-[2K   [32mOpen the big door[39m
-[2K   [32mQuit[39m[999D[5A[2K   [32mDrop the old key[39m
-[2K   [32mList inventory[39m
-[2K   [32mLock the big door with the old key[39m
-[2K > [32mLook at something[39m
-[2K   [32mOpen the big door[39m
-[2K   [32mQuit[39m[999D[5A[2K   [32mDrop the old key[39m
-[2K   [32mList inventory[39m
-[2K   [32mLock the big door with the old key[39m
-[2K   [32mLook at something[39m
-[2K > [32mOpen the big door[39m
-[2K   [32mQuit[39m[?25h
-
-The entrance:
-  contains:
-    you
-  west:
-    a big door (open) (unlocked)
-
-[2K > [32mClose the big door[39m
-[2K   [32mDrop the old key[39m
+[2K   [32mPut the right key into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m[?25l[999D[8A[2K   [32mClose the door[39m
+[2K > [32mDrop the right key[39m
+[2K   [32mGo into the car[39m
 [2K   [32mGo west[39m
 [2K   [32mList inventory[39m
 [2K   [32mLook at something[39m
-[2K   [32mQuit[39m[?25l[999D[5A[2K   [32mClose the big door[39m
-[2K > [32mDrop the old key[39m
+[2K   [32mPut the right key into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m[999D[8A[2K   [32mClose the door[39m
+[2K   [32mDrop the right key[39m
+[2K > [32mGo into the car[39m
 [2K   [32mGo west[39m
 [2K   [32mList inventory[39m
 [2K   [32mLook at something[39m
-[2K   [32mQuit[39m[999D[5A[2K   [32mClose the big door[39m
-[2K   [32mDrop the old key[39m
+[2K   [32mPut the right key into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m[999D[8A[2K   [32mClose the door[39m
+[2K   [32mDrop the right key[39m
+[2K   [32mGo into the car[39m
 [2K > [32mGo west[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut the right key into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m[?25h
+
+The castle:
+  contains:
+    you
+  east:
+    a door (open) (unlocked)
+
+[2K > [32mClose the door[39m
+[2K   [32mDrop the right key[39m
+[2K   [32mGo east[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at yourself[39m
+[2K   [32mQuit[39m[?25l[999D[5A[2K   [32mClose the door[39m
+[2K > [32mDrop the right key[39m
+[2K   [32mGo east[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at yourself[39m
+[2K   [32mQuit[39m[999D[5A[2K   [32mClose the door[39m
+[2K   [32mDrop the right key[39m
+[2K > [32mGo east[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at yourself[39m
+[2K   [32mQuit[39m[?25h
+
+The entrance:
+  contains:
+    you
+    the wrong key
+    a basket
+    a car
+  west:
+    a door (open) (unlocked)
+
+[2K > [32mClose the door[39m
+[2K   [32mDrop the right key[39m
+[2K   [32mGo into the car[39m
+[2K   [32mGo west[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut the right key into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m[?25l[999D[8A[2K   [32mClose the door[39m
+[2K > [32mDrop the right key[39m
+[2K   [32mGo into the car[39m
+[2K   [32mGo west[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut the right key into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m[999D[8A[2K   [32mClose the door[39m
+[2K   [32mDrop the right key[39m
+[2K > [32mGo into the car[39m
+[2K   [32mGo west[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut the right key into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m[?25h
+
+The entrance:
+  contains:
+    the wrong key
+    a basket
+    a car:
+      contains:
+        you
+  west:
+    a door (open) (unlocked)
+
+[2K > [32mDrop the right key[39m
+[2K   [32mGo west[39m
+[2K   [32mLeave[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mQuit[39m[?25l[999D[5A[2K   [32mDrop the right key[39m
+[2K > [32mGo west[39m
+[2K   [32mLeave[39m
 [2K   [32mList inventory[39m
 [2K   [32mLook at something[39m
 [2K   [32mQuit[39m[?25h
 
 The castle:
   contains:
-    you
+    a car:
+      contains:
+        you
   east:
-    a big door (open) (unlocked)
+    a door (open) (unlocked)
 
-[2K > [32mClose the big door[39m
-[2K   [32mDrop the old key[39m
+[2K > [32mDrop the right key[39m
 [2K   [32mGo east[39m
+[2K   [32mLeave[39m
 [2K   [32mList inventory[39m
-[2K   [32mLook at something[39m
-[2K   [32mQuit[39m[?25l[999D[5A[2K   [32mClose the big door[39m
-[2K > [32mDrop the old key[39m
-[2K   [32mGo east[39m
-[2K   [32mList inventory[39m
-[2K   [32mLook at something[39m
-[2K   [32mQuit[39m[999D[5A[2K   [32mClose the big door[39m
-[2K   [32mDrop the old key[39m
+[2K   [32mLook at yourself in the car[39m
+[2K   [32mQuit[39m[?25l[999D[5A[2K   [32mDrop the right key[39m
 [2K > [32mGo east[39m
+[2K   [32mLeave[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at yourself in the car[39m
+[2K   [32mQuit[39m[?25h
+
+The entrance:
+  contains:
+    the wrong key
+    a basket
+    a car:
+      contains:
+        you
+  west:
+    a door (open) (unlocked)
+
+[2K > [32mDrop the right key[39m
+[2K   [32mGo west[39m
+[2K   [32mLeave[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mQuit[39m[?25l[999D[5A[2K   [32mDrop the right key[39m
+[2K > [32mGo west[39m
+[2K   [32mLeave[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mQuit[39m[999D[5A[2K   [32mDrop the right key[39m
+[2K   [32mGo west[39m
+[2K > [32mLeave[39m
 [2K   [32mList inventory[39m
 [2K   [32mLook at something[39m
 [2K   [32mQuit[39m[?25h
@@ -359,37 +1092,74 @@ The castle:
 The entrance:
   contains:
     you
+    the wrong key
+    a basket
+    a car
   west:
-    a big door (open) (unlocked)
+    a door (open) (unlocked)
 
-[2K > [32mClose the big door[39m
-[2K   [32mDrop the old key[39m
+[2K > [32mClose the door[39m
+[2K   [32mDrop the right key[39m
+[2K   [32mGo into the car[39m
 [2K   [32mGo west[39m
 [2K   [32mList inventory[39m
 [2K   [32mLook at something[39m
-[2K   [32mQuit[39m[?25l[999D[5A[2K   [32mClose the big door[39m
-[2K > [32mDrop the old key[39m
+[2K   [32mPut the right key into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m[?25l[999D[8A[2K   [32mClose the door[39m
+[2K > [32mDrop the right key[39m
+[2K   [32mGo into the car[39m
 [2K   [32mGo west[39m
 [2K   [32mList inventory[39m
 [2K   [32mLook at something[39m
-[2K   [32mQuit[39m[999D[5A[2K   [32mClose the big door[39m
-[2K   [32mDrop the old key[39m
+[2K   [32mPut the right key into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m[999D[8A[2K   [32mClose the door[39m
+[2K   [32mDrop the right key[39m
+[2K > [32mGo into the car[39m
+[2K   [32mGo west[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut the right key into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m[999D[8A[2K   [32mClose the door[39m
+[2K   [32mDrop the right key[39m
+[2K   [32mGo into the car[39m
 [2K > [32mGo west[39m
 [2K   [32mList inventory[39m
 [2K   [32mLook at something[39m
-[2K   [32mQuit[39m[999D[5A[2K   [32mClose the big door[39m
-[2K   [32mDrop the old key[39m
+[2K   [32mPut the right key into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m[999D[8A[2K   [32mClose the door[39m
+[2K   [32mDrop the right key[39m
+[2K   [32mGo into the car[39m
 [2K   [32mGo west[39m
 [2K > [32mList inventory[39m
 [2K   [32mLook at something[39m
-[2K   [32mQuit[39m[999D[5A[2K   [32mClose the big door[39m
-[2K   [32mDrop the old key[39m
+[2K   [32mPut the right key into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m[999D[8A[2K   [32mClose the door[39m
+[2K   [32mDrop the right key[39m
+[2K   [32mGo into the car[39m
 [2K   [32mGo west[39m
 [2K   [32mList inventory[39m
 [2K > [32mLook at something[39m
-[2K   [32mQuit[39m[999D[5A[2K   [32mClose the big door[39m
-[2K   [32mDrop the old key[39m
+[2K   [32mPut the right key into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m[999D[8A[2K   [32mClose the door[39m
+[2K   [32mDrop the right key[39m
+[2K   [32mGo into the car[39m
 [2K   [32mGo west[39m
 [2K   [32mList inventory[39m
 [2K   [32mLook at something[39m
-[2K > [32mQuit[39m[?25h
+[2K > [32mPut the right key into the basket[39m
+[2K   [32mQuit[39m
+[2K   [32mTake something[39m[999D[8A[2K   [32mClose the door[39m
+[2K   [32mDrop the right key[39m
+[2K   [32mGo into the car[39m
+[2K   [32mGo west[39m
+[2K   [32mList inventory[39m
+[2K   [32mLook at something[39m
+[2K   [32mPut the right key into the basket[39m
+[2K > [32mQuit[39m
+[2K   [32mTake something[39m[?25h

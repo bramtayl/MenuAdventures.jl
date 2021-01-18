@@ -6,15 +6,15 @@ makedocs(
     modules = [MenuAdventures],
     doctest = false,
     pages = [
-        "Exports" => "index.md",
+        "Basic Interface" => "index.md",
         "Internals" => "internals.md",
-        "ExtraDirections" => "ExtraDirections.md",
-        "ExtraVerbs" => "ExtraVerbs.md",
-        "Onto" => "Onto.md",
-        "Outfits" => "Outfits.md",
-        "Parts" => "Parts.md",
-        "Talking" => "Talking.md",
-        "Testing" => "Testing.md"
+        "ExtraDirections extension" => "ExtraDirections.md",
+        "ExtraActions extension" => "ExtraActions.md",
+        "Onto extension" => "Onto.md",
+        "Outfits extension" => "Outfits.md",
+        "Parts extension" => "Parts.md",
+        "Talking extension" => "Talking.md",
+        "Testing extension" => "Testing.md"
     ]
 )
 deploydocs(repo = "github.com/bramtayl/MenuAdventures.jl.git")

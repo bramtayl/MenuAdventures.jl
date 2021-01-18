@@ -1,14 +1,14 @@
 """
     MenuAdventures
 
-A module for creating text adventures based on Menus.
+A module for creating text adventures based on menus.
 
 ```jldoctest
 julia> using MenuAdventures
 
 julia> using MenuAdventures.Testing
 
-julia> import MenuAdventures: ever_possible
+julia> import MenuAdventures: ever_possible, is_transparent, is_vehicle
 
 julia> @universe struct Universe <: AbstractUniverse
         end;
@@ -37,6 +37,22 @@ julia> ever_possible(::OpenOrClose, ::Reachable, ::LockableDoor) = true;
 
 julia> ever_possible(::UnlockOrLock, ::Reachable, ::LockableDoor) = true;
 
+julia> @noun struct Basket <: Noun
+        end;
+
+julia> ever_possible(::Take, ::Reachable, ::Basket) = true;
+
+julia> ever_possible(::PutInto, ::Reachable, ::Basket) = true;
+
+julia> @noun struct Car <: Noun
+        end;
+
+julia> ever_possible(::GoInto, ::Immediate, ::Car) = true;
+
+julia> is_transparent(::Car) = true;
+
+julia> is_vehicle(::Car) = true;
+
 julia> cd(joinpath(pkgdir(MenuAdventures), "test")) do
             check_choices() do interface
                 you = Person(
@@ -50,29 +66,18 @@ julia> cd(joinpath(pkgdir(MenuAdventures), "test")) do
                     description = (universe, self) -> "The entrance to the castle",
                     indefinite_article = ""
                 )
-                castle = Room(
-                    "the castle", 
-                    description = (universe, self) -> "What kind of castle only has one room!", 
-                    indefinite_article = ""
-                )
-                old_key = Key(
-                    "old key",
-                    description = (universe, self) -> "It looks old?",
-                    indefinite_article = "an"
-                )
-                big_door = LockableDoor(
-                    "big door",
-                    old_key,
-                    description = (universe, self) -> "It looks big?",
-                )
+                right_key = Key("the right key", indefinite_article = "")
                 universe = Universe(
                     you,
                     introduction = "Welcome!",
                     interface = interface
                 )
+                universe[entrance, Room("the castle", indefinite_article = "")] = LockableDoor("door", right_key), West()
                 universe[entrance, you] = Containing()
-                universe[entrance, old_key] = Containing()
-                universe[entrance, castle] = big_door, West()
+                universe[entrance, right_key] = Containing()
+                universe[entrance, Key("the wrong key", indefinite_article = "")] = Containing()
+                universe[entrance, Basket("basket")] = Containing()
+                universe[entrance, Car("car")] = Containing()
                 universe
             end
         end
@@ -174,7 +179,7 @@ end
 """
     Immediate()
 
-Thing that are in/on the same place the player could more from.
+Thing that are in/on the same place the player could move from.
 
 A [`Domain`](@ref).
 """
@@ -363,12 +368,12 @@ verb_for(::Containing) = Verb("contain")
 """
     abstract type Direction end
 
-Directions show the relationships between [`Location`](@ref)s.
+`Direction`s show the relationships between [`Location`](@ref)s.
 
 For example, a place can be [`North`](@ref) of another place.
 To create a new `Direction`, you must add a method for
 
-- `show`
+- `Base.show`
 - the [`MenuAdventures.opposite`](@ref) of the direction.
 """
 abstract type Direction end
@@ -459,8 +464,8 @@ The following `IOContext` components will be respected when showing nouns:
 
 - `:capitalize::Bool => false`
 - `:known::Bool => true`, set to `false` to include the `indefinite article` if it exists.
-- `:is_subject => true`, whether the noun is the subject of the sentence. If this is set to `false`, you must also include
-- `:subject::Noun`, the subject of the sentence.
+- `:is_subject => true`, whether the noun is the subject of a clause. If this is set to `false`, you must also include
+- `:subject::Noun`, the subject of the clause.
 """
 abstract type Noun end
 
@@ -478,7 +483,7 @@ export Location
 
 An abstract room.
 
-You must include a `already_lit::Bool` field.
+In addition to the required fields for [`@noun`](@ref), you must also include an `already_lit::Bool` field for an `AbstractRoom`.
 """
 abstract type AbstractRoom <: Location end
 
@@ -496,7 +501,7 @@ export AbstractDoor
 """
     abstract type Action end
 
-A action is an action the player can take.
+An `Action` the player can take.
 
 To create a new action, you will need to add methods for
 
@@ -515,8 +520,8 @@ Most importantly, define:
 function (::MyNewAction)(universe, arguments...) -> Bool
 ```
 
-Which will conduct the action based on user choices. 
-Return `true` to end the game, otherwise, continue onto the next turn.
+which will conduct the action based on user choices. 
+Return `true` to end the game, or `false` to continue onto the next turn.
 You can overload `Action` calls for a [`Noun`](@ref) subtype.
 Use `Base.invoke` to avoid replicating the `Action` machinery.
 """
@@ -531,10 +536,10 @@ An answer has two fields: `text`, which will be how the option is displayed in a
 
 `object` might be a noun, direction, trigger, or even a question.
 """
-struct Answer
+struct Answer{Object}
     text::String
     # could be an noun, a direction, or another question
-    object::Any
+    object::Object
 end
 
 export Answer
@@ -799,7 +804,7 @@ Put something from your [`Inventory`](@ref) into something [`Reachable`](@ref).
 
 An [`Action`](@ref). By default,
 
-    ever_possible(::PutInto, ::Inventory, _) = true
+    ever_possible(::PutInto, ::Inventory, anything) = true
 
 that is, it is always possible to put something from your inventory into a container, and
 
@@ -862,8 +867,7 @@ function possible_now(universe, sentence::Sentence{Take}, domain::Reachable, thi
 end
 
 function (::Take)(universe, thing)
-    universe[universe.player, thing] = Carrying()
-    false
+    ExtraActions.Give()(universe, thing, universe.player)
 end
 
 function print_sentence(io, ::Take, thing_answer)
@@ -1077,9 +1081,9 @@ export subject_to_verb
 
 Contains all the information about the game universe.
 
-You will need to create your own `AbstractUniverse` subtype. See [`@universe`] for an easy way to do this.
+You will need to create your own `AbstractUniverse` subtype. See [`@universe`](@ref) for an easy way to do this.
 
-The universe is organized as interlinking web of [`Location`](@ref)s connected by [`Direction`](@ref)s.
+The universe is organized as an interlinking web of [`Location`](@ref)s connected by [`Direction`](@ref)s.
 Each location is the root of a tree of [`Noun`](@ref)s connected by [`Relationship`](@ref)s.
 
 You can add a new thing to the `universe`, or change the location of something, by specifying its relation to another thing:
@@ -1088,8 +1092,8 @@ You can add a new thing to the `universe`, or change the location of something, 
 
 You can add a connection between locations too, optionally interspersed by a door:
 
-    universe[parent_thing, destination, one_way = false] = direction
-    universe[parent_thing, destination, one_way = false] = door, direction
+    universe[origin, destination, one_way = false] = direction
+    universe[origin, destination, one_way = false] = door, direction
 
 By default, this will create a way back in the [`MenuAdventures.opposite`](@ref) direction. To suppress this, set `one_way = true`
 """
@@ -1315,7 +1319,7 @@ end
 """
     string_in_color(color::Symbol, arguments...)
 
-Use ASCII escape codes add a `color` to the `arguments` collected as a string.
+Use ASCII escape codes to add a `color` to the `arguments` collected as a string.
 """
 function string_in_color(color::Symbol, arguments...)
     string(text_colors[color], arguments..., text_colors[:default])
@@ -1333,11 +1337,11 @@ end
 """
     mention_status(io, action, thing)
 
-Mention the status of `thing` corresponding to `action`.
+Print the status of `thing` corresponding to `action` into `io`.
 
 For example, for the [`OpenOrClose`](@ref) action, will display whether `thing` is open or closed.
 Called for all action subtypes when mentioning a thing.
-Defaults to `nothing`.
+Defaults to doing `nothing`.
 """
 function mention_status(_, __, ___)
     nothing
@@ -1849,7 +1853,7 @@ Adds the following fields and defaults:
 - `plural::Bool = false`
 - `grammatical_person::GrammaticalPerson = third_person`, see [`third_person`](@ref)
 - `indefinite_article::String = "a"`
-- `description = (_, __) -> ""`
+- `description = (universe, self) -> ""`
 
 Set `indefinite_article` to `""` for proper nouns.
 `description` should be a function which takes two arguments, the `universe` and the `thing` itself, and returns a description.
@@ -1874,11 +1878,11 @@ const UNIVERSE_FIELDS = [
 """
     @universe user_definition
 
-Automatically add the required fields to an [`AbstractUniverse`] struct definition, including sane defaults.
+Automatically add the required fields to an [`AbstractUniverse`](@ref) struct definition, including sane defaults.
 
 Adds the following fields and defaults:
 
-- `player::Noun`. The player will typically be the [`second_person`](@ref).
+- `player::Noun`. The player will typically be in [`second_person`](@ref).
 - `interface::TTYTerminal = terminal`
 - `introduction::String = ""`
 - `relationships_graph = MetaGraph(DiGraph(), Label = Noun, EdgeMeta = Relationship))`, the [`Relationship`](@ref)s between [`Noun`](@ref)s.
@@ -1894,7 +1898,7 @@ end
 export @universe
 
 include("ExtraDirections.jl")
-include("ExtraVerbs.jl")
+include("ExtraActions.jl")
 include("Onto.jl")
 include("Outfits.jl")
 include("Parts.jl")

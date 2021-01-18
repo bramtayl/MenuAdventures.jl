@@ -1,7 +1,7 @@
 """
     MenuAdventures.Parts
 
-A sub-module with the incorporating relationship.
+A sub-module that allows things to be part of other things.
 
 ```jldoctest
 julia> using MenuAdventures
@@ -77,7 +77,8 @@ end
 
 `Attach` something from your [`Inventory`](@ref) to something else [`Reachable`](@ref).
 
-An [`Action`](@ref).
+An [`Action`](@ref). 
+By default, `ever_possible(::Attach, ::Reachable, _) = true`, that is, you can attach something sticky to anything.
 """
 struct Attach <: Action end
 

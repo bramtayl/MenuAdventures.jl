@@ -1,14 +1,14 @@
 """
-    MenuAdventures.ExtraVerbs
+    MenuAdventures.ExtraActions
 
-A sub-module with the incorporating relationship.
+A sub-module with miscellaneous extra actions.
 
 ```jldoctest
 julia> using MenuAdventures
 
 julia> using MenuAdventures.Testing
 
-julia> using MenuAdventures.ExtraVerbs
+julia> using MenuAdventures.ExtraActions
 
 julia> import MenuAdventures: ever_possible, is_shining
 
@@ -21,6 +21,8 @@ julia> @noun struct Room <: AbstractRoom
 
 julia> @noun struct Person <: Noun
         end;
+
+julia> ever_possible(::Give, ::Reachable, ::Person) = true;
 
 julia> @noun struct Food <: Noun
         end;
@@ -42,7 +44,7 @@ julia> @noun struct Anvil <: Noun
 
 julia> ever_possible(::PushBetweenRooms, ::Immediate, ::Anvil) = true;
 
-julia> cd(joinpath(pkgdir(MenuAdventures), "test", "ExtraVerbs")) do
+julia> cd(joinpath(pkgdir(MenuAdventures), "test", "ExtraActions")) do
             check_choices() do interface
                 you = Person(
                     "Brandon",
@@ -54,6 +56,7 @@ julia> cd(joinpath(pkgdir(MenuAdventures), "test", "ExtraVerbs")) do
                 universe = Universe(you, interface = interface)
                 universe[light_room, dark_room] = North()
                 universe[light_room, you] = Containing()
+                universe[light_room, Person("friend")] = Containing()
                 universe[light_room, Lamp("lamp")] = Containing()
                 universe[light_room, Food("food")] = Containing()
                 universe[light_room, Anvil("anvil")] = Containing()
@@ -63,7 +66,7 @@ julia> cd(joinpath(pkgdir(MenuAdventures), "test", "ExtraVerbs")) do
 true
 ```
 """
-module ExtraVerbs
+module ExtraActions
 
 using MenuAdventures: Action, Carrying, Containing, ExitDirections, get_final_destination, get_first_destination, get_parent, Go, Immediate, Inventory, is_closable_and_closed, Noun, PutInto, Reachable, Sentence
 import MenuAdventures: argument_domains, ever_possible, mention_status, possible_now, print_sentence
@@ -98,7 +101,8 @@ end
 
 `Give` something from your [`Inventory`](@ref) to someone [`Reachable`](@ref).
 
-An [`Action`](@ref).
+An [`Action`](@ref). By default, `ever_possible(::Give, ::Inventory, _) = true`,
+that is, you can give someone anything in your inventory.
 """
 struct Give <: Action end
 
@@ -130,7 +134,7 @@ end
 """
     PushBetweenRooms()
 
-PushBetweenRooms something [`Immediate`](@ref) in one of [`ExitDirections`](@ref).
+Push something [`Immediate`](@ref) in one of [`ExitDirections`](@ref).
 
 An [`Action`](@ref).
 """

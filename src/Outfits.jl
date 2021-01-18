@@ -1,7 +1,7 @@
 """
     MenuAdventures.Outfits
 
-A sub-module with the wearing relationship.
+A sub-module that enables the player to wear clothes.
 
 ```jldoctest
 julia> using MenuAdventures
@@ -52,7 +52,7 @@ true
 module Outfits
 
 using MenuAdventures: Action, BE, get_parent, Inventory, Location, Reachable, Relationship, Sentence, subject_to_verb, Verb
-import MenuAdventures: argument_domains, ever_possible, possible_now, print_sentence, string_relationship_to, verb_for
+import MenuAdventures: argument_domains, print_sentence, string_relationship_to, verb_for
 
 """
     Wearing()

@@ -1,7 +1,7 @@
 """
     MenuAdventures.Talking
 
-A sub-module with the Dialog domain.
+A sub-module that enables talking to other players.
 
 ```jldoctest
 julia> using MenuAdventures
@@ -52,8 +52,8 @@ true
 """
 module Talking
 
-using MenuAdventures: Action, Answer, Domain, println_wrapped, Sentence, subject_to_verb, Verb, Visible
-import MenuAdventures: argument_domains, ever_possible, find_in_domain, possible_now, print_sentence
+using MenuAdventures: Action, Answer, Domain, ever_possible, println_wrapped, Sentence, subject_to_verb, Verb, Visible
+import MenuAdventures: argument_domains, find_in_domain, possible_now, print_sentence
 
 """
     Dialog()
@@ -61,7 +61,6 @@ import MenuAdventures: argument_domains, ever_possible, find_in_domain, possible
 Things a player might say.
 
 For dialog, the keys will be things you can say, and answers will be replies.
-
 The text of answer objects will be the quoted version of their object.
 
 A [`Domain`](@ref).
@@ -83,7 +82,7 @@ Say, to someone [`Visible`](@ref), some [`Dialog`](@ref).
 An [`Action`](@ref). 
 Note the first argument is the addressee, and the second is the dialog.
 If `possible(::Say, ::Dialog, addressee)`, then `addressee` must have a dialog field containing a dialog dictionary.
-The keys of this dictionary should be text the player says, and the values should be [`Answer`]s containing a response from the `addressee` and a trigger.
+The keys of this dictionary should be text the player says, and the values should be [`Answer`](@ref)s containing a response from the `addressee` and a trigger.
 After a dialog option is chosen, the response trigger will be called with two arguments: `universe` and `addressee`. Then the dialog option will be removed.
 """
 struct Say <: Action end

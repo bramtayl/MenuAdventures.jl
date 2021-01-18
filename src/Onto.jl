@@ -1,7 +1,7 @@
 """
     MenuAdventures.Onto
 
-A sub-module with the supporting relationship.
+A sub-module that allows things to be on top of other things.
 
 ```jldoctest
 julia> using MenuAdventures

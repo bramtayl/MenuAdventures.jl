@@ -1,7 +1,7 @@
 module Testing
 
 using DelimitedFiles: readdlm, writedlm
-using MenuAdventures: terminal, TTYTerminal, turn!
+using MenuAdventures: AbstractUniverse, terminal, TTYTerminal, turn!
 
 const KEY_PRESS = Dict(:up => "\e[A", :down => "\e[B", :enter => "\r")
 
@@ -24,7 +24,7 @@ end
 Save the choices a user makes as a delimited file, as well as the transcript of the game.
 
 Use to create a transcript to test with [`check_choices`](@ref).
-`make_universe` should be a function which takes one argument, an IO interface, and returns an [`AbstractUniverse`].
+`make_universe` should be a function which takes one argument, an IO interface, and returns an [`AbstractUniverse`](@ref).
 `choices_file` will be the delimited file where user choices are saved.
 `transcript_file` will be the file where the game transcript will be saved.
 If `resume` is true, the game will pick up from the point you left off, based on the existing `choices_file`.
