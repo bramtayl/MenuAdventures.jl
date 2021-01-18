@@ -1,0 +1,17 @@
+
+A room:
+  contains:
+    you
+    your friend
+
+[2K > [32mQuit[39m
+[2K   [32mSay "Hello" to your friend[39m[?25l[999D[1A[2K   [32mQuit[39m
+[2K > [32mSay "Hello" to your friend[39m[?25h
+Your friend replies "Hello"
+
+A room:
+  contains:
+    you
+    your friend
+
+ > [32mQuit[39m

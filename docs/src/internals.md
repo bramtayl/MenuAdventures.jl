@@ -1,10 +1,10 @@
-# Exports
+# Internals
 
 ```@index
-Pages = ["index.md"]
+Pages = ["internals.md"]
 ```
 
 ```@autodocs
 Modules = [MenuAdventures]
-Private = false
+Public = false
 ```

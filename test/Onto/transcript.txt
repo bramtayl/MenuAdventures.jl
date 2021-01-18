@@ -1,0 +1,124 @@
+
+A room:
+  contains:
+    you
+    a table
+    a thing
+
+[2K > [32mGo onto the table[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the thing[39m[?25l[?25h
+
+A room:
+  contains:
+    a table:
+      supports:
+        you
+    a thing
+
+[2K > [32mLeave[39m
+[2K   [32mQuit[39m[?25l[?25h
+
+A room:
+  contains:
+    you
+    a table
+    a thing
+
+[2K > [32mGo onto the table[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the thing[39m[?25l[999D[2A[2K   [32mGo onto the table[39m
+[2K > [32mQuit[39m
+[2K   [32mTake the thing[39m[999D[2A[2K   [32mGo onto the table[39m
+[2K   [32mQuit[39m
+[2K > [32mTake the thing[39m[?25h
+
+A room:
+  contains:
+    you
+    a table
+
+[2K > [32mDrop the thing[39m
+[2K   [32mGo onto the table[39m
+[2K   [32mList inventory[39m
+[2K   [32mPut the thing onto the table[39m
+[2K   [32mQuit[39m[?25l[999D[4A[2K   [32mDrop the thing[39m
+[2K > [32mGo onto the table[39m
+[2K   [32mList inventory[39m
+[2K   [32mPut the thing onto the table[39m
+[2K   [32mQuit[39m[999D[4A[2K   [32mDrop the thing[39m
+[2K   [32mGo onto the table[39m
+[2K > [32mList inventory[39m
+[2K   [32mPut the thing onto the table[39m
+[2K   [32mQuit[39m[999D[4A[2K   [32mDrop the thing[39m
+[2K   [32mGo onto the table[39m
+[2K   [32mList inventory[39m
+[2K > [32mPut the thing onto the table[39m
+[2K   [32mQuit[39m[?25h
+
+A room:
+  contains:
+    you
+    a table:
+      supports:
+        a thing
+
+[2K > [32mGo onto the table[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the thing on the table[39m[?25l[?25h
+
+A room:
+  contains:
+    a table:
+      supports:
+        you
+        a thing
+
+[2K > [32mLeave[39m
+[2K   [32mQuit[39m
+[2K   [32mTake the thing[39m[?25l[999D[2A[2K   [32mLeave[39m
+[2K > [32mQuit[39m
+[2K   [32mTake the thing[39m[999D[2A[2K   [32mLeave[39m
+[2K   [32mQuit[39m
+[2K > [32mTake the thing[39m[?25h
+
+A room:
+  contains:
+    a table:
+      supports:
+        you
+
+[2K > [32mDrop the thing[39m
+[2K   [32mLeave[39m
+[2K   [32mList inventory[39m
+[2K   [32mQuit[39m[?25l[999D[3A[2K   [32mDrop the thing[39m
+[2K > [32mLeave[39m
+[2K   [32mList inventory[39m
+[2K   [32mQuit[39m[?25h
+
+A room:
+  contains:
+    you
+    a table
+
+[2K > [32mDrop the thing[39m
+[2K   [32mGo onto the table[39m
+[2K   [32mList inventory[39m
+[2K   [32mPut the thing onto the table[39m
+[2K   [32mQuit[39m[?25l[999D[4A[2K   [32mDrop the thing[39m
+[2K > [32mGo onto the table[39m
+[2K   [32mList inventory[39m
+[2K   [32mPut the thing onto the table[39m
+[2K   [32mQuit[39m[999D[4A[2K   [32mDrop the thing[39m
+[2K   [32mGo onto the table[39m
+[2K > [32mList inventory[39m
+[2K   [32mPut the thing onto the table[39m
+[2K   [32mQuit[39m[999D[4A[2K   [32mDrop the thing[39m
+[2K   [32mGo onto the table[39m
+[2K   [32mList inventory[39m
+[2K > [32mPut the thing onto the table[39m
+[2K   [32mQuit[39m[999D[4A[2K   [32mDrop the thing[39m
+[2K   [32mGo onto the table[39m
+[2K   [32mList inventory[39m
+[2K   [32mPut the thing onto the table[39m
+[2K > [32mQuit[39m[?25h
