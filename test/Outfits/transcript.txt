@@ -5,7 +5,7 @@ A room:
     a coat
 
 [2K > [32mQuit[39m
-[2K   [32mTake the coat[39m[?25l[999D[1A[2K   [32mQuit[39m
+[2K   [32mTake the coat[39m[?25l[1A[2K   [32mQuit[39m
 [2K > [32mTake the coat[39m[?25h
 
 A room:
@@ -15,7 +15,7 @@ A room:
 [2K > [32mDress yourself in the coat[39m
 [2K   [32mDrop the coat[39m
 [2K   [32mList inventory[39m
-[2K   [32mQuit[39m[?25l[999D[3A[2K   [32mDress yourself in the coat[39m
+[2K   [32mQuit[39m[?25l[3A[2K   [32mDress yourself in the coat[39m
 [2K > [32mDrop the coat[39m
 [2K   [32mList inventory[39m
 [2K   [32mQuit[39m[?25h
@@ -26,7 +26,7 @@ A room:
     a coat
 
 [2K > [32mQuit[39m
-[2K   [32mTake the coat[39m[?25l[999D[1A[2K   [32mQuit[39m
+[2K   [32mTake the coat[39m[?25l[1A[2K   [32mQuit[39m
 [2K > [32mTake the coat[39m[?25h
 
 A room:
@@ -36,10 +36,10 @@ A room:
 [2K > [32mDress yourself in the coat[39m
 [2K   [32mDrop the coat[39m
 [2K   [32mList inventory[39m
-[2K   [32mQuit[39m[?25l[999D[3A[2K   [32mDress yourself in the coat[39m
+[2K   [32mQuit[39m[?25l[3A[2K   [32mDress yourself in the coat[39m
 [2K > [32mDrop the coat[39m
 [2K   [32mList inventory[39m
-[2K   [32mQuit[39m[999D[3A[2K   [32mDress yourself in the coat[39m
+[2K   [32mQuit[39m[3A[2K   [32mDress yourself in the coat[39m
 [2K   [32mDrop the coat[39m
 [2K > [32mList inventory[39m
 [2K   [32mQuit[39m[?25h
@@ -75,9 +75,9 @@ A room:
 
 [2K > [32mList inventory[39m
 [2K   [32mQuit[39m
-[2K   [32mTake the coat that you are wearing[39m[?25l[999D[2A[2K   [32mList inventory[39m
+[2K   [32mTake the coat that you are wearing[39m[?25l[2A[2K   [32mList inventory[39m
 [2K > [32mQuit[39m
-[2K   [32mTake the coat that you are wearing[39m[999D[2A[2K   [32mList inventory[39m
+[2K   [32mTake the coat that you are wearing[39m[2A[2K   [32mList inventory[39m
 [2K   [32mQuit[39m
 [2K > [32mTake the coat that you are wearing[39m[?25h
 
@@ -88,13 +88,13 @@ A room:
 [2K > [32mDress yourself in the coat[39m
 [2K   [32mDrop the coat[39m
 [2K   [32mList inventory[39m
-[2K   [32mQuit[39m[?25l[999D[3A[2K   [32mDress yourself in the coat[39m
+[2K   [32mQuit[39m[?25l[3A[2K   [32mDress yourself in the coat[39m
 [2K > [32mDrop the coat[39m
 [2K   [32mList inventory[39m
-[2K   [32mQuit[39m[999D[3A[2K   [32mDress yourself in the coat[39m
+[2K   [32mQuit[39m[3A[2K   [32mDress yourself in the coat[39m
 [2K   [32mDrop the coat[39m
 [2K > [32mList inventory[39m
-[2K   [32mQuit[39m[999D[3A[2K   [32mDress yourself in the coat[39m
+[2K   [32mQuit[39m[3A[2K   [32mDress yourself in the coat[39m
 [2K   [32mDrop the coat[39m
 [2K   [32mList inventory[39m
 [2K > [32mQuit[39m[?25h

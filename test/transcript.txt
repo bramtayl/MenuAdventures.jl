@@ -12,7 +12,7 @@ The entrance:
 [2K > [32mGo into the car[39m
 [2K   [32mLook at something[39m
 [2K   [32mQuit[39m
-[2K   [32mTake the small key[39m[?25l[999D[3A[2K   [32mGo into the car[39m
+[2K   [32mTake the small key[39m[?25l[3A[2K   [32mGo into the car[39m
 [2K > [32mLook at something[39m
 [2K   [32mQuit[39m
 [2K   [32mTake the small key[39m[?25h
@@ -34,14 +34,14 @@ The entrance:
 [2K > [32mGo into the car[39m
 [2K   [32mLook at something[39m
 [2K   [32mQuit[39m
-[2K   [32mTake the small key[39m[?25l[999D[3A[2K   [32mGo into the car[39m
+[2K   [32mTake the small key[39m[?25l[3A[2K   [32mGo into the car[39m
 [2K > [32mLook at something[39m
 [2K   [32mQuit[39m
 [2K   [32mTake the small key[39m[?25h
 
 [39mLook at what?[39m
 [2K > [32mLook at the entrance[39m
-[2K   [32mLook at yourself[39m[?25l[999D[1A[2K   [32mLook at the entrance[39m
+[2K   [32mLook at yourself[39m[?25l[1A[2K   [32mLook at the entrance[39m
 [2K > [32mLook at yourself[39m[?25h
 What a dork!
 
@@ -57,13 +57,13 @@ The entrance:
 [2K > [32mGo into the car[39m
 [2K   [32mLook at something[39m
 [2K   [32mQuit[39m
-[2K   [32mTake the small key[39m[?25l[999D[3A[2K   [32mGo into the car[39m
+[2K   [32mTake the small key[39m[?25l[3A[2K   [32mGo into the car[39m
 [2K > [32mLook at something[39m
 [2K   [32mQuit[39m
-[2K   [32mTake the small key[39m[999D[3A[2K   [32mGo into the car[39m
+[2K   [32mTake the small key[39m[3A[2K   [32mGo into the car[39m
 [2K   [32mLook at something[39m
 [2K > [32mQuit[39m
-[2K   [32mTake the small key[39m[999D[3A[2K   [32mGo into the car[39m
+[2K   [32mTake the small key[39m[3A[2K   [32mGo into the car[39m
 [2K   [32mLook at something[39m
 [2K   [32mQuit[39m
 [2K > [32mTake the small key[39m[?25h
@@ -81,27 +81,27 @@ The entrance:
 [2K   [32mList inventory[39m
 [2K   [32mLook at something[39m
 [2K   [32mQuit[39m
-[2K   [32mUnlock or lock something with the small key[39m[?25l[999D[5A[2K   [32mDrop the small key[39m
+[2K   [32mUnlock or lock something with the small key[39m[?25l[5A[2K   [32mDrop the small key[39m
 [2K > [32mGo into the car[39m
 [2K   [32mList inventory[39m
 [2K   [32mLook at something[39m
 [2K   [32mQuit[39m
-[2K   [32mUnlock or lock something with the small key[39m[999D[5A[2K   [32mDrop the small key[39m
+[2K   [32mUnlock or lock something with the small key[39m[5A[2K   [32mDrop the small key[39m
 [2K   [32mGo into the car[39m
 [2K > [32mList inventory[39m
 [2K   [32mLook at something[39m
 [2K   [32mQuit[39m
-[2K   [32mUnlock or lock something with the small key[39m[999D[5A[2K   [32mDrop the small key[39m
+[2K   [32mUnlock or lock something with the small key[39m[5A[2K   [32mDrop the small key[39m
 [2K   [32mGo into the car[39m
 [2K   [32mList inventory[39m
 [2K > [32mLook at something[39m
 [2K   [32mQuit[39m
-[2K   [32mUnlock or lock something with the small key[39m[999D[5A[2K   [32mDrop the small key[39m
+[2K   [32mUnlock or lock something with the small key[39m[5A[2K   [32mDrop the small key[39m
 [2K   [32mGo into the car[39m
 [2K   [32mList inventory[39m
 [2K   [32mLook at something[39m
 [2K > [32mQuit[39m
-[2K   [32mUnlock or lock something with the small key[39m[999D[5A[2K   [32mDrop the small key[39m
+[2K   [32mUnlock or lock something with the small key[39m[5A[2K   [32mDrop the small key[39m
 [2K   [32mGo into the car[39m
 [2K   [32mList inventory[39m
 [2K   [32mLook at something[39m
@@ -110,7 +110,7 @@ The entrance:
 
 [39mUnlock or lock what with the small key?[39m
 [2K > [32mUnlock the chest with the small key[39m
-[2K   [32mUnlock the door with the small key[39m[?25l[999D[1A[2K   [32mUnlock the chest with the small key[39m
+[2K   [32mUnlock the door with the small key[39m[?25l[1A[2K   [32mUnlock the chest with the small key[39m
 [2K > [32mUnlock the door with the small key[39m[?25h
 [31mThe small key doesn't fit![39m
 
@@ -127,27 +127,27 @@ The entrance:
 [2K   [32mList inventory[39m
 [2K   [32mLook at something[39m
 [2K   [32mQuit[39m
-[2K   [32mUnlock or lock something with the small key[39m[?25l[999D[5A[2K   [32mDrop the small key[39m
+[2K   [32mUnlock or lock something with the small key[39m[?25l[5A[2K   [32mDrop the small key[39m
 [2K > [32mGo into the car[39m
 [2K   [32mList inventory[39m
 [2K   [32mLook at something[39m
 [2K   [32mQuit[39m
-[2K   [32mUnlock or lock something with the small key[39m[999D[5A[2K   [32mDrop the small key[39m
+[2K   [32mUnlock or lock something with the small key[39m[5A[2K   [32mDrop the small key[39m
 [2K   [32mGo into the car[39m
 [2K > [32mList inventory[39m
 [2K   [32mLook at something[39m
 [2K   [32mQuit[39m
-[2K   [32mUnlock or lock something with the small key[39m[999D[5A[2K   [32mDrop the small key[39m
+[2K   [32mUnlock or lock something with the small key[39m[5A[2K   [32mDrop the small key[39m
 [2K   [32mGo into the car[39m
 [2K   [32mList inventory[39m
 [2K > [32mLook at something[39m
 [2K   [32mQuit[39m
-[2K   [32mUnlock or lock something with the small key[39m[999D[5A[2K   [32mDrop the small key[39m
+[2K   [32mUnlock or lock something with the small key[39m[5A[2K   [32mDrop the small key[39m
 [2K   [32mGo into the car[39m
 [2K   [32mList inventory[39m
 [2K   [32mLook at something[39m
 [2K > [32mQuit[39m
-[2K   [32mUnlock or lock something with the small key[39m[999D[5A[2K   [32mDrop the small key[39m
+[2K   [32mUnlock or lock something with the small key[39m[5A[2K   [32mDrop the small key[39m
 [2K   [32mGo into the car[39m
 [2K   [32mList inventory[39m
 [2K   [32mLook at something[39m
@@ -172,37 +172,37 @@ The entrance:
 [2K   [32mLook at something[39m
 [2K   [32mOpen the chest[39m
 [2K   [32mQuit[39m
-[2K   [32mUnlock or lock something with the small key[39m[?25l[999D[6A[2K   [32mDrop the small key[39m
+[2K   [32mUnlock or lock something with the small key[39m[?25l[6A[2K   [32mDrop the small key[39m
 [2K > [32mGo into the car[39m
 [2K   [32mList inventory[39m
 [2K   [32mLook at something[39m
 [2K   [32mOpen the chest[39m
 [2K   [32mQuit[39m
-[2K   [32mUnlock or lock something with the small key[39m[999D[6A[2K   [32mDrop the small key[39m
+[2K   [32mUnlock or lock something with the small key[39m[6A[2K   [32mDrop the small key[39m
 [2K   [32mGo into the car[39m
 [2K > [32mList inventory[39m
 [2K   [32mLook at something[39m
 [2K   [32mOpen the chest[39m
 [2K   [32mQuit[39m
-[2K   [32mUnlock or lock something with the small key[39m[999D[6A[2K   [32mDrop the small key[39m
+[2K   [32mUnlock or lock something with the small key[39m[6A[2K   [32mDrop the small key[39m
 [2K   [32mGo into the car[39m
 [2K   [32mList inventory[39m
 [2K > [32mLook at something[39m
 [2K   [32mOpen the chest[39m
 [2K   [32mQuit[39m
-[2K   [32mUnlock or lock something with the small key[39m[999D[6A[2K   [32mDrop the small key[39m
+[2K   [32mUnlock or lock something with the small key[39m[6A[2K   [32mDrop the small key[39m
 [2K   [32mGo into the car[39m
 [2K   [32mList inventory[39m
 [2K   [32mLook at something[39m
 [2K > [32mOpen the chest[39m
 [2K   [32mQuit[39m
-[2K   [32mUnlock or lock something with the small key[39m[999D[6A[2K   [32mDrop the small key[39m
+[2K   [32mUnlock or lock something with the small key[39m[6A[2K   [32mDrop the small key[39m
 [2K   [32mGo into the car[39m
 [2K   [32mList inventory[39m
 [2K   [32mLook at something[39m
 [2K   [32mOpen the chest[39m
 [2K > [32mQuit[39m
-[2K   [32mUnlock or lock something with the small key[39m[999D[6A[2K   [32mDrop the small key[39m
+[2K   [32mUnlock or lock something with the small key[39m[6A[2K   [32mDrop the small key[39m
 [2K   [32mGo into the car[39m
 [2K   [32mList inventory[39m
 [2K   [32mLook at something[39m
@@ -227,27 +227,27 @@ The entrance:
 [2K   [32mList inventory[39m
 [2K   [32mLook at something[39m
 [2K   [32mQuit[39m
-[2K   [32mUnlock or lock something with the small key[39m[?25l[999D[5A[2K   [32mDrop the small key[39m
+[2K   [32mUnlock or lock something with the small key[39m[?25l[5A[2K   [32mDrop the small key[39m
 [2K > [32mGo into the car[39m
 [2K   [32mList inventory[39m
 [2K   [32mLook at something[39m
 [2K   [32mQuit[39m
-[2K   [32mUnlock or lock something with the small key[39m[999D[5A[2K   [32mDrop the small key[39m
+[2K   [32mUnlock or lock something with the small key[39m[5A[2K   [32mDrop the small key[39m
 [2K   [32mGo into the car[39m
 [2K > [32mList inventory[39m
 [2K   [32mLook at something[39m
 [2K   [32mQuit[39m
-[2K   [32mUnlock or lock something with the small key[39m[999D[5A[2K   [32mDrop the small key[39m
+[2K   [32mUnlock or lock something with the small key[39m[5A[2K   [32mDrop the small key[39m
 [2K   [32mGo into the car[39m
 [2K   [32mList inventory[39m
 [2K > [32mLook at something[39m
 [2K   [32mQuit[39m
-[2K   [32mUnlock or lock something with the small key[39m[999D[5A[2K   [32mDrop the small key[39m
+[2K   [32mUnlock or lock something with the small key[39m[5A[2K   [32mDrop the small key[39m
 [2K   [32mGo into the car[39m
 [2K   [32mList inventory[39m
 [2K   [32mLook at something[39m
 [2K > [32mQuit[39m
-[2K   [32mUnlock or lock something with the small key[39m[999D[5A[2K   [32mDrop the small key[39m
+[2K   [32mUnlock or lock something with the small key[39m[5A[2K   [32mDrop the small key[39m
 [2K   [32mGo into the car[39m
 [2K   [32mList inventory[39m
 [2K   [32mLook at something[39m
@@ -272,25 +272,25 @@ The entrance:
 [2K   [32mLook at something[39m
 [2K   [32mOpen the chest[39m
 [2K   [32mQuit[39m
-[2K   [32mUnlock or lock something with the small key[39m[?25l[999D[6A[2K   [32mDrop the small key[39m
+[2K   [32mUnlock or lock something with the small key[39m[?25l[6A[2K   [32mDrop the small key[39m
 [2K > [32mGo into the car[39m
 [2K   [32mList inventory[39m
 [2K   [32mLook at something[39m
 [2K   [32mOpen the chest[39m
 [2K   [32mQuit[39m
-[2K   [32mUnlock or lock something with the small key[39m[999D[6A[2K   [32mDrop the small key[39m
+[2K   [32mUnlock or lock something with the small key[39m[6A[2K   [32mDrop the small key[39m
 [2K   [32mGo into the car[39m
 [2K > [32mList inventory[39m
 [2K   [32mLook at something[39m
 [2K   [32mOpen the chest[39m
 [2K   [32mQuit[39m
-[2K   [32mUnlock or lock something with the small key[39m[999D[6A[2K   [32mDrop the small key[39m
+[2K   [32mUnlock or lock something with the small key[39m[6A[2K   [32mDrop the small key[39m
 [2K   [32mGo into the car[39m
 [2K   [32mList inventory[39m
 [2K > [32mLook at something[39m
 [2K   [32mOpen the chest[39m
 [2K   [32mQuit[39m
-[2K   [32mUnlock or lock something with the small key[39m[999D[6A[2K   [32mDrop the small key[39m
+[2K   [32mUnlock or lock something with the small key[39m[6A[2K   [32mDrop the small key[39m
 [2K   [32mGo into the car[39m
 [2K   [32mList inventory[39m
 [2K   [32mLook at something[39m
@@ -332,25 +332,25 @@ The entrance:
 [2K   [32mLook at something[39m
 [2K   [32mOpen the chest[39m
 [2K   [32mQuit[39m
-[2K   [32mUnlock or lock something with the small key[39m[?25l[999D[6A[2K   [32mDrop the small key[39m
+[2K   [32mUnlock or lock something with the small key[39m[?25l[6A[2K   [32mDrop the small key[39m
 [2K > [32mGo into the car[39m
 [2K   [32mList inventory[39m
 [2K   [32mLook at something[39m
 [2K   [32mOpen the chest[39m
 [2K   [32mQuit[39m
-[2K   [32mUnlock or lock something with the small key[39m[999D[6A[2K   [32mDrop the small key[39m
+[2K   [32mUnlock or lock something with the small key[39m[6A[2K   [32mDrop the small key[39m
 [2K   [32mGo into the car[39m
 [2K > [32mList inventory[39m
 [2K   [32mLook at something[39m
 [2K   [32mOpen the chest[39m
 [2K   [32mQuit[39m
-[2K   [32mUnlock or lock something with the small key[39m[999D[6A[2K   [32mDrop the small key[39m
+[2K   [32mUnlock or lock something with the small key[39m[6A[2K   [32mDrop the small key[39m
 [2K   [32mGo into the car[39m
 [2K   [32mList inventory[39m
 [2K > [32mLook at something[39m
 [2K   [32mOpen the chest[39m
 [2K   [32mQuit[39m
-[2K   [32mUnlock or lock something with the small key[39m[999D[6A[2K   [32mDrop the small key[39m
+[2K   [32mUnlock or lock something with the small key[39m[6A[2K   [32mDrop the small key[39m
 [2K   [32mGo into the car[39m
 [2K   [32mList inventory[39m
 [2K   [32mLook at something[39m
@@ -376,7 +376,7 @@ The entrance:
 [2K   [32mPut the small key into the chest[39m
 [2K   [32mQuit[39m
 [2K   [32mTake the large key in the chest[39m
-[2K   [32mUnlock the door with the small key[39m[?25l[999D[8A[2K   [32mClose the chest[39m
+[2K   [32mUnlock the door with the small key[39m[?25l[8A[2K   [32mClose the chest[39m
 [2K > [32mDrop the small key[39m
 [2K   [32mGo into the car[39m
 [2K   [32mList inventory[39m
@@ -384,7 +384,7 @@ The entrance:
 [2K   [32mPut the small key into the chest[39m
 [2K   [32mQuit[39m
 [2K   [32mTake the large key in the chest[39m
-[2K   [32mUnlock the door with the small key[39m[999D[8A[2K   [32mClose the chest[39m
+[2K   [32mUnlock the door with the small key[39m[8A[2K   [32mClose the chest[39m
 [2K   [32mDrop the small key[39m
 [2K > [32mGo into the car[39m
 [2K   [32mList inventory[39m
@@ -392,7 +392,7 @@ The entrance:
 [2K   [32mPut the small key into the chest[39m
 [2K   [32mQuit[39m
 [2K   [32mTake the large key in the chest[39m
-[2K   [32mUnlock the door with the small key[39m[999D[8A[2K   [32mClose the chest[39m
+[2K   [32mUnlock the door with the small key[39m[8A[2K   [32mClose the chest[39m
 [2K   [32mDrop the small key[39m
 [2K   [32mGo into the car[39m
 [2K > [32mList inventory[39m
@@ -400,7 +400,7 @@ The entrance:
 [2K   [32mPut the small key into the chest[39m
 [2K   [32mQuit[39m
 [2K   [32mTake the large key in the chest[39m
-[2K   [32mUnlock the door with the small key[39m[999D[8A[2K   [32mClose the chest[39m
+[2K   [32mUnlock the door with the small key[39m[8A[2K   [32mClose the chest[39m
 [2K   [32mDrop the small key[39m
 [2K   [32mGo into the car[39m
 [2K   [32mList inventory[39m
@@ -408,7 +408,7 @@ The entrance:
 [2K   [32mPut the small key into the chest[39m
 [2K   [32mQuit[39m
 [2K   [32mTake the large key in the chest[39m
-[2K   [32mUnlock the door with the small key[39m[999D[8A[2K   [32mClose the chest[39m
+[2K   [32mUnlock the door with the small key[39m[8A[2K   [32mClose the chest[39m
 [2K   [32mDrop the small key[39m
 [2K   [32mGo into the car[39m
 [2K   [32mList inventory[39m
@@ -416,7 +416,7 @@ The entrance:
 [2K > [32mPut the small key into the chest[39m
 [2K   [32mQuit[39m
 [2K   [32mTake the large key in the chest[39m
-[2K   [32mUnlock the door with the small key[39m[999D[8A[2K   [32mClose the chest[39m
+[2K   [32mUnlock the door with the small key[39m[8A[2K   [32mClose the chest[39m
 [2K   [32mDrop the small key[39m
 [2K   [32mGo into the car[39m
 [2K   [32mList inventory[39m
@@ -424,7 +424,7 @@ The entrance:
 [2K   [32mPut the small key into the chest[39m
 [2K > [32mQuit[39m
 [2K   [32mTake the large key in the chest[39m
-[2K   [32mUnlock the door with the small key[39m[999D[8A[2K   [32mClose the chest[39m
+[2K   [32mUnlock the door with the small key[39m[8A[2K   [32mClose the chest[39m
 [2K   [32mDrop the small key[39m
 [2K   [32mGo into the car[39m
 [2K   [32mList inventory[39m
@@ -449,35 +449,35 @@ The entrance:
 [2K   [32mLook at something[39m
 [2K   [32mPut something into the chest[39m
 [2K   [32mQuit[39m
-[2K   [32mUnlock the door with something[39m[?25l[999D[7A[2K   [32mClose the chest[39m
+[2K   [32mUnlock the door with something[39m[?25l[7A[2K   [32mClose the chest[39m
 [2K > [32mDrop something[39m
 [2K   [32mGo into the car[39m
 [2K   [32mList inventory[39m
 [2K   [32mLook at something[39m
 [2K   [32mPut something into the chest[39m
 [2K   [32mQuit[39m
-[2K   [32mUnlock the door with something[39m[999D[7A[2K   [32mClose the chest[39m
+[2K   [32mUnlock the door with something[39m[7A[2K   [32mClose the chest[39m
 [2K   [32mDrop something[39m
 [2K > [32mGo into the car[39m
 [2K   [32mList inventory[39m
 [2K   [32mLook at something[39m
 [2K   [32mPut something into the chest[39m
 [2K   [32mQuit[39m
-[2K   [32mUnlock the door with something[39m[999D[7A[2K   [32mClose the chest[39m
+[2K   [32mUnlock the door with something[39m[7A[2K   [32mClose the chest[39m
 [2K   [32mDrop something[39m
 [2K   [32mGo into the car[39m
 [2K > [32mList inventory[39m
 [2K   [32mLook at something[39m
 [2K   [32mPut something into the chest[39m
 [2K   [32mQuit[39m
-[2K   [32mUnlock the door with something[39m[999D[7A[2K   [32mClose the chest[39m
+[2K   [32mUnlock the door with something[39m[7A[2K   [32mClose the chest[39m
 [2K   [32mDrop something[39m
 [2K   [32mGo into the car[39m
 [2K   [32mList inventory[39m
 [2K > [32mLook at something[39m
 [2K   [32mPut something into the chest[39m
 [2K   [32mQuit[39m
-[2K   [32mUnlock the door with something[39m[999D[7A[2K   [32mClose the chest[39m
+[2K   [32mUnlock the door with something[39m[7A[2K   [32mClose the chest[39m
 [2K   [32mDrop something[39m
 [2K   [32mGo into the car[39m
 [2K   [32mList inventory[39m
@@ -508,7 +508,7 @@ The entrance:
 [2K   [32mPut the small key into the chest[39m
 [2K   [32mQuit[39m
 [2K   [32mTake the large key in the chest[39m
-[2K   [32mUnlock the door with the small key[39m[?25l[999D[8A[2K   [32mClose the chest[39m
+[2K   [32mUnlock the door with the small key[39m[?25l[8A[2K   [32mClose the chest[39m
 [2K > [32mDrop the small key[39m
 [2K   [32mGo into the car[39m
 [2K   [32mList inventory[39m
@@ -516,7 +516,7 @@ The entrance:
 [2K   [32mPut the small key into the chest[39m
 [2K   [32mQuit[39m
 [2K   [32mTake the large key in the chest[39m
-[2K   [32mUnlock the door with the small key[39m[999D[8A[2K   [32mClose the chest[39m
+[2K   [32mUnlock the door with the small key[39m[8A[2K   [32mClose the chest[39m
 [2K   [32mDrop the small key[39m
 [2K > [32mGo into the car[39m
 [2K   [32mList inventory[39m
@@ -524,7 +524,7 @@ The entrance:
 [2K   [32mPut the small key into the chest[39m
 [2K   [32mQuit[39m
 [2K   [32mTake the large key in the chest[39m
-[2K   [32mUnlock the door with the small key[39m[999D[8A[2K   [32mClose the chest[39m
+[2K   [32mUnlock the door with the small key[39m[8A[2K   [32mClose the chest[39m
 [2K   [32mDrop the small key[39m
 [2K   [32mGo into the car[39m
 [2K > [32mList inventory[39m
@@ -532,7 +532,7 @@ The entrance:
 [2K   [32mPut the small key into the chest[39m
 [2K   [32mQuit[39m
 [2K   [32mTake the large key in the chest[39m
-[2K   [32mUnlock the door with the small key[39m[999D[8A[2K   [32mClose the chest[39m
+[2K   [32mUnlock the door with the small key[39m[8A[2K   [32mClose the chest[39m
 [2K   [32mDrop the small key[39m
 [2K   [32mGo into the car[39m
 [2K   [32mList inventory[39m
@@ -540,7 +540,7 @@ The entrance:
 [2K   [32mPut the small key into the chest[39m
 [2K   [32mQuit[39m
 [2K   [32mTake the large key in the chest[39m
-[2K   [32mUnlock the door with the small key[39m[999D[8A[2K   [32mClose the chest[39m
+[2K   [32mUnlock the door with the small key[39m[8A[2K   [32mClose the chest[39m
 [2K   [32mDrop the small key[39m
 [2K   [32mGo into the car[39m
 [2K   [32mList inventory[39m
@@ -565,19 +565,19 @@ The entrance:
 [2K   [32mGo into the car[39m
 [2K   [32mLook at something[39m
 [2K   [32mQuit[39m
-[2K   [32mTake something in the chest[39m[?25l[999D[4A[2K   [32mClose the chest[39m
+[2K   [32mTake something in the chest[39m[?25l[4A[2K   [32mClose the chest[39m
 [2K > [32mGo into the car[39m
 [2K   [32mLook at something[39m
 [2K   [32mQuit[39m
-[2K   [32mTake something in the chest[39m[999D[4A[2K   [32mClose the chest[39m
+[2K   [32mTake something in the chest[39m[4A[2K   [32mClose the chest[39m
 [2K   [32mGo into the car[39m
 [2K > [32mLook at something[39m
 [2K   [32mQuit[39m
-[2K   [32mTake something in the chest[39m[999D[4A[2K   [32mClose the chest[39m
+[2K   [32mTake something in the chest[39m[4A[2K   [32mClose the chest[39m
 [2K   [32mGo into the car[39m
 [2K   [32mLook at something[39m
 [2K > [32mQuit[39m
-[2K   [32mTake something in the chest[39m[999D[4A[2K   [32mClose the chest[39m
+[2K   [32mTake something in the chest[39m[4A[2K   [32mClose the chest[39m
 [2K   [32mGo into the car[39m
 [2K   [32mLook at something[39m
 [2K   [32mQuit[39m
@@ -605,7 +605,7 @@ The entrance:
 [2K   [32mPut the large key into the chest[39m
 [2K   [32mQuit[39m
 [2K   [32mTake the small key in the chest[39m
-[2K   [32mUnlock the door with the large key[39m[?25l[999D[8A[2K   [32mClose the chest[39m
+[2K   [32mUnlock the door with the large key[39m[?25l[8A[2K   [32mClose the chest[39m
 [2K > [32mDrop the large key[39m
 [2K   [32mGo into the car[39m
 [2K   [32mList inventory[39m
@@ -613,7 +613,7 @@ The entrance:
 [2K   [32mPut the large key into the chest[39m
 [2K   [32mQuit[39m
 [2K   [32mTake the small key in the chest[39m
-[2K   [32mUnlock the door with the large key[39m[999D[8A[2K   [32mClose the chest[39m
+[2K   [32mUnlock the door with the large key[39m[8A[2K   [32mClose the chest[39m
 [2K   [32mDrop the large key[39m
 [2K > [32mGo into the car[39m
 [2K   [32mList inventory[39m
@@ -621,7 +621,7 @@ The entrance:
 [2K   [32mPut the large key into the chest[39m
 [2K   [32mQuit[39m
 [2K   [32mTake the small key in the chest[39m
-[2K   [32mUnlock the door with the large key[39m[999D[8A[2K   [32mClose the chest[39m
+[2K   [32mUnlock the door with the large key[39m[8A[2K   [32mClose the chest[39m
 [2K   [32mDrop the large key[39m
 [2K   [32mGo into the car[39m
 [2K > [32mList inventory[39m
@@ -629,7 +629,7 @@ The entrance:
 [2K   [32mPut the large key into the chest[39m
 [2K   [32mQuit[39m
 [2K   [32mTake the small key in the chest[39m
-[2K   [32mUnlock the door with the large key[39m[999D[8A[2K   [32mClose the chest[39m
+[2K   [32mUnlock the door with the large key[39m[8A[2K   [32mClose the chest[39m
 [2K   [32mDrop the large key[39m
 [2K   [32mGo into the car[39m
 [2K   [32mList inventory[39m
@@ -637,7 +637,7 @@ The entrance:
 [2K   [32mPut the large key into the chest[39m
 [2K   [32mQuit[39m
 [2K   [32mTake the small key in the chest[39m
-[2K   [32mUnlock the door with the large key[39m[999D[8A[2K   [32mClose the chest[39m
+[2K   [32mUnlock the door with the large key[39m[8A[2K   [32mClose the chest[39m
 [2K   [32mDrop the large key[39m
 [2K   [32mGo into the car[39m
 [2K   [32mList inventory[39m
@@ -645,7 +645,7 @@ The entrance:
 [2K > [32mPut the large key into the chest[39m
 [2K   [32mQuit[39m
 [2K   [32mTake the small key in the chest[39m
-[2K   [32mUnlock the door with the large key[39m[999D[8A[2K   [32mClose the chest[39m
+[2K   [32mUnlock the door with the large key[39m[8A[2K   [32mClose the chest[39m
 [2K   [32mDrop the large key[39m
 [2K   [32mGo into the car[39m
 [2K   [32mList inventory[39m
@@ -653,7 +653,7 @@ The entrance:
 [2K   [32mPut the large key into the chest[39m
 [2K > [32mQuit[39m
 [2K   [32mTake the small key in the chest[39m
-[2K   [32mUnlock the door with the large key[39m[999D[8A[2K   [32mClose the chest[39m
+[2K   [32mUnlock the door with the large key[39m[8A[2K   [32mClose the chest[39m
 [2K   [32mDrop the large key[39m
 [2K   [32mGo into the car[39m
 [2K   [32mList inventory[39m
@@ -661,7 +661,7 @@ The entrance:
 [2K   [32mPut the large key into the chest[39m
 [2K   [32mQuit[39m
 [2K > [32mTake the small key in the chest[39m
-[2K   [32mUnlock the door with the large key[39m[999D[8A[2K   [32mClose the chest[39m
+[2K   [32mUnlock the door with the large key[39m[8A[2K   [32mClose the chest[39m
 [2K   [32mDrop the large key[39m
 [2K   [32mGo into the car[39m
 [2K   [32mList inventory[39m
@@ -689,7 +689,7 @@ The entrance:
 [2K   [32mOpen or close something[39m
 [2K   [32mPut the large key into the chest[39m
 [2K   [32mQuit[39m
-[2K   [32mTake the small key in the chest[39m[?25l[999D[8A[2K   [32mDrop the large key[39m
+[2K   [32mTake the small key in the chest[39m[?25l[8A[2K   [32mDrop the large key[39m
 [2K > [32mGo into the car[39m
 [2K   [32mList inventory[39m
 [2K   [32mLock the door with the large key[39m
@@ -697,7 +697,7 @@ The entrance:
 [2K   [32mOpen or close something[39m
 [2K   [32mPut the large key into the chest[39m
 [2K   [32mQuit[39m
-[2K   [32mTake the small key in the chest[39m[999D[8A[2K   [32mDrop the large key[39m
+[2K   [32mTake the small key in the chest[39m[8A[2K   [32mDrop the large key[39m
 [2K   [32mGo into the car[39m
 [2K > [32mList inventory[39m
 [2K   [32mLock the door with the large key[39m
@@ -705,7 +705,7 @@ The entrance:
 [2K   [32mOpen or close something[39m
 [2K   [32mPut the large key into the chest[39m
 [2K   [32mQuit[39m
-[2K   [32mTake the small key in the chest[39m[999D[8A[2K   [32mDrop the large key[39m
+[2K   [32mTake the small key in the chest[39m[8A[2K   [32mDrop the large key[39m
 [2K   [32mGo into the car[39m
 [2K   [32mList inventory[39m
 [2K > [32mLock the door with the large key[39m
@@ -713,7 +713,7 @@ The entrance:
 [2K   [32mOpen or close something[39m
 [2K   [32mPut the large key into the chest[39m
 [2K   [32mQuit[39m
-[2K   [32mTake the small key in the chest[39m[999D[8A[2K   [32mDrop the large key[39m
+[2K   [32mTake the small key in the chest[39m[8A[2K   [32mDrop the large key[39m
 [2K   [32mGo into the car[39m
 [2K   [32mList inventory[39m
 [2K   [32mLock the door with the large key[39m
@@ -721,7 +721,7 @@ The entrance:
 [2K   [32mOpen or close something[39m
 [2K   [32mPut the large key into the chest[39m
 [2K   [32mQuit[39m
-[2K   [32mTake the small key in the chest[39m[999D[8A[2K   [32mDrop the large key[39m
+[2K   [32mTake the small key in the chest[39m[8A[2K   [32mDrop the large key[39m
 [2K   [32mGo into the car[39m
 [2K   [32mList inventory[39m
 [2K   [32mLock the door with the large key[39m
@@ -733,7 +733,7 @@ The entrance:
 
 [39mOpen or close what?[39m
 [2K > [32mClose the chest[39m
-[2K   [32mOpen the door[39m[?25l[999D[1A[2K   [32mClose the chest[39m
+[2K   [32mOpen the door[39m[?25l[1A[2K   [32mClose the chest[39m
 [2K > [32mOpen the door[39m[?25h
 
 The entrance:
@@ -754,7 +754,7 @@ The entrance:
 [2K   [32mOpen or close something[39m
 [2K   [32mPut the large key into the chest[39m
 [2K   [32mQuit[39m
-[2K   [32mTake the small key in the chest[39m[?25l[999D[8A[2K   [32mDrop the large key[39m
+[2K   [32mTake the small key in the chest[39m[?25l[8A[2K   [32mDrop the large key[39m
 [2K > [32mGo into the car[39m
 [2K   [32mGo west[39m
 [2K   [32mList inventory[39m
@@ -762,7 +762,7 @@ The entrance:
 [2K   [32mOpen or close something[39m
 [2K   [32mPut the large key into the chest[39m
 [2K   [32mQuit[39m
-[2K   [32mTake the small key in the chest[39m[999D[8A[2K   [32mDrop the large key[39m
+[2K   [32mTake the small key in the chest[39m[8A[2K   [32mDrop the large key[39m
 [2K   [32mGo into the car[39m
 [2K > [32mGo west[39m
 [2K   [32mList inventory[39m
@@ -770,7 +770,7 @@ The entrance:
 [2K   [32mOpen or close something[39m
 [2K   [32mPut the large key into the chest[39m
 [2K   [32mQuit[39m
-[2K   [32mTake the small key in the chest[39m[999D[8A[2K   [32mDrop the large key[39m
+[2K   [32mTake the small key in the chest[39m[8A[2K   [32mDrop the large key[39m
 [2K   [32mGo into the car[39m
 [2K   [32mGo west[39m
 [2K > [32mList inventory[39m
@@ -802,7 +802,7 @@ The entrance:
 [2K   [32mOpen or close something[39m
 [2K   [32mPut the large key into the chest[39m
 [2K   [32mQuit[39m
-[2K   [32mTake the small key in the chest[39m[?25l[999D[8A[2K   [32mDrop the large key[39m
+[2K   [32mTake the small key in the chest[39m[?25l[8A[2K   [32mDrop the large key[39m
 [2K > [32mGo into the car[39m
 [2K   [32mGo west[39m
 [2K   [32mList inventory[39m
@@ -810,7 +810,7 @@ The entrance:
 [2K   [32mOpen or close something[39m
 [2K   [32mPut the large key into the chest[39m
 [2K   [32mQuit[39m
-[2K   [32mTake the small key in the chest[39m[999D[8A[2K   [32mDrop the large key[39m
+[2K   [32mTake the small key in the chest[39m[8A[2K   [32mDrop the large key[39m
 [2K   [32mGo into the car[39m
 [2K > [32mGo west[39m
 [2K   [32mList inventory[39m
@@ -831,12 +831,12 @@ The castle:
 [2K   [32mGo east[39m
 [2K   [32mList inventory[39m
 [2K   [32mLook at yourself[39m
-[2K   [32mQuit[39m[?25l[999D[5A[2K   [32mClose the door[39m
+[2K   [32mQuit[39m[?25l[5A[2K   [32mClose the door[39m
 [2K > [32mDrop the large key[39m
 [2K   [32mGo east[39m
 [2K   [32mList inventory[39m
 [2K   [32mLook at yourself[39m
-[2K   [32mQuit[39m[999D[5A[2K   [32mClose the door[39m
+[2K   [32mQuit[39m[5A[2K   [32mClose the door[39m
 [2K   [32mDrop the large key[39m
 [2K > [32mGo east[39m
 [2K   [32mList inventory[39m
@@ -861,7 +861,7 @@ The entrance:
 [2K   [32mOpen or close something[39m
 [2K   [32mPut the large key into the chest[39m
 [2K   [32mQuit[39m
-[2K   [32mTake the small key in the chest[39m[?25l[999D[8A[2K   [32mDrop the large key[39m
+[2K   [32mTake the small key in the chest[39m[?25l[8A[2K   [32mDrop the large key[39m
 [2K > [32mGo into the car[39m
 [2K   [32mGo west[39m
 [2K   [32mList inventory[39m
@@ -887,7 +887,7 @@ The entrance:
 [2K   [32mLeave[39m
 [2K   [32mList inventory[39m
 [2K   [32mLook at something[39m
-[2K   [32mQuit[39m[?25l[999D[5A[2K   [32mDrop the large key[39m
+[2K   [32mQuit[39m[?25l[5A[2K   [32mDrop the large key[39m
 [2K > [32mGo west[39m
 [2K   [32mLeave[39m
 [2K   [32mList inventory[39m
@@ -907,12 +907,12 @@ The castle:
 [2K   [32mLeave[39m
 [2K   [32mList inventory[39m
 [2K   [32mLook at yourself in the car[39m
-[2K   [32mQuit[39m[?25l[999D[5A[2K   [32mDrop the large key[39m
+[2K   [32mQuit[39m[?25l[5A[2K   [32mDrop the large key[39m
 [2K > [32mGo east[39m
 [2K   [32mLeave[39m
 [2K   [32mList inventory[39m
 [2K   [32mLook at yourself in the car[39m
-[2K   [32mQuit[39m[999D[5A[2K   [32mDrop the large key[39m
+[2K   [32mQuit[39m[5A[2K   [32mDrop the large key[39m
 [2K   [32mGo east[39m
 [2K > [32mLeave[39m
 [2K   [32mList inventory[39m
@@ -932,37 +932,37 @@ The castle:
 [2K   [32mGo into the car[39m
 [2K   [32mList inventory[39m
 [2K   [32mLook at yourself[39m
-[2K   [32mQuit[39m[?25l[999D[6A[2K   [32mClose the door[39m
+[2K   [32mQuit[39m[?25l[6A[2K   [32mClose the door[39m
 [2K > [32mDrop the large key[39m
 [2K   [32mGo east[39m
 [2K   [32mGo into the car[39m
 [2K   [32mList inventory[39m
 [2K   [32mLook at yourself[39m
-[2K   [32mQuit[39m[999D[6A[2K   [32mClose the door[39m
+[2K   [32mQuit[39m[6A[2K   [32mClose the door[39m
 [2K   [32mDrop the large key[39m
 [2K > [32mGo east[39m
 [2K   [32mGo into the car[39m
 [2K   [32mList inventory[39m
 [2K   [32mLook at yourself[39m
-[2K   [32mQuit[39m[999D[6A[2K   [32mClose the door[39m
+[2K   [32mQuit[39m[6A[2K   [32mClose the door[39m
 [2K   [32mDrop the large key[39m
 [2K   [32mGo east[39m
 [2K > [32mGo into the car[39m
 [2K   [32mList inventory[39m
 [2K   [32mLook at yourself[39m
-[2K   [32mQuit[39m[999D[6A[2K   [32mClose the door[39m
+[2K   [32mQuit[39m[6A[2K   [32mClose the door[39m
 [2K   [32mDrop the large key[39m
 [2K   [32mGo east[39m
 [2K   [32mGo into the car[39m
 [2K > [32mList inventory[39m
 [2K   [32mLook at yourself[39m
-[2K   [32mQuit[39m[999D[6A[2K   [32mClose the door[39m
+[2K   [32mQuit[39m[6A[2K   [32mClose the door[39m
 [2K   [32mDrop the large key[39m
 [2K   [32mGo east[39m
 [2K   [32mGo into the car[39m
 [2K   [32mList inventory[39m
 [2K > [32mLook at yourself[39m
-[2K   [32mQuit[39m[999D[6A[2K   [32mClose the door[39m
+[2K   [32mQuit[39m[6A[2K   [32mClose the door[39m
 [2K   [32mDrop the large key[39m
 [2K   [32mGo east[39m
 [2K   [32mGo into the car[39m

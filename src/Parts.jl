@@ -54,7 +54,7 @@ import MenuAdventures: argument_domains, ever_possible, possible_now, print_sent
 """
     Incorporating()
 
-A is `Incorporating` B means B is part of A"
+A is `Incorporating` B means B is part of A.
 
 A [`Relationship`](@ref)
 """

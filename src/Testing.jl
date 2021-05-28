@@ -30,7 +30,7 @@ julia> function make_universe(interface)
         end;
 
 julia> cd(joinpath(pkgdir(MenuAdventures), "test", "Testing")) do
-            check_choices(make_universe)
+            check_choices(make_universe, transcript_file = "transcript1.txt")
         end
 Conflict in line 6
 Existing transcript: " > [control]quit[control]"
@@ -51,6 +51,12 @@ julia> cd(joinpath(pkgdir(MenuAdventures), "test", "Testing")) do
 Conflict in line 7
 Existing transcript: " more"
 New transcript: ""
+false
+
+julia> cd(joinpath(pkgdir(MenuAdventures), "test", "Testing")) do
+            check_choices(make_universe, choices_file = "choices3.txt", )
+        end
+Unchosen choices: [1.0]
 false
 ```
 """
@@ -74,6 +80,7 @@ end
     save_choices(make_universe;
         choices_file = "choices.txt", 
         transcript_file = "transcript.txt",
+        interface = terminal,
         resume = false
     )
 
@@ -88,24 +95,17 @@ If `resume` is true, the game will pick up from the point you left off, based on
 function save_choices(make_universe;
     choices_file = "choices.txt", 
     transcript_file = "transcript.txt",
+    interface = terminal,
     resume = false
 )
     take!(stdin.buffer)
     if resume
         run_turn_sequence(stdin.buffer, readdlm(choices_file))
     end
-    universe = make_universe(terminal)
+    universe = make_universe(interface)
     choices_log = universe.choices_log
     turn!(universe)
-    open(
-        io -> writedlm(io, choices_log),
-        choices_file,
-        if resume
-            "a"
-        else
-            "w"
-        end
-    )
+    open(io -> writedlm(io, choices_log), choices_file, "w")
     open(transcript_file, "w") do transcript
         take!(stdin.buffer)
         run_turn_sequence(stdin.buffer, choices_log)
@@ -155,9 +155,8 @@ Check the results of choices against a transcript created with [`save_choices`](
 
 Return `true` if the results match, `false` otherwise.
 `make_universe` should be a function which takes one argument, an IO interface, and returns an [`AbstractUniverse`].
-`choices_file` will be the delimited file where user choices were saved.
-`transcript_file` will be the file where the game transcript was saved.
-
+`choices_file` should be the delimited file where user choices were saved.
+`transcript_file` should be the file where the game transcript was saved.
 """
 function check_choices(make_universe;
     choices_file = "choices.txt", 
@@ -166,14 +165,27 @@ function check_choices(make_universe;
     output = IOBuffer()
     take!(stdin.buffer)
     universe = make_universe(TTYTerminal("unix", stdin, output, stderr))
-    run_turn_sequence(stdin.buffer, readdlm(choices_file))
+    choices = readdlm(choices_file)
+    run_turn_sequence(stdin.buffer, choices)
     turn!(universe)
+    expected_choices = length(choices)
+    choices_log = universe.choices_log
+    actual_choices = length(choices_log)
+    same_turn_count = actual_choices == expected_choices
+    if !same_turn_count
+        if actual_choices < expected_choices
+            print("Unchosen choices: ")
+            println(choices[actual_choices+1 : expected_choices])
+        elseif expected_choices < actual_choices
+            print("Extra choices: ")
+            println(choices_log[expected_choices+1 : actual_choices])
+        end
+    end
     old_result = read(transcript_file, String)
     new_result = String(take!(output))
-    matches = old_result == new_result
     difference = find_line_difference(old_result, new_result)
-    the_same = difference === nothing
-    if !the_same
+    same_transcript = difference === nothing
+    if !same_transcript
         line_number, expected_line, received_line = difference
         print("Conflict in line ")
         println(line_number)
@@ -184,7 +196,7 @@ function check_choices(make_universe;
         show(replace_escape_codes(received_line))
         println()
     end
-    the_same
+    same_turn_count && same_transcript
 end
 
 export check_choices

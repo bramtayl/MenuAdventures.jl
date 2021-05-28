@@ -42,7 +42,7 @@ A central room:
 [2K   [32mGo outside[39m
 [2K   [32mGo south[39m
 [2K   [32mGo south-east[39m
-[2Kv  [32mGo south-west[39m[?25l[999D[9A[2K   [32mGo down[39m
+[2Kv  [32mGo south-west[39m[?25l[9A[2K   [32mGo down[39m
 [2K > [32mGo east[39m
 [2K   [32mGo inside[39m
 [2K   [32mGo north[39m
@@ -77,7 +77,7 @@ A central room:
 [2K   [32mGo outside[39m
 [2K   [32mGo south[39m
 [2K   [32mGo south-east[39m
-[2Kv  [32mGo south-west[39m[?25l[999D[9A[2K   [32mGo down[39m
+[2Kv  [32mGo south-west[39m[?25l[9A[2K   [32mGo down[39m
 [2K > [32mGo east[39m
 [2K   [32mGo inside[39m
 [2K   [32mGo north[39m
@@ -86,7 +86,7 @@ A central room:
 [2K   [32mGo outside[39m
 [2K   [32mGo south[39m
 [2K   [32mGo south-east[39m
-[2Kv  [32mGo south-west[39m[999D[9A[2K   [32mGo down[39m
+[2Kv  [32mGo south-west[39m[9A[2K   [32mGo down[39m
 [2K   [32mGo east[39m
 [2K > [32mGo inside[39m
 [2K   [32mGo north[39m
@@ -121,7 +121,7 @@ A central room:
 [2K   [32mGo outside[39m
 [2K   [32mGo south[39m
 [2K   [32mGo south-east[39m
-[2Kv  [32mGo south-west[39m[?25l[999D[9A[2K   [32mGo down[39m
+[2Kv  [32mGo south-west[39m[?25l[9A[2K   [32mGo down[39m
 [2K > [32mGo east[39m
 [2K   [32mGo inside[39m
 [2K   [32mGo north[39m
@@ -130,7 +130,7 @@ A central room:
 [2K   [32mGo outside[39m
 [2K   [32mGo south[39m
 [2K   [32mGo south-east[39m
-[2Kv  [32mGo south-west[39m[999D[9A[2K   [32mGo down[39m
+[2Kv  [32mGo south-west[39m[9A[2K   [32mGo down[39m
 [2K   [32mGo east[39m
 [2K > [32mGo inside[39m
 [2K   [32mGo north[39m
@@ -139,7 +139,7 @@ A central room:
 [2K   [32mGo outside[39m
 [2K   [32mGo south[39m
 [2K   [32mGo south-east[39m
-[2Kv  [32mGo south-west[39m[999D[9A[2K   [32mGo down[39m
+[2Kv  [32mGo south-west[39m[9A[2K   [32mGo down[39m
 [2K   [32mGo east[39m
 [2K   [32mGo inside[39m
 [2K > [32mGo north[39m
@@ -174,7 +174,7 @@ A central room:
 [2K   [32mGo outside[39m
 [2K   [32mGo south[39m
 [2K   [32mGo south-east[39m
-[2Kv  [32mGo south-west[39m[?25l[999D[9A[2K   [32mGo down[39m
+[2Kv  [32mGo south-west[39m[?25l[9A[2K   [32mGo down[39m
 [2K > [32mGo east[39m
 [2K   [32mGo inside[39m
 [2K   [32mGo north[39m
@@ -183,7 +183,7 @@ A central room:
 [2K   [32mGo outside[39m
 [2K   [32mGo south[39m
 [2K   [32mGo south-east[39m
-[2Kv  [32mGo south-west[39m[999D[9A[2K   [32mGo down[39m
+[2Kv  [32mGo south-west[39m[9A[2K   [32mGo down[39m
 [2K   [32mGo east[39m
 [2K > [32mGo inside[39m
 [2K   [32mGo north[39m
@@ -192,7 +192,7 @@ A central room:
 [2K   [32mGo outside[39m
 [2K   [32mGo south[39m
 [2K   [32mGo south-east[39m
-[2Kv  [32mGo south-west[39m[999D[9A[2K   [32mGo down[39m
+[2Kv  [32mGo south-west[39m[9A[2K   [32mGo down[39m
 [2K   [32mGo east[39m
 [2K   [32mGo inside[39m
 [2K > [32mGo north[39m
@@ -201,7 +201,7 @@ A central room:
 [2K   [32mGo outside[39m
 [2K   [32mGo south[39m
 [2K   [32mGo south-east[39m
-[2Kv  [32mGo south-west[39m[999D[9A[2K   [32mGo down[39m
+[2Kv  [32mGo south-west[39m[9A[2K   [32mGo down[39m
 [2K   [32mGo east[39m
 [2K   [32mGo inside[39m
 [2K   [32mGo north[39m
@@ -236,7 +236,7 @@ A central room:
 [2K   [32mGo outside[39m
 [2K   [32mGo south[39m
 [2K   [32mGo south-east[39m
-[2Kv  [32mGo south-west[39m[?25l[999D[9A[2K   [32mGo down[39m
+[2Kv  [32mGo south-west[39m[?25l[9A[2K   [32mGo down[39m
 [2K > [32mGo east[39m
 [2K   [32mGo inside[39m
 [2K   [32mGo north[39m
@@ -245,7 +245,7 @@ A central room:
 [2K   [32mGo outside[39m
 [2K   [32mGo south[39m
 [2K   [32mGo south-east[39m
-[2Kv  [32mGo south-west[39m[999D[9A[2K   [32mGo down[39m
+[2Kv  [32mGo south-west[39m[9A[2K   [32mGo down[39m
 [2K   [32mGo east[39m
 [2K > [32mGo inside[39m
 [2K   [32mGo north[39m
@@ -254,7 +254,7 @@ A central room:
 [2K   [32mGo outside[39m
 [2K   [32mGo south[39m
 [2K   [32mGo south-east[39m
-[2Kv  [32mGo south-west[39m[999D[9A[2K   [32mGo down[39m
+[2Kv  [32mGo south-west[39m[9A[2K   [32mGo down[39m
 [2K   [32mGo east[39m
 [2K   [32mGo inside[39m
 [2K > [32mGo north[39m
@@ -263,7 +263,7 @@ A central room:
 [2K   [32mGo outside[39m
 [2K   [32mGo south[39m
 [2K   [32mGo south-east[39m
-[2Kv  [32mGo south-west[39m[999D[9A[2K   [32mGo down[39m
+[2Kv  [32mGo south-west[39m[9A[2K   [32mGo down[39m
 [2K   [32mGo east[39m
 [2K   [32mGo inside[39m
 [2K   [32mGo north[39m
@@ -272,7 +272,7 @@ A central room:
 [2K   [32mGo outside[39m
 [2K   [32mGo south[39m
 [2K   [32mGo south-east[39m
-[2Kv  [32mGo south-west[39m[999D[9A[2K   [32mGo down[39m
+[2Kv  [32mGo south-west[39m[9A[2K   [32mGo down[39m
 [2K   [32mGo east[39m
 [2K   [32mGo inside[39m
 [2K   [32mGo north[39m
@@ -307,7 +307,7 @@ A central room:
 [2K   [32mGo outside[39m
 [2K   [32mGo south[39m
 [2K   [32mGo south-east[39m
-[2Kv  [32mGo south-west[39m[?25l[999D[9A[2K   [32mGo down[39m
+[2Kv  [32mGo south-west[39m[?25l[9A[2K   [32mGo down[39m
 [2K > [32mGo east[39m
 [2K   [32mGo inside[39m
 [2K   [32mGo north[39m
@@ -316,7 +316,7 @@ A central room:
 [2K   [32mGo outside[39m
 [2K   [32mGo south[39m
 [2K   [32mGo south-east[39m
-[2Kv  [32mGo south-west[39m[999D[9A[2K   [32mGo down[39m
+[2Kv  [32mGo south-west[39m[9A[2K   [32mGo down[39m
 [2K   [32mGo east[39m
 [2K > [32mGo inside[39m
 [2K   [32mGo north[39m
@@ -325,7 +325,7 @@ A central room:
 [2K   [32mGo outside[39m
 [2K   [32mGo south[39m
 [2K   [32mGo south-east[39m
-[2Kv  [32mGo south-west[39m[999D[9A[2K   [32mGo down[39m
+[2Kv  [32mGo south-west[39m[9A[2K   [32mGo down[39m
 [2K   [32mGo east[39m
 [2K   [32mGo inside[39m
 [2K > [32mGo north[39m
@@ -334,7 +334,7 @@ A central room:
 [2K   [32mGo outside[39m
 [2K   [32mGo south[39m
 [2K   [32mGo south-east[39m
-[2Kv  [32mGo south-west[39m[999D[9A[2K   [32mGo down[39m
+[2Kv  [32mGo south-west[39m[9A[2K   [32mGo down[39m
 [2K   [32mGo east[39m
 [2K   [32mGo inside[39m
 [2K   [32mGo north[39m
@@ -343,7 +343,7 @@ A central room:
 [2K   [32mGo outside[39m
 [2K   [32mGo south[39m
 [2K   [32mGo south-east[39m
-[2Kv  [32mGo south-west[39m[999D[9A[2K   [32mGo down[39m
+[2Kv  [32mGo south-west[39m[9A[2K   [32mGo down[39m
 [2K   [32mGo east[39m
 [2K   [32mGo inside[39m
 [2K   [32mGo north[39m
@@ -352,7 +352,7 @@ A central room:
 [2K   [32mGo outside[39m
 [2K   [32mGo south[39m
 [2K   [32mGo south-east[39m
-[2Kv  [32mGo south-west[39m[999D[9A[2K   [32mGo down[39m
+[2Kv  [32mGo south-west[39m[9A[2K   [32mGo down[39m
 [2K   [32mGo east[39m
 [2K   [32mGo inside[39m
 [2K   [32mGo north[39m
@@ -387,7 +387,7 @@ A central room:
 [2K   [32mGo outside[39m
 [2K   [32mGo south[39m
 [2K   [32mGo south-east[39m
-[2Kv  [32mGo south-west[39m[?25l[999D[9A[2K   [32mGo down[39m
+[2Kv  [32mGo south-west[39m[?25l[9A[2K   [32mGo down[39m
 [2K > [32mGo east[39m
 [2K   [32mGo inside[39m
 [2K   [32mGo north[39m
@@ -396,7 +396,7 @@ A central room:
 [2K   [32mGo outside[39m
 [2K   [32mGo south[39m
 [2K   [32mGo south-east[39m
-[2Kv  [32mGo south-west[39m[999D[9A[2K   [32mGo down[39m
+[2Kv  [32mGo south-west[39m[9A[2K   [32mGo down[39m
 [2K   [32mGo east[39m
 [2K > [32mGo inside[39m
 [2K   [32mGo north[39m
@@ -405,7 +405,7 @@ A central room:
 [2K   [32mGo outside[39m
 [2K   [32mGo south[39m
 [2K   [32mGo south-east[39m
-[2Kv  [32mGo south-west[39m[999D[9A[2K   [32mGo down[39m
+[2Kv  [32mGo south-west[39m[9A[2K   [32mGo down[39m
 [2K   [32mGo east[39m
 [2K   [32mGo inside[39m
 [2K > [32mGo north[39m
@@ -414,7 +414,7 @@ A central room:
 [2K   [32mGo outside[39m
 [2K   [32mGo south[39m
 [2K   [32mGo south-east[39m
-[2Kv  [32mGo south-west[39m[999D[9A[2K   [32mGo down[39m
+[2Kv  [32mGo south-west[39m[9A[2K   [32mGo down[39m
 [2K   [32mGo east[39m
 [2K   [32mGo inside[39m
 [2K   [32mGo north[39m
@@ -423,7 +423,7 @@ A central room:
 [2K   [32mGo outside[39m
 [2K   [32mGo south[39m
 [2K   [32mGo south-east[39m
-[2Kv  [32mGo south-west[39m[999D[9A[2K   [32mGo down[39m
+[2Kv  [32mGo south-west[39m[9A[2K   [32mGo down[39m
 [2K   [32mGo east[39m
 [2K   [32mGo inside[39m
 [2K   [32mGo north[39m
@@ -432,7 +432,7 @@ A central room:
 [2K   [32mGo outside[39m
 [2K   [32mGo south[39m
 [2K   [32mGo south-east[39m
-[2Kv  [32mGo south-west[39m[999D[9A[2K   [32mGo down[39m
+[2Kv  [32mGo south-west[39m[9A[2K   [32mGo down[39m
 [2K   [32mGo east[39m
 [2K   [32mGo inside[39m
 [2K   [32mGo north[39m
@@ -441,7 +441,7 @@ A central room:
 [2K > [32mGo outside[39m
 [2K   [32mGo south[39m
 [2K   [32mGo south-east[39m
-[2Kv  [32mGo south-west[39m[999D[9A[2K   [32mGo down[39m
+[2Kv  [32mGo south-west[39m[9A[2K   [32mGo down[39m
 [2K   [32mGo east[39m
 [2K   [32mGo inside[39m
 [2K   [32mGo north[39m
@@ -476,7 +476,7 @@ A central room:
 [2K   [32mGo outside[39m
 [2K   [32mGo south[39m
 [2K   [32mGo south-east[39m
-[2Kv  [32mGo south-west[39m[?25l[999D[9A[2K   [32mGo down[39m
+[2Kv  [32mGo south-west[39m[?25l[9A[2K   [32mGo down[39m
 [2K > [32mGo east[39m
 [2K   [32mGo inside[39m
 [2K   [32mGo north[39m
@@ -485,7 +485,7 @@ A central room:
 [2K   [32mGo outside[39m
 [2K   [32mGo south[39m
 [2K   [32mGo south-east[39m
-[2Kv  [32mGo south-west[39m[999D[9A[2K   [32mGo down[39m
+[2Kv  [32mGo south-west[39m[9A[2K   [32mGo down[39m
 [2K   [32mGo east[39m
 [2K > [32mGo inside[39m
 [2K   [32mGo north[39m
@@ -494,7 +494,7 @@ A central room:
 [2K   [32mGo outside[39m
 [2K   [32mGo south[39m
 [2K   [32mGo south-east[39m
-[2Kv  [32mGo south-west[39m[999D[9A[2K   [32mGo down[39m
+[2Kv  [32mGo south-west[39m[9A[2K   [32mGo down[39m
 [2K   [32mGo east[39m
 [2K   [32mGo inside[39m
 [2K > [32mGo north[39m
@@ -503,7 +503,7 @@ A central room:
 [2K   [32mGo outside[39m
 [2K   [32mGo south[39m
 [2K   [32mGo south-east[39m
-[2Kv  [32mGo south-west[39m[999D[9A[2K   [32mGo down[39m
+[2Kv  [32mGo south-west[39m[9A[2K   [32mGo down[39m
 [2K   [32mGo east[39m
 [2K   [32mGo inside[39m
 [2K   [32mGo north[39m
@@ -512,7 +512,7 @@ A central room:
 [2K   [32mGo outside[39m
 [2K   [32mGo south[39m
 [2K   [32mGo south-east[39m
-[2Kv  [32mGo south-west[39m[999D[9A[2K   [32mGo down[39m
+[2Kv  [32mGo south-west[39m[9A[2K   [32mGo down[39m
 [2K   [32mGo east[39m
 [2K   [32mGo inside[39m
 [2K   [32mGo north[39m
@@ -521,7 +521,7 @@ A central room:
 [2K   [32mGo outside[39m
 [2K   [32mGo south[39m
 [2K   [32mGo south-east[39m
-[2Kv  [32mGo south-west[39m[999D[9A[2K   [32mGo down[39m
+[2Kv  [32mGo south-west[39m[9A[2K   [32mGo down[39m
 [2K   [32mGo east[39m
 [2K   [32mGo inside[39m
 [2K   [32mGo north[39m
@@ -530,7 +530,7 @@ A central room:
 [2K > [32mGo outside[39m
 [2K   [32mGo south[39m
 [2K   [32mGo south-east[39m
-[2Kv  [32mGo south-west[39m[999D[9A[2K   [32mGo down[39m
+[2Kv  [32mGo south-west[39m[9A[2K   [32mGo down[39m
 [2K   [32mGo east[39m
 [2K   [32mGo inside[39m
 [2K   [32mGo north[39m
@@ -539,7 +539,7 @@ A central room:
 [2K   [32mGo outside[39m
 [2K > [32mGo south[39m
 [2K   [32mGo south-east[39m
-[2Kv  [32mGo south-west[39m[999D[9A[2K   [32mGo down[39m
+[2Kv  [32mGo south-west[39m[9A[2K   [32mGo down[39m
 [2K   [32mGo east[39m
 [2K   [32mGo inside[39m
 [2K   [32mGo north[39m
@@ -574,7 +574,7 @@ A central room:
 [2K   [32mGo outside[39m
 [2K   [32mGo south[39m
 [2K   [32mGo south-east[39m
-[2Kv  [32mGo south-west[39m[?25l[999D[9A[2K   [32mGo down[39m
+[2Kv  [32mGo south-west[39m[?25l[9A[2K   [32mGo down[39m
 [2K > [32mGo east[39m
 [2K   [32mGo inside[39m
 [2K   [32mGo north[39m
@@ -583,7 +583,7 @@ A central room:
 [2K   [32mGo outside[39m
 [2K   [32mGo south[39m
 [2K   [32mGo south-east[39m
-[2Kv  [32mGo south-west[39m[999D[9A[2K   [32mGo down[39m
+[2Kv  [32mGo south-west[39m[9A[2K   [32mGo down[39m
 [2K   [32mGo east[39m
 [2K > [32mGo inside[39m
 [2K   [32mGo north[39m
@@ -592,7 +592,7 @@ A central room:
 [2K   [32mGo outside[39m
 [2K   [32mGo south[39m
 [2K   [32mGo south-east[39m
-[2Kv  [32mGo south-west[39m[999D[9A[2K   [32mGo down[39m
+[2Kv  [32mGo south-west[39m[9A[2K   [32mGo down[39m
 [2K   [32mGo east[39m
 [2K   [32mGo inside[39m
 [2K > [32mGo north[39m
@@ -601,7 +601,7 @@ A central room:
 [2K   [32mGo outside[39m
 [2K   [32mGo south[39m
 [2K   [32mGo south-east[39m
-[2Kv  [32mGo south-west[39m[999D[9A[2K   [32mGo down[39m
+[2Kv  [32mGo south-west[39m[9A[2K   [32mGo down[39m
 [2K   [32mGo east[39m
 [2K   [32mGo inside[39m
 [2K   [32mGo north[39m
@@ -610,7 +610,7 @@ A central room:
 [2K   [32mGo outside[39m
 [2K   [32mGo south[39m
 [2K   [32mGo south-east[39m
-[2Kv  [32mGo south-west[39m[999D[9A[2K   [32mGo down[39m
+[2Kv  [32mGo south-west[39m[9A[2K   [32mGo down[39m
 [2K   [32mGo east[39m
 [2K   [32mGo inside[39m
 [2K   [32mGo north[39m
@@ -619,7 +619,7 @@ A central room:
 [2K   [32mGo outside[39m
 [2K   [32mGo south[39m
 [2K   [32mGo south-east[39m
-[2Kv  [32mGo south-west[39m[999D[9A[2K   [32mGo down[39m
+[2Kv  [32mGo south-west[39m[9A[2K   [32mGo down[39m
 [2K   [32mGo east[39m
 [2K   [32mGo inside[39m
 [2K   [32mGo north[39m
@@ -628,7 +628,7 @@ A central room:
 [2K > [32mGo outside[39m
 [2K   [32mGo south[39m
 [2K   [32mGo south-east[39m
-[2Kv  [32mGo south-west[39m[999D[9A[2K   [32mGo down[39m
+[2Kv  [32mGo south-west[39m[9A[2K   [32mGo down[39m
 [2K   [32mGo east[39m
 [2K   [32mGo inside[39m
 [2K   [32mGo north[39m
@@ -637,7 +637,7 @@ A central room:
 [2K   [32mGo outside[39m
 [2K > [32mGo south[39m
 [2K   [32mGo south-east[39m
-[2Kv  [32mGo south-west[39m[999D[9A[2K   [32mGo down[39m
+[2Kv  [32mGo south-west[39m[9A[2K   [32mGo down[39m
 [2K   [32mGo east[39m
 [2K   [32mGo inside[39m
 [2K   [32mGo north[39m
@@ -646,7 +646,7 @@ A central room:
 [2K   [32mGo outside[39m
 [2K   [32mGo south[39m
 [2K > [32mGo south-east[39m
-[2Kv  [32mGo south-west[39m[999D[9A[2K^  [32mGo east[39m
+[2Kv  [32mGo south-west[39m[9A[2K^  [32mGo east[39m
 [2K   [32mGo inside[39m
 [2K   [32mGo north[39m
 [2K   [32mGo north-east[39m
@@ -681,7 +681,7 @@ A central room:
 [2K   [32mGo outside[39m
 [2K   [32mGo south[39m
 [2K   [32mGo south-east[39m
-[2Kv  [32mGo south-west[39m[?25l[999D[9A[2K   [32mGo down[39m
+[2Kv  [32mGo south-west[39m[?25l[9A[2K   [32mGo down[39m
 [2K > [32mGo east[39m
 [2K   [32mGo inside[39m
 [2K   [32mGo north[39m
@@ -690,7 +690,7 @@ A central room:
 [2K   [32mGo outside[39m
 [2K   [32mGo south[39m
 [2K   [32mGo south-east[39m
-[2Kv  [32mGo south-west[39m[999D[9A[2K   [32mGo down[39m
+[2Kv  [32mGo south-west[39m[9A[2K   [32mGo down[39m
 [2K   [32mGo east[39m
 [2K > [32mGo inside[39m
 [2K   [32mGo north[39m
@@ -699,7 +699,7 @@ A central room:
 [2K   [32mGo outside[39m
 [2K   [32mGo south[39m
 [2K   [32mGo south-east[39m
-[2Kv  [32mGo south-west[39m[999D[9A[2K   [32mGo down[39m
+[2Kv  [32mGo south-west[39m[9A[2K   [32mGo down[39m
 [2K   [32mGo east[39m
 [2K   [32mGo inside[39m
 [2K > [32mGo north[39m
@@ -708,7 +708,7 @@ A central room:
 [2K   [32mGo outside[39m
 [2K   [32mGo south[39m
 [2K   [32mGo south-east[39m
-[2Kv  [32mGo south-west[39m[999D[9A[2K   [32mGo down[39m
+[2Kv  [32mGo south-west[39m[9A[2K   [32mGo down[39m
 [2K   [32mGo east[39m
 [2K   [32mGo inside[39m
 [2K   [32mGo north[39m
@@ -717,7 +717,7 @@ A central room:
 [2K   [32mGo outside[39m
 [2K   [32mGo south[39m
 [2K   [32mGo south-east[39m
-[2Kv  [32mGo south-west[39m[999D[9A[2K   [32mGo down[39m
+[2Kv  [32mGo south-west[39m[9A[2K   [32mGo down[39m
 [2K   [32mGo east[39m
 [2K   [32mGo inside[39m
 [2K   [32mGo north[39m
@@ -726,7 +726,7 @@ A central room:
 [2K   [32mGo outside[39m
 [2K   [32mGo south[39m
 [2K   [32mGo south-east[39m
-[2Kv  [32mGo south-west[39m[999D[9A[2K   [32mGo down[39m
+[2Kv  [32mGo south-west[39m[9A[2K   [32mGo down[39m
 [2K   [32mGo east[39m
 [2K   [32mGo inside[39m
 [2K   [32mGo north[39m
@@ -735,7 +735,7 @@ A central room:
 [2K > [32mGo outside[39m
 [2K   [32mGo south[39m
 [2K   [32mGo south-east[39m
-[2Kv  [32mGo south-west[39m[999D[9A[2K   [32mGo down[39m
+[2Kv  [32mGo south-west[39m[9A[2K   [32mGo down[39m
 [2K   [32mGo east[39m
 [2K   [32mGo inside[39m
 [2K   [32mGo north[39m
@@ -744,7 +744,7 @@ A central room:
 [2K   [32mGo outside[39m
 [2K > [32mGo south[39m
 [2K   [32mGo south-east[39m
-[2Kv  [32mGo south-west[39m[999D[9A[2K   [32mGo down[39m
+[2Kv  [32mGo south-west[39m[9A[2K   [32mGo down[39m
 [2K   [32mGo east[39m
 [2K   [32mGo inside[39m
 [2K   [32mGo north[39m
@@ -753,7 +753,7 @@ A central room:
 [2K   [32mGo outside[39m
 [2K   [32mGo south[39m
 [2K > [32mGo south-east[39m
-[2Kv  [32mGo south-west[39m[999D[9A[2K^  [32mGo east[39m
+[2Kv  [32mGo south-west[39m[9A[2K^  [32mGo east[39m
 [2K   [32mGo inside[39m
 [2K   [32mGo north[39m
 [2K   [32mGo north-east[39m
@@ -762,7 +762,7 @@ A central room:
 [2K   [32mGo south[39m
 [2K   [32mGo south-east[39m
 [2K > [32mGo south-west[39m
-[2Kv  [32mGo up[39m[999D[9A[2K^  [32mGo inside[39m
+[2Kv  [32mGo up[39m[9A[2K^  [32mGo inside[39m
 [2K   [32mGo north[39m
 [2K   [32mGo north-east[39m
 [2K   [32mGo north-west[39m
@@ -797,7 +797,7 @@ A central room:
 [2K   [32mGo outside[39m
 [2K   [32mGo south[39m
 [2K   [32mGo south-east[39m
-[2Kv  [32mGo south-west[39m[?25l[999D[9A[2K   [32mGo down[39m
+[2Kv  [32mGo south-west[39m[?25l[9A[2K   [32mGo down[39m
 [2K > [32mGo east[39m
 [2K   [32mGo inside[39m
 [2K   [32mGo north[39m
@@ -806,7 +806,7 @@ A central room:
 [2K   [32mGo outside[39m
 [2K   [32mGo south[39m
 [2K   [32mGo south-east[39m
-[2Kv  [32mGo south-west[39m[999D[9A[2K   [32mGo down[39m
+[2Kv  [32mGo south-west[39m[9A[2K   [32mGo down[39m
 [2K   [32mGo east[39m
 [2K > [32mGo inside[39m
 [2K   [32mGo north[39m
@@ -815,7 +815,7 @@ A central room:
 [2K   [32mGo outside[39m
 [2K   [32mGo south[39m
 [2K   [32mGo south-east[39m
-[2Kv  [32mGo south-west[39m[999D[9A[2K   [32mGo down[39m
+[2Kv  [32mGo south-west[39m[9A[2K   [32mGo down[39m
 [2K   [32mGo east[39m
 [2K   [32mGo inside[39m
 [2K > [32mGo north[39m
@@ -824,7 +824,7 @@ A central room:
 [2K   [32mGo outside[39m
 [2K   [32mGo south[39m
 [2K   [32mGo south-east[39m
-[2Kv  [32mGo south-west[39m[999D[9A[2K   [32mGo down[39m
+[2Kv  [32mGo south-west[39m[9A[2K   [32mGo down[39m
 [2K   [32mGo east[39m
 [2K   [32mGo inside[39m
 [2K   [32mGo north[39m
@@ -833,7 +833,7 @@ A central room:
 [2K   [32mGo outside[39m
 [2K   [32mGo south[39m
 [2K   [32mGo south-east[39m
-[2Kv  [32mGo south-west[39m[999D[9A[2K   [32mGo down[39m
+[2Kv  [32mGo south-west[39m[9A[2K   [32mGo down[39m
 [2K   [32mGo east[39m
 [2K   [32mGo inside[39m
 [2K   [32mGo north[39m
@@ -842,7 +842,7 @@ A central room:
 [2K   [32mGo outside[39m
 [2K   [32mGo south[39m
 [2K   [32mGo south-east[39m
-[2Kv  [32mGo south-west[39m[999D[9A[2K   [32mGo down[39m
+[2Kv  [32mGo south-west[39m[9A[2K   [32mGo down[39m
 [2K   [32mGo east[39m
 [2K   [32mGo inside[39m
 [2K   [32mGo north[39m
@@ -851,7 +851,7 @@ A central room:
 [2K > [32mGo outside[39m
 [2K   [32mGo south[39m
 [2K   [32mGo south-east[39m
-[2Kv  [32mGo south-west[39m[999D[9A[2K   [32mGo down[39m
+[2Kv  [32mGo south-west[39m[9A[2K   [32mGo down[39m
 [2K   [32mGo east[39m
 [2K   [32mGo inside[39m
 [2K   [32mGo north[39m
@@ -860,7 +860,7 @@ A central room:
 [2K   [32mGo outside[39m
 [2K > [32mGo south[39m
 [2K   [32mGo south-east[39m
-[2Kv  [32mGo south-west[39m[999D[9A[2K   [32mGo down[39m
+[2Kv  [32mGo south-west[39m[9A[2K   [32mGo down[39m
 [2K   [32mGo east[39m
 [2K   [32mGo inside[39m
 [2K   [32mGo north[39m
@@ -869,7 +869,7 @@ A central room:
 [2K   [32mGo outside[39m
 [2K   [32mGo south[39m
 [2K > [32mGo south-east[39m
-[2Kv  [32mGo south-west[39m[999D[9A[2K^  [32mGo east[39m
+[2Kv  [32mGo south-west[39m[9A[2K^  [32mGo east[39m
 [2K   [32mGo inside[39m
 [2K   [32mGo north[39m
 [2K   [32mGo north-east[39m
@@ -878,7 +878,7 @@ A central room:
 [2K   [32mGo south[39m
 [2K   [32mGo south-east[39m
 [2K > [32mGo south-west[39m
-[2Kv  [32mGo up[39m[999D[9A[2K^  [32mGo inside[39m
+[2Kv  [32mGo up[39m[9A[2K^  [32mGo inside[39m
 [2K   [32mGo north[39m
 [2K   [32mGo north-east[39m
 [2K   [32mGo north-west[39m
@@ -887,7 +887,7 @@ A central room:
 [2K   [32mGo south-east[39m
 [2K   [32mGo south-west[39m
 [2K > [32mGo up[39m
-[2K   [32mGo west[39m[999D[9A[2K^  [32mGo inside[39m
+[2K   [32mGo west[39m[9A[2K^  [32mGo inside[39m
 [2K   [32mGo north[39m
 [2K   [32mGo north-east[39m
 [2K   [32mGo north-west[39m
@@ -910,5 +910,5 @@ A central room:
     you
 
 [2K > [32mGo some way[39m
-[2K   [32mQuit[39m[?25l[999D[1A[2K   [32mGo some way[39m
+[2K   [32mQuit[39m[?25l[1A[2K   [32mGo some way[39m
 [2K > [32mQuit[39m[?25h

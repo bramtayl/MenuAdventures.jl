@@ -58,10 +58,7 @@ import MenuAdventures: argument_domains, find_in_domain, possible_now, print_sen
 """
     Dialog()
 
-Things a player might say.
-
-For dialog, the keys will be things you can say, and answers will be replies.
-The text of answer objects will be the quoted version of their object.
+Things a player might [`Say`](@ref).
 
 A [`Domain`](@ref).
 """
@@ -83,7 +80,8 @@ An [`Action`](@ref).
 Note the first argument is the addressee, and the second is the dialog.
 If `possible(::Say, ::Dialog, addressee)`, then `addressee` must have a dialog field containing a dialog dictionary.
 The keys of this dictionary should be text the player says, and the values should be [`Answer`](@ref)s containing a response from the `addressee` and a trigger.
-After a dialog option is chosen, the response trigger will be called with two arguments: `universe` and `addressee`. Then the dialog option will be removed.
+After a dialog option is chosen, the response trigger will be called with two arguments: `universe` and `addressee`. 
+Then the dialog option will be removed.
 """
 struct Say <: Action end
 

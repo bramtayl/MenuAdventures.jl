@@ -73,6 +73,26 @@ using MenuAdventures: Action, Carrying, Containing, ExitDirections, get_final_de
 import MenuAdventures: argument_domains, ever_possible, mention_status, possible_now, print_sentence
 
 """
+    Attack()
+
+`Attack` something [`Reachable`](@ref).
+
+An [`Action`](@ref).
+"""
+struct Attack <: Action end
+
+export Attack
+
+function argument_domains(::Attack)
+    (Reachable(),)
+end
+
+function print_sentence(io, ::Attack, thing_answer)
+    print(io, "Attack ")
+    print(io, thing_answer.text)
+end
+
+"""
     Eat()
 
 `Eat` something [`Reachable`](@ref).

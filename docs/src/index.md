@@ -69,12 +69,17 @@ Quit
 UnlockOrLock
 ```
 
-## Miscellaneous
+## Grammatical persons
 
 ```@docs
 first_person
 second_person
 third_person
+```
+
+## Miscellaneous
+
+```@docs
 string_in_color
 subject_to_verb
 Verb

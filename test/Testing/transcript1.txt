@@ -3,4 +3,4 @@ A room:
   contains:
     you
 
- > [32mQuit[39m
+ > [32mquit[39m

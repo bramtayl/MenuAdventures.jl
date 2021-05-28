@@ -106,7 +106,7 @@ using LightGraphs: DiGraph, inneighbors, outneighbors
 using MacroTools: @capture
 using MetaGraphsNext: code_for, label_for, MetaGraph
 using REPL.Terminals: TTYTerminal
-using REPL.TerminalMenus: RadioMenu, request, terminal
+using REPL.TerminalMenus: RadioMenu, request, TerminalMenus, terminal
 using TextWrap: println_wrapped
 
 """
@@ -146,20 +146,16 @@ function interrogative(::ExitDirections)
 end
 
 function blocking_thing_and_relationship(universe, ::ExitDirections)
-    relationships_graph = universe.relationships_graph
     get_parent_relationship(universe, get_mover(universe))
 end
 
 function find_in_domain(universe, sentence, domain::ExitDirections; lit = true)
     blocking_thing, _ = blocking_thing_and_relationship(universe, domain)
     answers = Answer[]
-    directions_graph = universe.directions_graph
-    if haskey(directions_graph, blocking_thing)
-        for (location, direction) in
-            get_exit_directions(universe, blocking_thing)
-            if possible_now(universe, sentence, domain, direction)
-                push!(answers, make_answer(universe, direction))
-            end
+    for (_, direction) in
+        get_exit_directions(universe, blocking_thing)
+        if possible_now(universe, sentence, domain, direction)
+            push!(answers, make_answer(universe, direction))
         end
     end
     answers
@@ -206,7 +202,7 @@ function find_in_domain(universe, sentence, domain::Immediate; lit = true)
         for (thing, relationship) in
             get_children_relationships(universe, blocking_thing)
             if relationship === blocked_relationship &&
-               possible_now(universe, sentence, domain, thing)
+                possible_now(universe, sentence, domain, thing)
                 push!(answers, make_answer(universe, thing))
             end
         end
@@ -237,10 +233,10 @@ end
 function find_in_domain(universe, sentence, domain::Reachable; lit = true)
     answers = Answer[]
     if lit
-        blocking_thing, blocked_relationship = blocking_thing_and_relationship(universe, domain)
-        add_siblings_and_doors!(answers, universe, sentence, domain, blocking_thing, blocked_relationship)
+        add_siblings_and_doors!(answers, universe, sentence, domain, blocking_thing_and_relationship(universe, domain)...)
     else
-        for (thing, relationship) in
+        # you can only reach the things on your person
+        for (thing, _) in
             get_children_relationships(universe, universe.player)
             add_thing_and_relations!(answers, universe, sentence, domain, thing)
         end
@@ -265,7 +261,6 @@ function blocking(::Visible, parent_thing, relationship, thing)
 end
 
 function blocking_thing_and_relationship(universe, domain::Visible)
-    relationships_graph = universe.relationships_graph
     thing = universe.player
     blocking_thing, blocked_relationship = get_parent_relationship(universe, thing)
     # locations don't have a parent...
@@ -309,7 +304,7 @@ function indefinite(_)
 end
 
 """
-    MenuAdventures.interrogative(domain) = "something"
+    MenuAdventures.interrogative(domain) = "what"
 
 Ask for an object from the [`Domain`](@ref).
 
@@ -672,7 +667,6 @@ struct Leave <: Action end
 
 function (::Leave)(universe)
     player = universe.player
-    relationships_graph = universe.relationships_graph
     parent_thing = get_parent(universe, player)
     grandparent_thing, parent_relationship = get_parent_relationship(universe, parent_thing)
     universe[grandparent_thing, player] = parent_relationship
@@ -1017,7 +1011,7 @@ get_description(universe, thing::Noun) = thing.description(universe, thing)
 """
     MenuAdventures.is_transparent(thing::Noun) = false
 
-Whether you can see through `thing` into its contents.
+Whether you can see through a `thing` into its contents.
 """
 is_transparent(::Noun) = false
 
@@ -1031,7 +1025,7 @@ is_vehicle(::Noun) = false
 """
     is_shining(::Noun) = false
 
-Whether something provides its own light.
+Whether something provides light.
 """
 is_shining(::Noun) = false
 
@@ -1112,6 +1106,8 @@ abstract type AbstractUniverse end
 
 export AbstractUniverse
 
+show(io::IO, ::AbstractUniverse) = print(io, "A universe")
+
 function get_parent(universe, thing)
     relationships_graph = universe.relationships_graph
     label_for(
@@ -1134,7 +1130,13 @@ end
 export get_parent_relationship
 
 function over_out_neighbor_codes(a_function, meta_graph, parent_thing)
-    Iterators.map(a_function, outneighbors(meta_graph, code_for(meta_graph, parent_thing)))
+    Iterators.map(a_function, 
+        if haskey(meta_graph, parent_thing)
+            outneighbors(meta_graph, code_for(meta_graph, parent_thing))
+        else
+            eltype(meta_graph)[]
+        end
+    )
 end
 
 function out_neighbors_relationships(meta_graph, parent_thing)
@@ -1162,7 +1164,7 @@ export get_children_relationships
 """
     get_exit_directions(universe, location)
 
-Get the exits from a location, and the direction of those exits.
+Get the exits from a location, and the direction of those exits (if exits exist)
 """
 function get_exit_directions(universe, location)
     out_neighbors_relationships(universe.directions_graph, location)
@@ -1173,7 +1175,6 @@ export get_exit_directions
 
 function get_mover(universe)
     player = universe.player
-    relationships_graph = universe.relationships_graph
     mover = get_parent(universe, player)
     if is_vehicle(mover)
         mover
@@ -1413,8 +1414,8 @@ end
 
 `parent_thing` is blocked from accessing `thing` via the `relationship`.
 
-By default, [`Reachable`](@ref) `parent_thing`s block `thing`s they are `containing` if they are closed.
-By default, [`Visible`](@ref) `parent_thing`s block `thing`s they are `containing` if they are closed and not [`MenuAdventures.is_transparent`](@ref).
+By default, [`Reachable`](@ref) `parent_thing`s block `thing`s they are [`Containing`](@ref) if they are closed.
+By default, [`Visible`](@ref) `parent_thing`s block `thing`s they are [`Containing`](@ref) if they are closed and not [`MenuAdventures.is_transparent`](@ref).
 """
 blocking
 
@@ -1454,7 +1455,6 @@ function append_parent_relationship_to(universe, question::Question, relationshi
 end
 
 function add_thing_and_relations!(answers, universe, sentence, domain, parent_thing)
-    action = sentence.action
     if possible_now(universe, sentence, domain, parent_thing)
         push!(answers, make_answer(universe, parent_thing))
     end
@@ -1502,13 +1502,10 @@ function add_siblings_and_doors!(answers, universe, sentence, domain, blocking_t
             add_thing_and_relations!(answers, universe, sentence, domain, thing)
         end
     end
-    directions_graph = universe.directions_graph
-    if haskey(directions_graph, blocking_thing)
-        for (location, direction) in
-            get_exit_directions(universe, blocking_thing)
-            if location isa AbstractDoor
-                add_thing_and_relations!(answers, universe, sentence, domain, location)
-            end
+    for (location, _) in
+        get_exit_directions(universe, blocking_thing)
+        if location isa AbstractDoor
+            add_thing_and_relations!(answers, universe, sentence, domain, location)
         end
     end
 end
@@ -1587,8 +1584,8 @@ function choose(universe, sentence, index, answer)
                 function (sub_answer)
                     sprint(show, replace_argument(sentence, index, sub_answer), context = :color => :green)
                 end,
-                answers,
-            )),
+                answers
+            ); charset = :ascii),
         )
         push!(universe.choices_log, choice)
         choose(universe, sentence, index, answers[choice])
@@ -1667,13 +1664,10 @@ function look_around(universe, domain, blocking_thing, blocked_relationship)
             push!(get!(relations, relationship, Answer[]), make_blurb(thing))
         end
     end
-    directions_graph = universe.directions_graph
-    if haskey(directions_graph, blocking_thing)
-        for (location, direction) in
-            get_exit_directions(universe, blocking_thing)
-            if location isa AbstractDoor
-                push!(get!(relations, direction, Answer[]), make_blurb(location))
-            end
+    for (location, direction) in
+        get_exit_directions(universe, blocking_thing)
+        if location isa AbstractDoor
+            push!(get!(relations, direction, Answer[]), make_blurb(location))
         end
     end
     print(interface, ' '^indent)
@@ -1695,8 +1689,6 @@ Use `Core.invoke` to avoid replicating the `turn!` machinery.
 """
 function turn!(universe; introduce = true)
     interface = universe.interface
-    relationships_graph = universe.relationships_graph
-    player = universe.player
 
     if introduce
         introduction = universe.introduction
@@ -1714,7 +1706,6 @@ function turn!(universe; introduce = true)
         visible = Visible()
         look_around(universe, visible, blocking_thing_and_relationship(universe, visible)...)
     end
-    immediate_location = get_parent(universe, universe.player)
     sentences = Sentence[]
     for verb_type in subtypes(Action)
         action = verb_type()
@@ -1751,7 +1742,7 @@ function turn!(universe; introduce = true)
                     sprint(show, sentence, context = :color => :green)
                 end, 
                 sentences
-            )))
+            ); charset = :ascii))
         else
             println(interface)
             print(interface, " > ")
@@ -1845,6 +1836,21 @@ function add_defaults(user_definition, defaults, location)
     )
 end
 
+"""
+    const NOUN_FIELDS = [
+        :(name::String), 
+        :(grammatical_person::GrammaticalPerson = third_person),
+        :(indefinite_article::String = "a"),
+        :(plural::Bool = false),
+        :(description = (_, __) -> "")
+    ]
+
+A list of expressions, the fields added by the [`@noun`](@ref) macro. 
+
+You can add new noun fields by `push!`ing to this list. 
+Because the expressions will be escaped, you might want to interpolate in everything except for the field name.
+Be careful; obviously changing `NOUN_FIELDS` will change the behavior of the [`@noun`](@ref) macro.
+"""
 const NOUN_FIELDS = [
     :(name::$String), 
     :(grammatical_person::$GrammaticalPerson = $third_person),
@@ -1856,7 +1862,7 @@ const NOUN_FIELDS = [
 """
     @noun user_definition
 
-Automatically add the required fields to a [`Noun`](@ref) struct definition, including sane defaults.
+Automatically add [`MenuAdventures.NOUN_FIELDS`](@ref) to a [`Noun`](@ref) struct definition, including sane defaults.
 
 Adds the following fields and defaults:
 
@@ -1877,7 +1883,7 @@ export @noun
 
 const UNIVERSE_FIELDS = [
     :(player::$Noun),
-    :(interface::$TTYTerminal = $terminal),
+    :(interface::$TTYTerminal = ($TerminalMenus).terminal),
     :(introduction::$String = ""),
     :(relationships_graph::$(typeof(MetaGraph(DiGraph(), Label = Noun, EdgeMeta = Relationship))) = 
         $MetaGraph($DiGraph(), Label = $Noun, EdgeMeta = $Relationship)),

@@ -2,4 +2,3 @@
 A room:
   contains:
     you
-
